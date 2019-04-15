@@ -1,18 +1,18 @@
 package models
 
 import (
-	"github.com/astaxie/beego"
-	"log"
 	"fmt"
+	"github.com/astaxie/beego"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"log"
 	"time"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 var Db *gorm.DB
 
 type Model struct {
-	ID        int `json:"id" form:"id" gorm:"primary_key"`
+	ID        int       `json:"id" form:"id" gorm:"primary_key"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 	DeletedAt time.Time `json:"deleted_at" sql:"index"`
@@ -20,7 +20,7 @@ type Model struct {
 
 func init() {
 	var (
-		err error
+		err                                               error
 		dbType, dbName, user, password, host, tablePrefix string
 	)
 
@@ -41,8 +41,8 @@ func init() {
 		log.Println(err)
 	}
 
-	gorm.DefaultTableNameHandler = func (db *gorm.DB, defaultTableName string) string  {
-		return tablePrefix + defaultTableName;
+	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
+		return tablePrefix + defaultTableName
 	}
 
 	Db.SingularTable(true)

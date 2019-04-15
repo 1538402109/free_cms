@@ -35,19 +35,19 @@ func NewBooks() (books *Books) {
 	return &Books{}
 }
 
-func (b *Books) AfterFind(scope *gorm.Scope) (err error) {
-	b.CreatedAtText = b.CreatedAt.Unix()
-	b.BookLastAtText = b.BookLastAt.Unix()
-	b.BookTypeText = BookType[b.BookType]
+func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
+	m.CreatedAtText = m.CreatedAt.Unix()
+	m.BookLastAtText = m.BookLastAt.Unix()
+	m.BookTypeText = BookType[m.BookType]
 	return
 }
 
-func (b *Books) BeforeCreate(scope *gorm.Scope) (err error) {
-	b.BookLastAt = time.Now()
+func (m *Books) BeforeCreate(scope *gorm.Scope) (err error) {
+	m.BookLastAt = time.Now()
 	return
 }
 
-func (b *Books) Pagination(offset, limit int, key string) (res []Books, count int) {
+func (m *Books) Pagination(offset, limit int, key string) (res []Books, count int) {
 	query := Db
 	if key != "" {
 		query = query.Where("book_name like ?", fmt.Sprintf("%s%%",key))
@@ -57,24 +57,24 @@ func (b *Books) Pagination(offset, limit int, key string) (res []Books, count in
 	return
 }
 
-func (b *Books) Create() (err error, newAttr *Books) {
-	err = Db.Create(b).Error
-	newAttr = b
+func (m *Books) Create() (err error, newAttr *Books) {
+	err = Db.Create(m).Error
+	newAttr = m
 	return
 }
 
-func (b *Books) Update() (err error, newAttr Books) {
-	if b.ID > 0 {
-		err = Db.Model(&newAttr).Where("id=?", b.ID).Update(b).Error
+func (m *Books) Update() (err error, newAttr Books) {
+	if m.ID > 0 {
+		err = Db.Model(&newAttr).Where("id=?", m.ID).Update(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
 	return
 }
 
-func (b *Books) Delete() (err error) {
-	if b.ID > 0 {
-		err = Db.Delete(b).Error
+func (m *Books) Delete() (err error) {
+	if m.ID > 0 {
+		err = Db.Delete(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
