@@ -1,0 +1,75 @@
+<style>
+    .book-type p{float:left;width:50%;}
+</style>
+<form class="layui-form layui-row layui-col-space10" lay-filter="books" action="xx">
+    <div class="layui-col-md9 layui-col-xs12">
+        <div class="layui-form-item magt3">
+            <label class="layui-form-label">小说名称*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input book_name" lay-verify="book_name" name="book_name" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">列表页地址*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input list_url" lay-verify="list_url" name="list_url" placeholder="">
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane="">
+            <label class="layui-form-label">规则</label>
+            <div class="layui-input-block">
+                {{range $k,$v := .pregList}}
+                <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary">
+                {{end}}
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">作者</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input book_author" name="book_author" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea book_describe" name="book_describe"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md3 layui-col-xs12">
+        <blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i>类型</blockquote>
+        <div class="border category">
+            <div class="book-type clearfix">
+                {{range $k,$v := .bookType}}
+                <p><input type="radio" name="BookType" title="{{$v}}" lay-skin="primary" value="{{$k}}"/></p>
+                {{end}}
+            </div>
+        </div>
+        <blockquote class="layui-elem-quote title magt10"><i class="layui-icon">&#xe609;</i> 发布</blockquote>
+        <div class="border">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><i class="layui-icon">&#xe60e;</i> 状　态</label>
+                <div class="layui-input-block book_status">
+                    <select name="book_status" lay-verify="required">
+                        <option value="0">保存草稿</option>
+                        <option value="1">等待审核</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item is_top">
+                <label class="layui-form-label"><i class="seraph icon-zhiding"></i> 置　顶</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="is_top" lay-skin="switch" lay-text="是|否" value="1">
+                </div>
+            </div>
+            <hr class="layui-bg-gray" />
+            <div class="layui-right">
+                <a class="layui-btn layui-btn-sm" lay-filter="addBooks" lay-submit><i class="layui-icon">&#xe609;</i>发布</a>
+                <a class="layui-btn layui-btn-primary layui-btn-sm" lay-filter="look" lay-submit>预览</a>
+            </div>
+        </div>
+    </div>
+</form>

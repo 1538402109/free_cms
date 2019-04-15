@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>修改小说</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+{{template "admin/preg/form.html" .}}
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['form','layer','layedit','laydate','upload'],function(){
+        var form = layui.form
+        layer = parent.layer === undefined ? layui.layer : top.layer,
+            laypage = layui.laypage,
+            upload = layui.upload,
+            layedit = layui.layedit,
+            laydate = layui.laydate,
+            $ = layui.jquery;
+
+        form.verify({
+            BookName : function(val){
+                if(val == ''){
+                    return "小说名称不能为空";
+                }
+            },
+            ListUrl : function(val){
+                if(val == ''){
+                    return "列表页地址不能为空";
+                }
+            }
+        })
+
+        form.on("submit(addBooks)",function(data){
+            //弹出loading
+            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
+            // 实际使用时的提交信息
+            $.post($(".layui-form").attr("action"),data.field,function (res) {
+                setTimeout(function(){
+                    top.layer.close(index);
+                    top.layer.msg(res.msg);
+                    layer.closeAll("iframe");
+                    //刷新父页面
+                    parent.location.reload();
+                },500);
+            });
+            return false;
+        })
+
+    })
+</script>
+</body>
+</html>

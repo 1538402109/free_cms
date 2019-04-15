@@ -1,0 +1,27 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px"微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.clearfix:after{content:'';display: block;height: 0;overflow: hidden;clear:both;}
+
+
+.nav{height:60px;text-align: center;line-height: 60px;font-size:24px;}
+.footer{width:50%;margin:0 auto;text-align: center;margin-bottom:50px;}
+
+h1{font-size: 16px;margin:0;padding:0;font-weight: bold;}
+h2{text-align: center;}
+
+.list li{
+    list-style: none;
+    line-height: 27px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.main{margin-top:55px;}
+.article-title{margin:30px 0;font-size:27px;}

@@ -1,0 +1,41 @@
+<form class="layui-form layui-row layui-col-space10" lay-filter="books" action="xx">
+
+    <div class="layui-col-md9 layui-col-xs12">
+        <div class="layui-form-item magt3">
+            <label class="layui-form-label">规则名称*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">列表链接*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input list_a_block" lay-verify="list_a_block" name="list_a_block" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">内容块*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input content_block" name="content_block" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">内容标题*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input content_title" name="content_title" placeholder="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">内容文本*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input content_text" name="content_text" placeholder="">
+            </div>
+        </div>
+
+        <hr class="layui-bg-gray" />
+        <div class="layui-right">
+            <a class="layui-btn layui-btn-sm" lay-filter="addBooks" lay-submit><i class="layui-icon">&#xe609;</i>保存</a>
+        </div>
+    </div>
+
+</form>
