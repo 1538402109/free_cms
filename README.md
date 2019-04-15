@@ -1,5 +1,4 @@
 # free-cms
-beego+gorm=FreeCms
-内容管理系统使用beego与gorm
+beego+gorm=FreeCms内容管理系统
 
 开发中...
