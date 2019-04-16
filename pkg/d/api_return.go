@@ -6,11 +6,11 @@ func ReturnJson(code int,msg string,data ...interface{})(jsonData map[string]int
 	jsonData["msg"] = msg
 	if len(data) > 0 && data[0] !=nil{
 		jsonData["data"] = data[0]
-		jsonData["count"] = data[1]
 	}
 	return
 }
 
+//layui table 返回json
 func TableJson(data interface{},col... interface{})(jsonData map[string]interface{}){
 	jsonData = make(map[string]interface{}, 3)
 	jsonData["rows"] = data

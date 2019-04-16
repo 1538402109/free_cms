@@ -45,7 +45,7 @@ layui.use(['form','element','layer','jquery'],function(){
         fillParameter(systemParameter);
     }else{
         $.ajax({
-            url : "/static/json/systemParameter.json",
+            url : "/main",
             type : "get",
             dataType : "json",
             success : function(data){

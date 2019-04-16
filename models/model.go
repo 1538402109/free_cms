@@ -53,3 +53,13 @@ func init() {
 func CloseDB() {
 	defer Db.Close()
 }
+
+
+
+func GetMysqlMsg()(mysqlMsg map[string]string){
+	mysqlMsg = make(map[string]string)
+	Db.Row()
+	mysqlMsg["version"] = "5.6"
+
+	return
+}
