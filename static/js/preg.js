@@ -118,15 +118,15 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
 
     //批量删除
     $(".delAll_btn").click(function () {
-        var checkStatus = table.checkStatus('booksListTable'),
+        var checkStatus = table.checkStatus('jsonTable'),
             data = checkStatus.data,
             Id = [];
         if (data.length > 0) {
             for (var i in data) {
-                Id.push(data[i].Id);
+                Id.push(data[i].id);
             }
             layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
-                $.get("batch-del", {
+                $.get("batch-delete", {
                     ids: Id  //将需要删除的newsId作为参数传入
                 }, function (data) {
                     layer.msg(data.msg)

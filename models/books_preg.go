@@ -72,7 +72,7 @@ func (m *BooksPreg) Delete() (err error) {
 
 func (m *BooksPreg)DelBath(ids []int)(err error){
 	if len(ids)>0{
-		err = Db.Where("id in ()",ids).Delete(m).Error
+		err = Db.Where("id in (?)",ids).Delete(m).Error
 	}else {
 		err = errors.New("id参数错误")
 	}

@@ -17,11 +17,13 @@ func init() {
 	beego.Router("/books/create", &admin.BooksController{},"*:Create")
 	beego.Router("/books/update", &admin.BooksController{},"*:Update")
 	beego.Router("/books/delete", &admin.BooksController{},"*:Delete")
+	beego.Router("/books/batch-delete", &admin.BooksController{},"*:BatchDelete")
 
 	beego.Router("/books-preg/index", &admin.BooksPregController{},"*:Index")
 	beego.Router("/books-preg/create", &admin.BooksPregController{},"*:Create")
 	beego.Router("/books-preg/update", &admin.BooksPregController{},"*:Update")
 	beego.Router("/books-preg/delete", &admin.BooksPregController{},"*:Delete")
+	beego.Router("/books-preg/batch-delete", &admin.BooksPregController{},"*:BatchDelete")
 
 	beego.Router("/members/center", &admin.MembersController{},"*:Center")
 	beego.Router("/members/center/add", &admin.MembersController{},"*:CenterAdd")

@@ -15,7 +15,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
         height: "full-125",
         limit: 10,
         limits: [20, 50,100],
-        id: "booksListTable",
+        //id: "booksListTable",
         cols: [[
             {type: "checkbox", fixed: "left", width: 50},
             {field: 'id', title: 'ID', width: 60, align: "center"},
@@ -83,7 +83,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
     //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function () {
         if ($(".searchVal").val() != '') {
-            table.reload("booksListTable", {
+            table.reload("booksList", {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 },
@@ -145,16 +145,18 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
 
     //批量删除
     $(".delAll_btn").click(function () {
-        var checkStatus = table.checkStatus('booksListTable'),
+        var checkStatus = table.checkStatus('booksList'),
             data = checkStatus.data,
             Id = [];
+
         if (data.length > 0) {
             for (var i in data) {
                 Id.push(data[i].id);
             }
+
             layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
-                $.get("batch-del", {
-                    ids: id  //将需要删除的newsId作为参数传入
+                $.get("batch-delete", {
+                    ids: Id  //将需要删除的newsId作为参数传入
                 }, function (data) {
                     layer.msg(data.msg)
                     tableIns.reload();
@@ -165,5 +167,4 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
             layer.msg("请选择需要删除的文章");
         }
     })
-
 })

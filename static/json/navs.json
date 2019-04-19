@@ -41,6 +41,12 @@
 					"icon": "&#xe600;",
 					"href": "books-preg/index",
 					"spread": false
+				},
+				{
+					"title": "小说分类",
+					"icon": "&#xe600;",
+					"href": "books-type/index",
+					"spread": false
 				}
 			]
 		}

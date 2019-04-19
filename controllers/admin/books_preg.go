@@ -2,7 +2,6 @@ package admin
 
 import (
 	"free_cms/models"
-	"free_cms/pkg/d"
 	"frp/utils/log"
 	"github.com/astaxie/beego/validation"
 )
@@ -18,8 +17,7 @@ func (c *BooksPregController) Index() {
 		key := c.GetString("key", "")
 
 		result, count := models.NewBooksPreg().Pagination((page-1)*limit, limit, key)
-		c.Data["json"] = d.LayuiJson(0, "", result, count)
-		c.ServeJSON()
+		c.Success(0,"ok",result,count)
 	}
 	c.TplName = ADMIN_TPL + "books_preg/index.html"
 }
@@ -29,8 +27,7 @@ func (c *BooksPregController) Create() {
 		booksPreg := models.NewBooksPreg()
 		//1.压入数据
 		if err := c.ParseForm(booksPreg); err != nil {
-			log.Info("表单赋值", err)
-			c.Abort("500")
+			c.Error(0,"赋值失败")
 		}
 		//2.验证，在模型中验证不能分场景
 		valid := validation.Validation{}
@@ -43,16 +40,14 @@ func (c *BooksPregController) Create() {
 			for _, err := range valid.Errors {
 				log.Info(err.Key, err.Message)
 			}
-			c.Abort("500")
+			c.Error(0,"验证失败")
 		}
 
 		//3.插入数据
 		if err, _ := booksPreg.Create(); err != nil {
-			log.Info("添加数据", err)
-			c.Abort("500")
+			c.Error(0,"创建失败")
 		}
-		c.Data["json"] = d.ReturnJson(200, "添加成功")
-		c.ServeJSON()
+		c.Success(0,"添加成功")
 	}
 	c.TplName = ADMIN_TPL + "books_preg/create.html"
 }
@@ -62,7 +57,7 @@ func (c *BooksPregController) Update() {
 		booksPreg := models.NewBooksPreg()
 		//1
 		if err := c.ParseForm(booksPreg); err != nil {
-			c.Abort("500")
+			c.Error(0,"赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
@@ -76,14 +71,13 @@ func (c *BooksPregController) Update() {
 			for _, err := range valid.Errors {
 				log.Info(err.Key, err.Message)
 			}
-			c.Abort("500")
+			c.Error(0,"验证失败")
 		}
 		//3
 		if err, _ := booksPreg.Update(); err != nil {
-			c.Abort("500")
+			c.Error(0,"修改失败")
 		}
-		c.Data["json"] = d.ReturnJson(200, "修改成功")
-		c.ServeJSON()
+		c.Error(0,"修改成功")
 	}
 	c.TplName = ADMIN_TPL + "books_preg/update.html"
 }
@@ -93,22 +87,20 @@ func (c *BooksPregController) Delete() {
 	id, _ := c.GetInt("id")
 	booksPreg.Id = id
 	if err := booksPreg.Delete(); err != nil {
-		c.Abort("500")
+		c.Error(0,"删除失败")
 	}
-	c.Data["json"] = d.ReturnJson(200, "删除成功")
-	c.ServeJSON()
+	c.Error(0,"删除成功")
 }
 
 func (c *BooksPregController)BatchDelete(){
 	var ids []int
-	if err := c.Ctx.Input.Bind(&ids,"id");err !=nil{
-		c.Abort("500")
+	if err := c.Ctx.Input.Bind(&ids,"ids");err !=nil{
+		c.Error(0,"赋值失败")
 	}
 
 	booksPreg := models.NewBooksPreg()
 	if err := booksPreg.DelBath(ids);err != nil{
-		c.Abort("500")
+		c.Error(0,"删除失败")
 	}
-	c.Data["json"] = d.ReturnJson(200, "删除成功")
-	c.ServeJSON()
+	c.Success(0,"删除成功")
 }
