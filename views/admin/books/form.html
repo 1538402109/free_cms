@@ -19,7 +19,7 @@
         <div class="layui-form-item" pane="">
             <label class="layui-form-label">规则</label>
             <div class="layui-input-block">
-                {{range $k,$v := .pregList}}
+                {{range $k,$v := .booksPregs}}
                 <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary">
                 {{end}}
             </div>
@@ -43,7 +43,7 @@
         <div class="border category">
             <div class="book-type clearfix">
                 {{range $k,$v := .bookType}}
-                <p><input type="radio" name="BookType" title="{{$v}}" lay-skin="primary" value="{{$k}}"/></p>
+                <p><input type="radio" name="book_type" title="{{$v}}" lay-skin="primary" value="{{$k}}"/></p>
                 {{end}}
             </div>
         </div>

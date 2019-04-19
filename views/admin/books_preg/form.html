@@ -1,4 +1,4 @@
-<form class="layui-form layui-row layui-col-space10" lay-filter="books" action="xx">
+<form class="layui-form layui-row layui-col-space10" lay-filter="getForm" action="xx">
 
     <div class="layui-col-md9 layui-col-xs12">
         <div class="layui-form-item magt3">
@@ -14,27 +14,28 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">内容块*</label>
+            <label class="layui-form-label">列表页内容标题*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input content_block" name="content_block" placeholder="">
+                <input type="text" class="layui-input list_title" lay-verify="list_title" name="list_title" placeholder="">
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">内容标题*</label>
+            <label class="layui-form-label">内容块*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input content_title" name="content_title" placeholder="">
+                <input type="text" class="layui-input content_block" lay-verify="content_block" name="content_block" placeholder="">
             </div>
         </div>
+
         <div class="layui-form-item">
             <label class="layui-form-label">内容文本*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input content_text" name="content_text" placeholder="">
+                <input type="text" class="layui-input content_text" lay-verify="content_text" name="content_text" placeholder="">
             </div>
         </div>
 
         <hr class="layui-bg-gray" />
         <div class="layui-right">
-            <a class="layui-btn layui-btn-sm" lay-filter="addBooks" lay-submit><i class="layui-icon">&#xe609;</i>保存</a>
+            <a class="layui-btn layui-btn-sm" lay-filter="getTo" lay-submit><i class="layui-icon">&#xe609;</i>保存</a>
         </div>
     </div>
 

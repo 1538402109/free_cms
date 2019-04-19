@@ -8,14 +8,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#booksList',
-        url: '/preg/index',
+        elem: '#jsonTable',
+        url: '/books-preg/index',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 10,
         limits: [10, 15, 20, 25],
-        id: "booksListTable",
+        //id: "booksListTable",
         cols: [[
             {type: "checkbox", fixed: "left", width: 50},
             {field: 'id', title: 'ID', width: 60, align: "center"},
@@ -24,34 +24,22 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
             {field: 'list_describe', title: '描述', align: 'center'},
             {field: 'list_a_block', title: '列表链接', align: 'center'},
             {field: 'content_block', title: '内容块', align: 'center'},
-            {field: 'content_title', title: '内容标题', align: 'center'},
+            {field: 'list_title', title: '内容标题', align: 'center'},
             {field: 'content_text', title: '内容文本', align: 'center'},
-            {title: '操作', width: 170, templet: '#booksListBar', fixed: "right", align: "center"}
+            {title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
         ]]
     });
 
-    function formatUnixtimestamp(unixtimestamp) {
-        var unixtimestamp = new Date(unixtimestamp * 1000);
-        var year = 1900 + unixtimestamp.getYear();
-        var month = "0" + (unixtimestamp.getMonth() + 1);
-        var date = "0" + unixtimestamp.getDate();
-        var hour = "0" + unixtimestamp.getHours();
-        var minute = "0" + unixtimestamp.getMinutes();
-        var second = "0" + unixtimestamp.getSeconds();
-        return year + "-" + month.substring(month.length - 2, month.length) + "-" + date.substring(date.length - 2, date.length) + " " + hour.substring(hour.length - 2, hour.length) + ":" + minute.substring(minute.length - 2, minute.length) + ":" + second.substring(second.length - 2, second.length);
-    }
-
     //列表操作
-    table.on('tool(booksList)', function (obj) {
+    table.on('tool(jsonTable)', function (obj) {
         var layEvent = obj.event,
             data = obj.data;
-
-        if (layEvent === 'edit') { //编辑
-            addBooks(data, "edit");
-        } else if (layEvent === 'del') { //删除
+        if (layEvent === 'update') { //编辑
+            add(data, "update");
+        } else if (layEvent === 'delete') { //删除
             layer.confirm('确定删除此文章？', {icon: 3, title: '提示信息'}, function (index) {
-                $.get("del", {
-                    id: data.Id  //将需要删除的newsId作为参数传入
+                $.get("delete", {
+                    id: data.id  //将需要删除的newsId作为参数传入
                 }, function (data) {
                     setTimeout(function () {
                         layer.msg(data.msg)
@@ -60,9 +48,9 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
                     }, 500);
                 })
             });
-        } else if (layEvent === 'update') { //预览
-            $.get("update", {
-                id: data.Id  //将需要删除的newsId作为参数传入
+        } else if (layEvent === 'view') { //预览
+            $.get("view", {
+                id: data.id  //将需要删除的newsId作为参数传入
             }, function (data) {
                 setTimeout(function () {
                     layer.msg(data.msg)
@@ -77,7 +65,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
     //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function () {
         if ($(".searchVal").val() != '') {
-            table.reload("booksListTable", {
+            table.reload("jsonTable", {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 },
@@ -91,7 +79,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
     });
 
     //编辑文章
-    function addBooks(edit, action) {
+    function add(edit, action) {
         var index = layui.layer.open({
             title: "小说",
             type: 2,
@@ -99,15 +87,15 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
             success: function (layero, index) {
                 var body = layui.layer.getChildFrame('body', index);
                 if (edit) {
-                    body.find(".layui-form").attr("action", "edit?id=" + edit.Id)
+                    body.find(".layui-form").attr("action", "update?id=" + edit.id)
                     body.find(".name").val(edit.name);
                     body.find(".list_a_block").val(edit.list_a_block);
                     body.find(".content_block").val(edit.content_block);
-                    body.find(".content_title").val(edit.content_title);
+                    body.find(".list_title").val(edit.list_title);
                     body.find(".content_text").val(edit.content_text);
                     form.render();
                 } else {
-                    body.find(".layui-form").attr("action", "add")
+                    body.find(".layui-form").attr("action", "create")
                 }
                 setTimeout(function () {
                     layui.layer.tips('点击此处返回文章列表', '.layui-layer-setwin .layui-layer-close', {
@@ -123,8 +111,9 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
         })
     }
 
-    $(".addBooks_btn").click(function () {
-        addBooks("", "add");
+    //添加
+    $(".create_btn").click(function () {
+        add("", "create");
     })
 
     //批量删除

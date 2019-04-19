@@ -19,7 +19,7 @@ function getLangDate(){
     var second = dateObj.getSeconds(); //当前系统时间的秒钟值
     var timeValue = "" +((hour >= 12) ? (hour >= 18) ? "晚上" : "下午" : "上午" ); //当前时间属于上午、晚上还是下午
     newDate = dateFilter(year)+"年"+dateFilter(month)+"月"+dateFilter(date)+"日 "+" "+dateFilter(hour)+":"+dateFilter(minute)+":"+dateFilter(second);
-    document.getElementById("nowTime").innerHTML = "亲爱的驊驊龔頾，"+timeValue+"好！ 欢迎使用layuiCMS 2.0模版。当前时间为： "+newDate+"　"+week;
+    document.getElementById("nowTime").innerHTML = timeValue+"好！ 欢迎使用FreeCms。当前时间为： "+newDate+"　"+week;
     setTimeout("getLangDate()",1000);
 }
 
@@ -48,8 +48,8 @@ layui.use(['form','element','layer','jquery'],function(){
             url : "/main",
             type : "get",
             dataType : "json",
-            success : function(data){
-                fillParameter(data);
+            success : function(res){
+                fillParameter(res.data);
             }
         })
     }
@@ -63,13 +63,14 @@ layui.use(['form','element','layer','jquery'],function(){
                 return data;
             }
         }
-        $(".version").text(nullData(data.version));      //当前版本
-        $(".author").text(nullData(data.author));        //开发作者
-        $(".homePage").text(nullData(data.homePage));    //网站首页
-        $(".server").text(nullData(data.server));        //服务器环境
-        $(".dataBase").text(nullData(data.dataBase));    //数据库版本
-        $(".maxUpload").text(nullData(data.maxUpload));    //最大上传限制
-        $(".userRights").text(nullData(data.userRights));//当前用户权限
+        $(".cms_version").text(nullData(data.cms_version));
+        $(".cms_author").text(nullData(data.cms_author));
+        $(".blog").text(nullData(data.blog));
+        $(".server").text(nullData(data.server));
+        $(".go_version").text(nullData(data.go_version));
+        $(".numcpu").text(nullData(data.numcpu));
+        $(".numgoroutine").text(nullData(data.numgoroutine));
+        $(".mysql_version").text(nullData(data.mysql_version));
     }
 
     //最新文章列表

@@ -1,11 +1,17 @@
 package util
 
 import (
+	"bytes"
 	"fmt"
+	"github.com/axgle/mahonia"
+	"golang.org/x/text/encoding/simplifiedchinese"
+	"golang.org/x/text/transform"
+	"io/ioutil"
 	"strconv"
 	"strings"
 )
 
+//字符串转unicode
 func Unicode(str string) (textUnquoted string) {
 	textQuoted := strconv.QuoteToASCII(str)
 	textUnquoted = textQuoted[1 : len(textQuoted)-1]
@@ -25,4 +31,31 @@ func Ununicode(textUnquoted string) (context string) {
 		context += fmt.Sprintf("%c", temp)
 	}
 	return
+}
+
+//src为要转换的字符串，srcCode为待转换的编码格式，targetCode为要转换的编码格式
+func ConvertToByte(src string, srcCode string, targetCode string) []byte {
+	srcCoder := mahonia.NewDecoder(srcCode)
+	srcResult := srcCoder.ConvertString(src)
+	tagCoder := mahonia.NewDecoder(targetCode)
+	_, cdata, _ := tagCoder.Translate([]byte(srcResult), true)
+	return cdata
+}
+
+func GbkToUtf8(s []byte) ([]byte, error) {
+	reader := transform.NewReader(bytes.NewReader(s), simplifiedchinese.GBK.NewDecoder())
+	d, e := ioutil.ReadAll(reader)
+	if e != nil {
+		return nil, e
+	}
+	return d, nil
+}
+
+func Utf8ToGbk(s []byte) ([]byte, error) {
+	reader := transform.NewReader(bytes.NewReader(s), simplifiedchinese.GBK.NewEncoder())
+	d, e := ioutil.ReadAll(reader)
+	if e != nil {
+		return nil, e
+	}
+	return d, nil
 }

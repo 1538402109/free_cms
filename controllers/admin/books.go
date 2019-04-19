@@ -18,7 +18,7 @@ func (c *BooksController) Index() {
 		key := c.GetString("key", "")
 
 		result, count := models.NewBooks().Pagination((page-1)*limit, limit, key)
-		c.Data["json"] = d.ReturnJson(0, "", result, count)
+		c.Data["json"] = d.LayuiJson(0, "", result, count)
 		c.ServeJSON()
 	}
 	c.TplName = ADMIN_TPL + "books/index.html"
@@ -52,7 +52,13 @@ func (c *BooksController) Create() {
 		c.Data["json"] = d.ReturnJson(200, "添加成功")
 		c.ServeJSON()
 	}
-	c.TplName = ADMIN_TPL + "books/update.html"
+
+	var booksPregs []models.BooksPreg
+	models.Db.Find(&booksPregs)
+	c.Data["booksPregs"] = booksPregs
+	c.Data["bookType"] = models.BookType
+
+	c.TplName = ADMIN_TPL + "books/create.html"
 }
 
 func (c *BooksController) Update() {
@@ -64,7 +70,7 @@ func (c *BooksController) Update() {
 		}
 		//2
 		valid := validation.Validation{}
-		valid.Required(books.ID,"id").Message("id不能为空")
+		valid.Required(books.Id,"id").Message("id不能为空")
 		valid.Required(books.BookName,"book_name").Message("小说名称不能为空")
 		valid.Required(books.ListUrl,"list_url").Message("列表页地址不能为空")
 		valid.Required(books.PregId,"preg_id").Message("采集规则不能为空")
@@ -81,16 +87,24 @@ func (c *BooksController) Update() {
 		c.Data["json"] = d.ReturnJson(200, "修改成功")
 		c.ServeJSON()
 	}
+
+	var booksPregs []models.BooksPreg
+	models.Db.Find(&booksPregs)
+	c.Data["booksPregs"] = booksPregs
+	c.Data["bookType"] = models.BookType
+
 	c.TplName = ADMIN_TPL + "books/update.html"
 }
 
 func (c *BooksController) Delete() {
 	books := models.NewBooks()
 	id, _ := c.GetInt("id")
-	books.ID = id
+	books.Id = id
 	if err := books.Delete(); err != nil {
 		c.Abort("500")
 	}
 	c.Data["json"] = d.ReturnJson(200, "删除成功")
 	c.ServeJSON()
 }
+
+

@@ -50,7 +50,7 @@ func (m *Books) BeforeCreate(scope *gorm.Scope) (err error) {
 func (m *Books) Pagination(offset, limit int, key string) (res []Books, count int) {
 	query := Db
 	if key != "" {
-		query = query.Where("book_name like ?", fmt.Sprintf("%s%%",key))
+		query = query.Where("book_name like ?", fmt.Sprintf("%s%%", key))
 	}
 	query.Offset(offset).Limit(limit).Order("id desc").Find(&res)
 	query.Model(Books{}).Count(&count)
@@ -64,8 +64,8 @@ func (m *Books) Create() (err error, newAttr *Books) {
 }
 
 func (m *Books) Update() (err error, newAttr Books) {
-	if m.ID > 0 {
-		err = Db.Model(&newAttr).Where("id=?", m.ID).Update(m).Error
+	if m.Id > 0 {
+		err = Db.Model(&newAttr).Where("id=?", m.Id).Update(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
@@ -73,8 +73,17 @@ func (m *Books) Update() (err error, newAttr Books) {
 }
 
 func (m *Books) Delete() (err error) {
-	if m.ID > 0 {
+	if m.Id > 0 {
 		err = Db.Delete(m).Error
+	} else {
+		err = errors.New("id参数错误")
+	}
+	return
+}
+
+func (m *Books) DelBath(ids []int) (err error) {
+	if len(ids) > 0 {
+		err = Db.Where("id in ()", ids).Delete(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}

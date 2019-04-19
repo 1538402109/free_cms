@@ -12,7 +12,7 @@ import (
 var Db *gorm.DB
 
 type Model struct {
-	ID        int       `json:"id" form:"id" gorm:"primary_key"`
+	Id        int       `json:"id" form:"id" gorm:"primary_key"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 	DeletedAt time.Time `json:"deleted_at" sql:"index"`
@@ -58,8 +58,10 @@ func CloseDB() {
 
 func GetMysqlMsg()(mysqlMsg map[string]string){
 	mysqlMsg = make(map[string]string)
-	Db.Row()
-	mysqlMsg["version"] = "5.6"
-
+	var version string
+	if err := Db.Raw("select version()").Row().Scan(&version);err!=nil{
+		log.Println(err)
+	}
+	mysqlMsg["version"] = version
 	return
 }

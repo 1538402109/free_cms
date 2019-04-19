@@ -113,8 +113,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
                     body.find(".book_describe").val(edit.book_describe);
                     body.find(".book_status select").val(edit.book_status);
                     body.find("input[name='book_type'][value='" + edit.book_type + "']").prop("checked", "checked");
-                    body.find("input[name='preg_id'][value='"+edit.preg_id+"']").attr("checked", true)
-                    body.find("input[name='book_type'][value='"+edit.book_type+"']").attr("checked", true)
+                    body.find("input[name='preg_id'][value='"+edit.preg_id+"']").prop("checked", true)
+                    body.find("input[name='book_type'][value='"+edit.book_type+"']").prop("checked", true)
                     body.find(".book_status").val(edit.book_status)
                     if (edit.is_top) {
                         body.find("input[name='is_top']").prop("checked", "checked");
