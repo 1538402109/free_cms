@@ -12,6 +12,11 @@ type MainController struct {
 }
 
 func (c *MainController) Admin() {
+/*	var bookstype []models.BooksType
+	models.Db.Find(&bookstype)
+	_,v:=models.NewBooksType().FindTree(bookstype)
+	c.Data["json"] =v
+	c.ServeJSON()*/
 	c.TplName = "admin/default/index.html"
 }
 

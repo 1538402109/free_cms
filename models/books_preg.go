@@ -1,7 +1,6 @@
 package models
 
 import (
-	"fmt"
 	"errors"
 	"github.com/jinzhu/gorm"
 )
@@ -39,7 +38,7 @@ func (m *BooksPreg) AfterFind(scope *gorm.Scope) (err error) {
 func (m *BooksPreg) Pagination(offset, limit int, key string) (res []BooksPreg, count int) {
 	query := Db
 	if key != "" {
-		query = query.Where("name like ?", fmt.Sprintf("%s%%",key))
+		query = query.Where("name like ?", "%"+key+"%")
 	}
 	query.Offset(offset).Limit(limit).Order("id desc").Find(&res)
 	query.Model(BooksPreg{}).Count(&count)

@@ -14,9 +14,11 @@ func LayuiJson(code int,msg string,data ...interface{})(jsonData map[string]inte
 	jsonData = make(map[string]interface{}, 3)
 	jsonData["code"] = code
 	jsonData["msg"] = msg
-	if len(data) > 0 && data[0] !=nil{
-		jsonData["data"] = data[0]
+	if len(data) > 1 {
 		jsonData["count"] = data[1]
+	}
+	if len(data)>0{
+		jsonData["data"] = data[0]
 	}
 	return
 }

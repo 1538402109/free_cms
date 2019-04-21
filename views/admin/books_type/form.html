@@ -1,12 +1,25 @@
 <form class="layui-form layui-row layui-col-space10" lay-filter="getForm" action="xx">
 
     <div class="layui-col-md9 layui-col-xs12">
+
+        <div class="layui-form-item magt3">
+            <label class="layui-form-label">上级分类</label>
+            <div class="layui-input-block">
+                <select name="pid" lay-verify="pid" class="pid">
+                    {{range $k,$v:=.booksType}}
+                        <option value="{{$v.Id}}">{{$v.NameText}}</option>
+                    {{end}}
+                </select>
+            </div>
+        </div>
+
         <div class="layui-form-item magt3">
             <label class="layui-form-label">名称*</label>
             <div class="layui-input-block">
                 <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="">
             </div>
         </div>
+
 
         <hr class="layui-bg-gray" />
         <div class="layui-right">

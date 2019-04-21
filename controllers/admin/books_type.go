@@ -12,12 +12,11 @@ type BooksTypeController struct {
 
 func (c *BooksTypeController) Index() {
 	if c.Ctx.Input.IsAjax() {
-		page, _ := c.GetInt("page")
-		limit, _ := c.GetInt("limit")
 		key := c.GetString("key", "")
 
-		result, count := models.NewBooksType().Pagination((page-1)*limit, limit, key)
-		c.Success(0,"ok",result,count)
+		_,result:=models.NewBooksType().FindTree(key)
+
+		c.Success(0,"ok",result)
 		return
 	}
 	c.TplName = ADMIN_TPL + "books_type/index.html"
@@ -50,6 +49,8 @@ func (c *BooksTypeController) Create() {
 		c.Success(0,"添加成功")
 		return
 	}
+	_,result:=models.NewBooksType().FindTree("")
+	c.Data["booksType"] = result
 	c.TplName = ADMIN_TPL + "books_type/create.html"
 }
 
@@ -80,6 +81,8 @@ func (c *BooksTypeController) Update() {
 		c.Success(0,"修改成功")
 		return
 	}
+	_,result:=models.NewBooksType().FindTree("")
+	c.Data["booksType"] = result
 	c.TplName = ADMIN_TPL + "books_type/update.html"
 }
 

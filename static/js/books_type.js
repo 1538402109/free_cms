@@ -11,15 +11,15 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
         elem: '#jsonTable',
         url: '/books-type/index',
         cellMinWidth: 95,
-        page: true,
+        //page: true,
         height: "full-125",
-        limit: 10,
-        limits: [10, 15, 20, 25],
+        //limit: 10,
+        //limits: [10, 15, 20, 25],
         //id: "booksListTable",
         cols: [[
             {type: "checkbox", fixed: "left", width: 50},
             {field: 'id', title: 'ID', width: 60, align: "center"},
-            {field: 'name', title: '规则名称'},
+            {field: 'name_text', title: '规则名称'},
             {title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
         ]]
     });
@@ -83,6 +83,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
                 if (edit) {
                     body.find(".layui-form").attr("action", "update?id=" + edit.id)
                     body.find(".name").val(edit.name);
+                    body.find(".pid").val(edit.pid)
                     form.render();
                 } else {
                     body.find(".layui-form").attr("action", "create")

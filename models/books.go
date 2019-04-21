@@ -2,7 +2,6 @@ package models
 
 import (
 	"errors"
-	"fmt"
 	"github.com/jinzhu/gorm"
 	"time"
 )
@@ -36,7 +35,7 @@ func NewBooks() (books *Books) {
 func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
 	m.CreatedAtText = m.CreatedAt.Unix()
 	m.BookLastAtText = m.BookLastAt.Unix()
-	_,booksType:=NewBooksType().FindColumn()
+	_, booksType := NewBooksType().FindColumn()
 	m.BookTypeText = booksType[m.BookType]
 	return
 }
@@ -49,7 +48,7 @@ func (m *Books) BeforeCreate(scope *gorm.Scope) (err error) {
 func (m *Books) Pagination(offset, limit int, key string) (res []Books, count int) {
 	query := Db
 	if key != "" {
-		query = query.Where("book_name like ?", fmt.Sprintf("%s%%", key))
+		query = query.Where("book_name like ?", "%"+key+"%")
 	}
 	query.Offset(offset).Limit(limit).Order("id desc").Find(&res)
 	query.Model(Books{}).Count(&count)
