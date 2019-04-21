@@ -10,7 +10,6 @@ type BooksPreg struct {
 	Model
 	Name       string    `json:"name"                           form:"name"`
 	ListMsgBlock string `json:"list_msg_block"                  form:"list_msg_block"`
-	ListTitle string `json:"list_title"                         form:"list_title"`
 	ListAuthor string `json:"list_author"                       form:"list_author"`
 	ListAuthorFilter string `json:"list_author_filter"          form:"list_author_filter"`
 	ListNewChapter string `json:"list_new_chapter"              form:"list_new_chapter"`
@@ -19,6 +18,7 @@ type BooksPreg struct {
 	ListDescribeFilter string `json:"list_describe_filter"      form:"list_describe_filter"`
 	ListABlock string `json:"list_a_block"                      form:"list_a_block"`
 	ContentBlock string `json:"content_block"                   form:"content_block"`
+	ContentTitle string `json:"content_title"                   form:"content_title"`
 	ContentTitleFilter string `json:"content_title_filter"      form:"content_title_filter"`
 	ContentText string `json:"content_text"                     form:"content_text"`
 	ContentTextFilter string `json:"content_text_filter"        form:"content_text_filter"`

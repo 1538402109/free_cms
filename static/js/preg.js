@@ -24,7 +24,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
             {field: 'list_describe', title: '描述', align: 'center'},
             {field: 'list_a_block', title: '列表链接', align: 'center'},
             {field: 'content_block', title: '内容块', align: 'center'},
-            {field: 'list_title', title: '内容标题', align: 'center'},
+            {field: 'content_title', title: '内容标题', align: 'center'},
             {field: 'content_text', title: '内容文本', align: 'center'},
             {title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
         ]]
@@ -91,7 +91,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
                     body.find(".name").val(edit.name);
                     body.find(".list_a_block").val(edit.list_a_block);
                     body.find(".content_block").val(edit.content_block);
-                    body.find(".list_title").val(edit.list_title);
+                    body.find(".content_title").val(edit.content_title);
                     body.find(".content_text").val(edit.content_text);
                     form.render();
                 } else {

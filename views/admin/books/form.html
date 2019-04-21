@@ -2,42 +2,82 @@
     .book-type p{float:left;width:50%;}
 </style>
 <form class="layui-form layui-row layui-col-space10" lay-filter="books" action="xx">
-    <div class="layui-col-md9 layui-col-xs12">
-        <div class="layui-form-item magt3">
-            <label class="layui-form-label">小说名称*</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input book_name" lay-verify="book_name" name="book_name" placeholder="">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">列表页地址*</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input list_url" lay-verify="list_url" name="list_url" placeholder="">
-            </div>
-        </div>
 
-        <div class="layui-form-item" pane="">
-            <label class="layui-form-label">规则</label>
-            <div class="layui-input-block">
-                {{range $k,$v := .booksPregs}}
-                <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary">
-                {{end}}
-            </div>
-        </div>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">基本设置</li>
+            <li>seo设置</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
 
-        <div class="layui-form-item">
-            <label class="layui-form-label">作者</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input book_author" name="book_author" placeholder="">
+                <div class="layui-col-md9 layui-col-xs12">
+                    <div class="layui-form-item magt3">
+                        <label class="layui-form-label">小说名称*</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input book_name" lay-verify="book_name" name="book_name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">列表页地址*</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input list_url" lay-verify="list_url" name="list_url" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" pane="">
+                        <label class="layui-form-label">规则</label>
+                        <div class="layui-input-block">
+                            {{range $k,$v := .booksPregs}}
+                                <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary">
+                            {{end}}
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">作者</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input book_author" name="book_author" placeholder="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">描述</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea book_describe" name="book_describe"></textarea>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">描述</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容" class="layui-textarea book_describe" name="book_describe"></textarea>
+
+            <div class="layui-tab-item">
+                <div class="layui-col-md9 layui-col-xs12">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">seo标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input seo_title" name="seo_title" placeholder="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">seo关键字</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input seo_keyword" name="seo_keyword" placeholder="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">seo描述</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea seo_describe" name="seo_describe"></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+
+
+
     <div class="layui-col-md3 layui-col-xs12">
         <blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i>类型</blockquote>
         <div class="border category">

@@ -29,8 +29,6 @@ type Books struct {
 	BookTypeText   string `json:"book_type_text"    gorm:"-"`
 }
 
-var BookType = map[int]string{1: "玄幻", 2: "修真", 3: "穿越", 4: "网游", 5: "科幻", 6: "武侠", 7: "言情", 8: "都市"}
-
 func NewBooks() (books *Books) {
 	return &Books{}
 }
@@ -38,7 +36,8 @@ func NewBooks() (books *Books) {
 func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
 	m.CreatedAtText = m.CreatedAt.Unix()
 	m.BookLastAtText = m.BookLastAt.Unix()
-	m.BookTypeText = BookType[m.BookType]
+	_,booksType:=NewBooksType().FindColumn()
+	m.BookTypeText = booksType[m.BookType]
 	return
 }
 

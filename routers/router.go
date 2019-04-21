@@ -25,6 +25,12 @@ func init() {
 	beego.Router("/books-preg/delete", &admin.BooksPregController{},"*:Delete")
 	beego.Router("/books-preg/batch-delete", &admin.BooksPregController{},"*:BatchDelete")
 
+	beego.Router("/books-type/index", &admin.BooksTypeController{},"*:Index")
+	beego.Router("/books-type/create", &admin.BooksTypeController{},"*:Create")
+	beego.Router("/books-type/update", &admin.BooksTypeController{},"*:Update")
+	beego.Router("/books-type/delete", &admin.BooksTypeController{},"*:Delete")
+	beego.Router("/books-type/batch-delete", &admin.BooksTypeController{},"*:BatchDelete")
+
 	beego.Router("/members/center", &admin.MembersController{},"*:Center")
 	beego.Router("/members/center/add", &admin.MembersController{},"*:CenterAdd")
 	beego.Router("/members/level", &admin.MembersController{},"*:Level")
