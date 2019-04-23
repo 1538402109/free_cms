@@ -9,9 +9,12 @@ const ADMIN_TPL = "admin/"
 
 type BaseController struct {
 	beego.Controller
+	ADMIN_TPL string
 }
 
 func (c *BaseController) Prepare() {
+	c.ADMIN_TPL="admin/"
+
 	controller, action := c.GetControllerAndAction()
 	//if controller!="UserController" && c.GetSession("loginUser") == nil{
 	//	c.History("未登录","/login")

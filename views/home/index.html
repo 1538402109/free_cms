@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+{{template "home/public/head.html".}}
+</head>
+<body>
+
+{{template "home/public/nav.html".}}
+
+<div class="article">
+    <h2 class="title"><span>封面推荐</span></h2>
+    <div class="block">
+        {{range $k,$v:=.books8}}
+        <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/10489s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+        <div class="block_txt">
+            <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+            <p>作者：{{$v.BookAuthor}}</p>
+            <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}}</a></p>
+        </div>
+        <div style="clear:both"></div>
+        {{end}}
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/6">玄幻小说</a></span><a href="/list/6">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books1}}
+            {{if eq 0 $k}}
+            <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+            <div class="block_txt">
+                <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                <p>作者：{{$v.BookAuthor}}</p>
+                <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+            </div>
+            <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books1}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/7">仙侠小说</a></span><a href="/list/7">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books2}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books2}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/8">都市小说</a></span><a href="/list/8">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books3}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books3}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/9">历史小说</a></span><a href="/list/9">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books4}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books4}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/10">网游小说</a></span><a href="/list/10">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books5}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books5}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/11">科幻小说</a></span><a href="/list/11">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books6}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books6}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+<div class="article">
+    <h2 class="title"><span><a href="/list/12">其他</a></span><a href="/list/12">更多...</a></h2>
+    <div class="block">
+        {{range $k,$v:=.books7}}
+            {{if eq 0 $k}}
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="/static/home/images/15409s.jpg" onerror="this.src='http://www.xbiquge.la/modules/article//static/home/images/nocover.jpg'"/></a></div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
+            {{end}}
+        {{end}}
+        <ul>
+            {{range $k,$v:=.books7}}
+                {{if lt 0 $k}}
+                    <li><a href="/books-list/{{$v.Id}}" class="blue">{{$v.BookName}}</a>/{{$v.BookAuthor}}</li>
+                {{end}}
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+
+{{template "home/public/foot.html" .}}
+</body>
+</html>

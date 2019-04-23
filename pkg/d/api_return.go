@@ -28,8 +28,8 @@ func TableJson(data interface{},col... interface{})(jsonData map[string]interfac
 	jsonData = make(map[string]interface{}, 3)
 	jsonData["rows"] = data
 	if len(col)>0{
-		jsonData["limit"] = col[0]
-		jsonData["offset"] = col[1]
+		jsonData["offset"] = col[0]
+		jsonData["limit"] = col[1]
 		jsonData["total"] = col[2]
 	}
 	return

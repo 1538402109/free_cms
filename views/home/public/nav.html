@@ -1,0 +1,11 @@
+<div class="header">
+    <div class="logo"><a href="/">轻轻小说</a></div>
+</div>
+
+<div class="nav">
+    <ul>
+        {{range $k,$v:=.booksType}}
+        <li><a href="/list/{{$v.Id}}">{{$v.Name}}</a></li>
+        {{end}}
+    </ul>
+</div>

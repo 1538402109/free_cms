@@ -10,6 +10,7 @@ type Books struct {
 	Model
 	BookName       string    `json:"book_name"        form:"book_name"`
 	BookType       int       `json:"book_type"        form:"book_type"`
+	BookType2       int       `json:"book_type2"        form:"book_type2"`
 	BookAuthor     string    `json:"book_author"      form:"book_author"`
 	BookNewChapter string    `json:"book_new_chapter" form:"book_new_chapter"`
 	BookDescribe   string    `json:"book_describe"    form:"book_describe"`
@@ -22,6 +23,7 @@ type Books struct {
 	SeoTitle       string    `json:"seo_title"        form:"seo_title"`
 	SeoKeyword     string    `json:"seo_keyword"      form:"seo_keyword"`
 	SeoDescribe    string    `json:"seo_describe"     form:"seo_describe"`
+	BookTypes	   BooksType `gorm:"ForeignKey:Id;AssociationForeignKey:BookType"`
 
 	CreatedAtText  int64  `json:"created_at_text"   gorm:"-"`
 	BookLastAtText int64  `json:"book_last_at_text" gorm:"-"`

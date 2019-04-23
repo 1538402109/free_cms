@@ -1,13 +1,14 @@
-package admin
+package books
 
 import (
+	"free_cms/controllers/admin"
 	"free_cms/models"
 	"frp/utils/log"
 	"github.com/astaxie/beego/validation"
 )
 
 type BooksTypeController struct {
-	BaseController
+	admin.BaseController
 }
 
 func (c *BooksTypeController) Index() {
@@ -19,7 +20,7 @@ func (c *BooksTypeController) Index() {
 		c.Success(0,"ok",result)
 		return
 	}
-	c.TplName = ADMIN_TPL + "books_type/index.html"
+	c.TplName = c.ADMIN_TPL + "books_type/index.html"
 }
 
 func (c *BooksTypeController) Create() {
@@ -51,7 +52,7 @@ func (c *BooksTypeController) Create() {
 	}
 	_,result:=models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
-	c.TplName = ADMIN_TPL + "books_type/create.html"
+	c.TplName = c.ADMIN_TPL + "books_type/create.html"
 }
 
 func (c *BooksTypeController) Update() {
@@ -83,7 +84,7 @@ func (c *BooksTypeController) Update() {
 	}
 	_,result:=models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
-	c.TplName = ADMIN_TPL + "books_type/update.html"
+	c.TplName = c.ADMIN_TPL + "books_type/update.html"
 }
 
 func (c *BooksTypeController) Delete() {

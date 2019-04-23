@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{template "home/public/head.html".}}
+</head>
+<body id="nr_body" class="nr_all c_nr">
+<div class="header" id="_bqgmb_head">
+    <div class="back"><a href="javascript:history.go(-1);">返回</a></div>
+    <h1 id="_bqgmb_h1">{{.article.Title}}</h1>
+    <div class="back_r"><a href="/">首页</a></div>
+</div>
+<div>
+    <div class="nr_set">
+        <div id="lightdiv" class="set1" onclick="nr_setbg('light')">关灯</div>
+        <div id="huyandiv" class="set1" onclick="nr_setbg('huyan')">护眼</div>
+        <div class="set2"><div>字:</div><div id="fontbig" onclick="nr_setbg('big')">大</div> <div id="fontmiddle" onclick="nr_setbg('middle')" >中</div> <div id="fontsmall" onclick="nr_setbg('small')">小</div></div>
+        <div class="cc"></div>
+    </div>
+    <div class="nr_page">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="prev"><a id="pb_prev" href="{{.article.PrevHref}}">上一章</a></td>
+                <td class="mulu"><a id="pb_mulu" href="{{.article.ListHref}}">回目录</a></td>
+                <td class="next"><a id="pb_next" href="{{.article.NextHref}}">下一章</a></td>
+                <td class="mulu"><a id="pt_shouye" href="">加入书架</a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="nr" class="nr_nr">
+        <div id="nr1">
+            {{.article.Content|str2html}}
+        </div>
+    </div>
+
+    <div class="nr_page">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="prev"><a id="pb_prev" href="{{.article.PrevHref}}">上一章</a></td>
+                <td class="mulu"><a id="pb_mulu" href="{{.article.ListHref}}">回目录</a></td>
+                <td class="next"><a id="pb_next" href="{{.article.NextHref}}">下一章</a></td>
+                <td class="mulu"><a id='pb_shouye' href="Javascript:void(0);" onclick="javascript:putbookmark(23537,17123860);"><font>加入书架</font></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+{{template "home/public/foot.html" .}}
+{{template "home/public/scripts.html" .}}
+
+</body>
+</html>

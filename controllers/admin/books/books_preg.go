@@ -1,13 +1,14 @@
-package admin
+package books
 
 import (
+	"free_cms/controllers/admin"
 	"free_cms/models"
 	"frp/utils/log"
 	"github.com/astaxie/beego/validation"
 )
 
 type BooksPregController struct {
-	BaseController
+	admin.BaseController
 }
 
 func (c *BooksPregController) Index() {
@@ -20,7 +21,7 @@ func (c *BooksPregController) Index() {
 		c.Success(0,"ok",result,count)
 		return
 	}
-	c.TplName = ADMIN_TPL + "books_preg/index.html"
+	c.TplName = c.ADMIN_TPL + "books_preg/index.html"
 }
 
 func (c *BooksPregController) Create() {
@@ -54,7 +55,7 @@ func (c *BooksPregController) Create() {
 		c.Success(0,"添加成功")
 		return
 	}
-	c.TplName = ADMIN_TPL + "books_preg/create.html"
+	c.TplName = c.ADMIN_TPL + "books_preg/create.html"
 }
 
 func (c *BooksPregController) Update() {
@@ -88,7 +89,7 @@ func (c *BooksPregController) Update() {
 		c.Success(0,"修改成功")
 		return
 	}
-	c.TplName = ADMIN_TPL + "books_preg/update.html"
+	c.TplName = c.ADMIN_TPL + "books_preg/update.html"
 }
 
 func (c *BooksPregController) Delete() {
