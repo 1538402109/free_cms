@@ -76,7 +76,7 @@ func (c *BooksPregController) Update() {
 		valid.Required(booksPreg.ContentText,"content_text").Message("内容文本不能为空")
 		if valid.HasErrors(){
 			for _, err := range valid.Errors {
-				log.Info(err.Key, err.Message)
+				log.Println(err.Key, err.Message)
 			}
 			c.Error(0,"验证失败")
 			return
