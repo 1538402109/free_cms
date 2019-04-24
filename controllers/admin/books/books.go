@@ -3,7 +3,7 @@ package books
 import (
 	"free_cms/controllers/admin"
 	"free_cms/models"
-	"frp/utils/log"
+	"log"
 	"github.com/astaxie/beego/validation"
 )
 
@@ -39,7 +39,7 @@ func (c *BooksController) Create() {
 		valid.Required(books.PregId, "preg_id").Message("采集规则不能为空")
 		if valid.HasErrors() {
 			for _, err := range valid.Errors {
-				log.Info(err.Key, err.Message)
+				log.Println(err.Key, err.Message)
 			}
 			c.Error(0, "验证失败")
 			return
@@ -79,7 +79,7 @@ func (c *BooksController) Update() {
 		valid.Required(books.PregId, "preg_id").Message("采集规则不能为空")
 		if valid.HasErrors() {
 			for _, err := range valid.Errors {
-				log.Info(err.Key, err.Message)
+				log.Println(err.Key, err.Message)
 			}
 			c.Error(0, "验证失败")
 			return
