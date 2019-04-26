@@ -42,13 +42,8 @@ func ConvertToByte(src string, srcCode string, targetCode string) []byte {
 	return cdata
 }
 
-func GbkToUtf8(s []byte) ([]byte, error) {
-	reader := transform.NewReader(bytes.NewReader(s), simplifiedchinese.GBK.NewDecoder())
-	d, e := ioutil.ReadAll(reader)
-	if e != nil {
-		return nil, e
-	}
-	return d, nil
+func GbkToUtf8(src string) (str string) {
+	return mahonia.NewDecoder("gbk").ConvertString(src)
 }
 
 func Utf8ToGbk(s []byte) ([]byte, error) {

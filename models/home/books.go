@@ -2,6 +2,7 @@ package home
 
 import (
 	"free_cms/models"
+	"github.com/jinzhu/gorm"
 )
 
 type Books struct {
@@ -10,6 +11,12 @@ type Books struct {
 
 func NewBooks() (books *Books) {
 	return &Books{}
+}
+
+func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
+	var types = []string{"连载","完本"}
+	m.BookType2Text = types[m.BookType2]
+	return
 }
 
 func (m *Books) Pagination(offset, limit int, key string, bookType int) (res []Books, count int) {
@@ -25,7 +32,7 @@ func (m *Books) Pagination(offset, limit int, key string, bookType int) (res []B
 	return
 }
 
-func (m *Books) FindByBooksType(booksType, status, limit int) (err error, books []Books) {
+func (m *Books) FindByBooksType(booksType, status, limit int) (books []Books,err error) {
 	query := models.Db
 	if booksType > 0 {
 		query = query.Where("book_type=?", booksType)
@@ -37,7 +44,8 @@ func (m *Books) FindByBooksType(booksType, status, limit int) (err error, books 
 	return
 }
 
-func (m *Books)FindOfBtTable(pid,offset,limit int,key string,bookType2 int)(err error,books []Books,count int){
+//根据不同参数查询分页数据
+func (m *Books)FindOfBtTable(pid,offset,limit int,key string,bookType2 int)(books []Books,count int,err error){
 	query := models.Db.Preload("BookTypes")
 	if pid >0{
 		query = query.Where("book_type=?",pid)
@@ -54,6 +62,7 @@ func (m *Books)FindOfBtTable(pid,offset,limit int,key string,bookType2 int)(err 
 	return
 }
 
+//使用id查询一条数据
 func (m *Books)FindById(id int)(books Books,err error){
 	err = models.Db.Where("id=?",id).Preload("BookTypes").First(&books).Error
 	return

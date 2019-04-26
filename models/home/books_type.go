@@ -10,7 +10,7 @@ func NewBooksType()(*BooksType){
 	return &BooksType{}
 }
 
-func (m *BooksType) FindByPid(pid int) (err error, booksType []BooksType) {
+func (m *BooksType) FindByPid(pid int) (booksType []BooksType,err error) {
 	err = models.Db.Where("pid=?", pid).Find(&booksType).Error
 	return
 }

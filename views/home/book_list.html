@@ -33,23 +33,23 @@
 </div>
 <div class="cover">
     <div class="block">
-        <div class="block_img2"><img src="images/23537s.jpg" border="0" width='92' height='116'/>
+        <div class="block_img2"><img src="{{if eq "" .bookMsg.BookImg}} {{.list.BookImg}} {{else}}{{.bookMsg.BookImg}} {{end}}" border="0" width='92' height='116'/>
         </div>
         <div class="block_txt2">
             <p><a href=""><h2>{{.bookMsg.BookName}}</h2></a></P>
-            <p>作者：{{.bookMsg.BookAuthor}}</p>
+            <p>作者：{{if eq "" .bookMsg.BookAuthor}} {{.list.BookAuthor}} {{else}}{{.bookMsg.BookAuthor}} {{end}}</p>
             <p>分类：<a href="">{{.bookMsg.BookTypes.Name}}</a></p>
-            <p>状态：{{.bookMsg.BookType2}}</p>
-            <p>更新：{{.bookMsg.BookLastAtText}}</p>
-            <p>最新：<a href="">{{.bookMsg.BookNewChapter}}</a></p>
+            <p>状态：{{.bookMsg.BookType2Text}}</p>
+            <p>更新：{{if eq "" .bookMsg.BookLastAt}} {{.list.BookLastAt}} {{else}}{{.bookMsg.BookLastAt}} {{end}}</p>
+            <p>最新：<a href="">{{if eq "" .bookMsg.BookNewChapter}} {{.list.BookNewChapter}} {{else}}{{.bookMsg.BookNewChapter}} {{end}}</a></p>
         </div>
     </div>
     <div style="clear:both"></div>
     <div class="intro">《{{.bookMsg.BookName}}》小说简介</div>
-    <div class="intro_info">{{.bookMsg.BookDescribe}}</div>
+    <div class="intro_info">{{if eq "" .bookMsg.BookDescribe}} {{.list.BookDescribe}} {{else}}{{.bookMsg.BookDescribe}} {{end}}</div>
     <div class="intro">正文</div>
     <ul class="chapter">
-        {{range $k,$v:=.list}}
+        {{range $k,$v:=.list.BookListMsgs}}
         <li><a href="{{$v.Href}}">{{$v.Title}}</a></li>
         {{end}}
     </ul>

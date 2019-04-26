@@ -8,17 +8,14 @@ import (
 type BooksPreg struct {
 	Model
 	Name       string    `json:"name"                           form:"name"`
-	ListMsgBlock string `json:"list_msg_block"                  form:"list_msg_block"`
 	ListAuthor string `json:"list_author"                       form:"list_author"`
 	ListAuthorFilter string `json:"list_author_filter"          form:"list_author_filter"`
 	ListNewChapter string `json:"list_new_chapter"              form:"list_new_chapter"`
 	ListNewChapterFilter string `json:"list_new_chapter_filter" form:"list_new_chapter_filter"`
 	ListDescribe string `json:"list_describe"                   form:"list_describe"`
 	ListDescribeFilter string `json:"list_describe_filter"      form:"list_describe_filter"`
-	ListABlock string `json:"list_a_block"                      form:"list_a_block"`
-	ContentBlock string `json:"content_block"                   form:"content_block"`
-	ContentTitle string `json:"content_title"                   form:"content_title"`
-	ContentTitleFilter string `json:"content_title_filter"      form:"content_title_filter"`
+	ListMsgImg string `json:"list_msg_img"                      form:"list_msg_img"`
+	ListA string `json:"list_a"                      form:"list_a"`
 	ContentText string `json:"content_text"                     form:"content_text"`
 	ContentTextFilter string `json:"content_text_filter"        form:"content_text_filter"`
 
@@ -53,10 +50,11 @@ func (m *BooksPreg) Create() (err error, newAttr *BooksPreg) {
 
 func (m *BooksPreg) Update() (err error, newAttr BooksPreg) {
 	if m.Id > 0 {
-		err = Db.Model(&newAttr).Where("id=?", m.Id).Update(m).Error
+		err = Db.Where("id=?", m.Id).Save(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
+	newAttr = *m
 	return
 }
 

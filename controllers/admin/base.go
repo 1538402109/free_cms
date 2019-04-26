@@ -34,7 +34,7 @@ func (c *BaseController) History(msg string, url string) {
 	}
 }
 
-func (c *BaseController) Success(code int, msg string, data ...interface{}) {
+func (c *BaseController) JsonResult(code int, msg string, data ...interface{}) {
 	if len(data) > 1 {
 		c.Data["json"] = d.LayuiJson(code, msg, data[0], data[1])
 	} else if len(data) > 0 {
@@ -43,15 +43,5 @@ func (c *BaseController) Success(code int, msg string, data ...interface{}) {
 		c.Data["json"] = d.LayuiJson(code, msg)
 	}
 	c.ServeJSON()
-}
-
-func (c *BaseController) Error(code int, msg string, data ...interface{}) {
-	if len(data) > 1 {
-		c.Data["json"] = d.LayuiJson(code, msg, data[0])
-	} else if len(data) > 0 {
-		c.Data["json"] = d.LayuiJson(code, msg, data[0], data[1])
-	} else {
-		c.Data["json"] = d.LayuiJson(code, msg)
-	}
-	c.ServeJSON()
+	c.StopRun()
 }

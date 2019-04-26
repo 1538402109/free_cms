@@ -18,8 +18,7 @@ func (c *BooksController) Index() {
 		key := c.GetString("key", "")
 
 		result, count := models.NewBooks().Pagination((page-1)*limit, limit, key)
-		c.Success(0, "ok", result, count)
-		return
+		c.JsonResult(0, "ok", result, count)
 	}
 	c.TplName = c.ADMIN_TPL + "books/index.html"
 }
@@ -29,8 +28,7 @@ func (c *BooksController) Create() {
 		books := models.NewBooks()
 		//1.压入数据
 		if err := c.ParseForm(books); err != nil {
-			c.Error(0, "表单赋值失败")
-			return
+			c.JsonResult(0, "表单赋值失败")
 		}
 		//2.验证，在模型中验证不能分场景
 		valid := validation.Validation{}
@@ -41,17 +39,14 @@ func (c *BooksController) Create() {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.Error(0, "验证失败")
-			return
+			c.JsonResult(0, "验证失败")
 		}
 
 		//3.插入数据
 		if err, _ := books.Create(); err != nil {
-			c.Error(0, "添加失败")
-			return
+			c.JsonResult(0, "添加失败")
 		}
-		c.Success(0, "添加成功")
-		return
+		c.JsonResult(0, "添加成功")
 	}
 
 	var booksPregs []models.BooksPreg
@@ -68,8 +63,7 @@ func (c *BooksController) Update() {
 		books := models.NewBooks()
 		//1
 		if err := c.ParseForm(books); err != nil {
-			c.Error(0, "表单赋值失败")
-			return
+			c.JsonResult(0, "表单赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
@@ -81,16 +75,13 @@ func (c *BooksController) Update() {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.Error(0, "验证失败")
-			return
+			c.JsonResult(0, "验证失败")
 		}
 		//3
 		if err, _ := books.Update(); err != nil {
-			c.Error(0, "更新失败")
-			return
+			c.JsonResult(0, "更新失败")
 		}
-		c.Success(0, "修改成功")
-		return
+		c.JsonResult(0, "修改成功")
 	}
 
 	var booksPregs []models.BooksPreg
@@ -107,23 +98,20 @@ func (c *BooksController) Delete() {
 	id, _ := c.GetInt("id")
 	books.Id = id
 	if err := books.Delete(); err != nil {
-		c.Error(0, "删除失败")
-		return
+		c.JsonResult(0, "删除失败")
 	}
-	c.Success(0, "删除成功")
+	c.JsonResult(0, "删除成功")
 }
 
 func (c *BooksController) BatchDelete() {
 	var ids []int
 	if err := c.Ctx.Input.Bind(&ids, "ids"); err != nil {
-		c.Error(0, "赋值失败")
-		return
+		c.JsonResult(0, "赋值失败")
 	}
 
 	books := models.NewBooks()
 	if err := books.DelBath(ids); err != nil {
-		c.Error(0, "删除失败")
-		return
+		c.JsonResult(0, "删除失败")
 	}
-	c.Success(0, "删除成功")
+	c.JsonResult(0, "删除成功")
 }

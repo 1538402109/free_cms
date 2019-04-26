@@ -17,8 +17,7 @@ func (c *BooksTypeController) Index() {
 
 		_,result:=models.NewBooksType().FindTree(key)
 
-		c.Success(0,"ok",result)
-		return
+		c.JsonResult(0,"ok",result)
 	}
 	c.TplName = c.ADMIN_TPL + "books_type/index.html"
 }
@@ -28,8 +27,7 @@ func (c *BooksTypeController) Create() {
 		BooksType := models.NewBooksType()
 		//1.压入数据
 		if err := c.ParseForm(BooksType); err != nil {
-			c.Error(0,"赋值失败")
-			return
+			c.JsonResult(0,"赋值失败")
 		}
 		//2.验证，在模型中验证不能分场景
 		valid := validation.Validation{}
@@ -38,17 +36,14 @@ func (c *BooksTypeController) Create() {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.Error(0,"验证失败")
-			return
+			c.JsonResult(0,"验证失败")
 		}
 
 		//3.插入数据
 		if err, _ := BooksType.Create(); err != nil {
-			c.Error(0,"创建失败")
-			return
+			c.JsonResult(0,"创建失败")
 		}
-		c.Success(0,"添加成功")
-		return
+		c.JsonResult(0,"添加成功")
 	}
 	_,result:=models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
@@ -60,8 +55,7 @@ func (c *BooksTypeController) Update() {
 		BooksType := models.NewBooksType()
 		//1
 		if err := c.ParseForm(BooksType); err != nil {
-			c.Error(0,"赋值失败")
-			return
+			c.JsonResult(0,"赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
@@ -71,16 +65,13 @@ func (c *BooksTypeController) Update() {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.Error(0,"验证失败")
-			return
+			c.JsonResult(0,"验证失败")
 		}
 		//3
 		if err, _ := BooksType.Update(); err != nil {
-			c.Error(0,"修改失败")
-			return
+			c.JsonResult(0,"修改失败")
 		}
-		c.Success(0,"修改成功")
-		return
+		c.JsonResult(0,"修改成功")
 	}
 	_,result:=models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
@@ -92,23 +83,20 @@ func (c *BooksTypeController) Delete() {
 	id, _ := c.GetInt("id")
 	BooksType.Id = id
 	if err := BooksType.Delete(); err != nil {
-		c.Error(0,"删除失败")
-		return
+		c.JsonResult(0,"删除失败")
 	}
-	c.Success(0,"删除成功")
+	c.JsonResult(0,"删除成功")
 }
 
 func (c *BooksTypeController)BatchDelete(){
 	var ids []int
 	if err := c.Ctx.Input.Bind(&ids,"ids");err !=nil{
-		c.Error(0,"赋值失败")
-		return
+		c.JsonResult(0,"赋值失败")
 	}
 
 	BooksType := models.NewBooksType()
 	if err := BooksType.DelBath(ids);err != nil{
-		c.Error(0,"删除失败")
-		return
+		c.JsonResult(0,"删除失败")
 	}
-	c.Success(0,"删除成功")
+	c.JsonResult(0,"删除成功")
 }

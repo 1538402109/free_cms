@@ -34,10 +34,11 @@ func (m *BooksType) Create() (err error, newAttr *BooksType) {
 
 func (m *BooksType) Update() (err error, newAttr BooksType) {
 	if m.Id > 0 {
-		err = Db.Model(&newAttr).Where("id=?", m.Id).Update(m).Error
+		err = Db.Where("id=?", m.Id).Save(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
+	newAttr = *m
 	return
 }
 
