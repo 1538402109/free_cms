@@ -75,3 +75,8 @@ func (m *BooksPreg)DelBath(ids []int)(err error){
 	}
 	return
 }
+
+func (m *BooksPreg)FindById(id int)(booksPreg BooksPreg,err error){
+	err = Db.Where("id=?",id).First(&booksPreg).Error
+	return
+}

@@ -2,7 +2,6 @@
 <html>
 <head>
     {{template "home/public/head.html".}}
-    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/static/plugins/bootstrap-table/dist/bootstrap-table.css">
     <style>
         .pull-right{float:none !important;}
@@ -29,12 +28,7 @@
 {{template "home/public/scripts.html" .}}
 <script>
 function show(id){
-    $.ajax({
-        url:"/list/"+id+"?limit=20&offset=0",
-        success:function (res) {
-            $('#book_list').bootstrapTable('load', res)
-        }
-    })
+    $('#book_list').bootstrapTable('refresh',{url: '/list/'+id})
 }
 
     $(document).ready(function () {
@@ -104,6 +98,14 @@ function show(id){
             },//隔行变色
         })
     });
+
+$(function () {
+    $(".nav .l"+getQuery()[4]).addClass("active")
+    $("#search").on("click",function () {
+        var keyword = $("#keyword").val()
+        $('#book_list').bootstrapTable('refresh',{url: '/list/4',query:{key:keyword}})
+    });
+});
 </script>
 </body>
 </html>

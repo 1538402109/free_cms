@@ -3,8 +3,8 @@ package books
 import (
 	"free_cms/controllers/admin"
 	"free_cms/models"
-	"log"
 	"github.com/astaxie/beego/validation"
+	"log"
 )
 
 type BooksController struct {
@@ -60,9 +60,10 @@ func (c *BooksController) Create() {
 
 func (c *BooksController) Update() {
 	if c.Ctx.Input.IsPost() {
-		books := models.NewBooks()
+		id,_ := c.GetInt("id")
+		books,_ := models.NewBooks().FindById(id)
 		//1
-		if err := c.ParseForm(books); err != nil {
+		if err := c.ParseForm(&books); err != nil {
 			c.JsonResult(0, "表单赋值失败")
 		}
 		//2

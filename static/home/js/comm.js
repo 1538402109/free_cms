@@ -329,3 +329,10 @@ function set(intype,p){
         }
     }
 }
+
+function getQuery()
+{
+    var url = window.document.location.href.toString();
+    var u = url.split("/");
+    return u;
+}

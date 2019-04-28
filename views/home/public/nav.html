@@ -3,9 +3,13 @@
 </div>
 
 <div class="nav">
-    <ul>
+    <ul class="clearfix">
         {{range $k,$v:=.booksType}}
-        <li><a href="/list/{{$v.Id}}">{{$v.Name}}</a></li>
+        <li class="l{{$v.Id}}" ><a href="/list/{{$v.Id}}">{{$v.Name}}</a></li>
         {{end}}
     </ul>
+</div>
+
+<div class="search">
+    <input type="text" style="width:80%;height:30px;font-size:16px;" id="keyword"><button style="width:20%;height:30px;" id="search">search</button>
 </div>

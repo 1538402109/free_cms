@@ -52,9 +52,10 @@ func (c *BooksPregController) Create() {
 
 func (c *BooksPregController) Update() {
 	if c.Ctx.Input.IsPost() {
-		booksPreg := models.NewBooksPreg()
+		id,_:= c.GetInt("id")
+		booksPreg,_ := models.NewBooksPreg().FindById(id)
 		//1
-		if err := c.ParseForm(booksPreg); err != nil {
+		if err := c.ParseForm(&booksPreg); err != nil {
 			c.JsonResult(0,"赋值失败")
 		}
 		//2

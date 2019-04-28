@@ -71,6 +71,9 @@ func (c *HomeController) List() {
 			bookType2 = 0
 			id2 = -1
 		}
+		if id2 == 5{
+			//书架
+		}
 		limit, _ := c.GetInt("limit", 10)
 		offset, _ := c.GetInt("offset", 0)
 		key := c.GetString("key")

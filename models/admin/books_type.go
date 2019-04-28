@@ -2,14 +2,11 @@ package models
 
 import (
 	"errors"
+	"free_cms/models"
 )
 
 type BooksType struct {
-	Model
-	Name string `json:"name" form:"name"`
-	Pid  int    `json:"pid" form:"pid"`
-
-	NameText string `json:"name_text" gorm:"-"`
+	models.BooksType
 }
 
 func NewBooksType() (books *BooksType) {
@@ -17,7 +14,7 @@ func NewBooksType() (books *BooksType) {
 }
 
 func (m *BooksType) Pagination(offset, limit int, key string) (res []BooksType, count int) {
-	query := Db
+	query := models.Db
 	if key != "" {
 		query = query.Where("name like ?", "%"+key+"%")
 	}
@@ -27,14 +24,14 @@ func (m *BooksType) Pagination(offset, limit int, key string) (res []BooksType, 
 }
 
 func (m *BooksType) Create() (err error, newAttr *BooksType) {
-	err = Db.Create(m).Error
+	err = models.Db.Create(m).Error
 	newAttr = m
 	return
 }
 
 func (m *BooksType) Update() (err error, newAttr BooksType) {
 	if m.Id > 0 {
-		err = Db.Where("id=?", m.Id).Save(m).Error
+		err = models.Db.Where("id=?", m.Id).Save(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
@@ -44,7 +41,7 @@ func (m *BooksType) Update() (err error, newAttr BooksType) {
 
 func (m *BooksType) Delete() (err error) {
 	if m.Id > 0 {
-		err = Db.Delete(m).Error
+		err = models.Db.Delete(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
@@ -53,7 +50,7 @@ func (m *BooksType) Delete() (err error) {
 
 func (m *BooksType) DelBath(ids []int) (err error) {
 	if len(ids) > 0 {
-		err = Db.Where("id in (?)", ids).Delete(m).Error
+		err = models.Db.Where("id in (?)", ids).Delete(m).Error
 	} else {
 		err = errors.New("id参数错误")
 	}
@@ -61,14 +58,14 @@ func (m *BooksType) DelBath(ids []int) (err error) {
 }
 
 func (m *BooksType) FindById(id int) (booksType BooksType, err error) {
-	err = Db.Where("id=?", id).First(&booksType).Error
+	err = models.Db.Where("id=?", id).First(&booksType).Error
 	return
 }
 
 func (m *BooksType) FindColumn() (err error, booksType map[int]string) {
 	booksType = make(map[int]string)
 	var booksTypes []BooksType
-	err = Db.Find(&booksTypes).Error
+	err = models.Db.Find(&booksTypes).Error
 	for _, v := range booksTypes {
 		booksType[v.Id] = v.Name
 	}
