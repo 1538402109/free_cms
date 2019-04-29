@@ -33,6 +33,7 @@ func (c *BooksPregController) Create() {
 		//2.验证，在模型中验证不能分场景
 		valid := validation.Validation{}
 		valid.Required(booksPreg.Name,"name").Message("规则名称不能为空")
+		valid.Required(booksPreg.ListA,"list_a").Message("列表链接不能为空")
 		valid.Required(booksPreg.ContentText,"content_text").Message("内容文本不能为空")
 		if valid.HasErrors(){
 			for _, err := range valid.Errors {
@@ -54,6 +55,7 @@ func (c *BooksPregController) Update() {
 	if c.Ctx.Input.IsPost() {
 		id,_:= c.GetInt("id")
 		booksPreg,_ := models.NewBooksPreg().FindById(id)
+
 		//1
 		if err := c.ParseForm(&booksPreg); err != nil {
 			c.JsonResult(0,"赋值失败")
@@ -62,7 +64,7 @@ func (c *BooksPregController) Update() {
 		valid := validation.Validation{}
 		valid.Required(booksPreg.Id,"id").Message("id不能为空")
 		valid.Required(booksPreg.Name,"name").Message("规则名称不能为空")
-		valid.Required(booksPreg.Name,"name").Message("规则名称不能为空")
+		valid.Required(booksPreg.ListA,"list_a").Message("列表链接不能为空")
 		valid.Required(booksPreg.ContentText,"content_text").Message("内容文本不能为空")
 		if valid.HasErrors(){
 			for _, err := range valid.Errors {

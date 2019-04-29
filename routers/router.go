@@ -12,6 +12,7 @@ func init() {
 	beego.Router("/list/:id", &home.HomeController{},"get:List")
 	beego.Router("/books-list/:id", &home.HomeController{},"get:BooksList")
 	beego.Router("/article/:cid/:id", &home.HomeController{},"get:Article")
+	beego.Router("/search", &home.HomeController{},"get:Search")
 
 
 	beego.Router("/admin", &admin.MainController{},"get:Admin")

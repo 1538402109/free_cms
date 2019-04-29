@@ -30,9 +30,9 @@ a{color:#000;text-decoration:none}
 .sort .yellow{color:#E4B307}
 .head_color{display:-webkit-box;display:-moz-box;display:box}
 .header{background:#007BB1;display:block;position:relative;font-size:16px;height:50px;line-height:50px}
-.header h1{font-size:16px;font-weight:400;height:50px;margin:0 70px 0 70px;text-align:center;color:#fff;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-.header .back{position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;font-size:14px;background-color:#65bbec;border-radius:3px;width:30px}
-.header .back_r{color:#fff;position:absolute;padding:0 10px;width:30px;height:28px;margin:10px 10px;line-height:28px;text-align:center;border-radius:3px;right:0;top:0;font-size:14px;background-color:#65bbec}
+.header h1{font-size:16px;font-weight:400;height:50px;text-align:center;color:#fff;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;position: relative;margin:0;line-height: 50px;}
+.header .back{position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;font-size:14px;background-color:#65bbec;border-radius:3px;z-index:1;}
+.header .back_r{color:#fff;position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;text-align:center;border-radius:3px;right:0;top:0;font-size:14px;background-color:#65bbec}
 .header a{color:#fff}
 .login_topbtn{padding:5px;margin-left:5px;border-radius:3px}
 .head_color{display:-webkit-box;display:-moz-box;display:box}

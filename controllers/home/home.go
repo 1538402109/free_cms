@@ -71,7 +71,7 @@ func (c *HomeController) List() {
 			bookType2 = 0
 			id2 = -1
 		}
-		if id2 == 5{
+		if id2 == 5 {
 			//书架
 		}
 		limit, _ := c.GetInt("limit", 10)
@@ -115,7 +115,16 @@ func (c *HomeController) Article() {
 }
 
 func (c *HomeController) Search() {
-
+	key := c.GetString("key")
+	if c.IsAjax() {
+		limit, _ := c.GetInt("limit", 10)
+		offset, _ := c.GetInt("offset", 0)
+		tabData, count, _ := home.NewBooks().FindOfBtTable(-1, offset, limit, key, -1)
+		c.Data["json"] = d.TableJson(tabData, offset, limit, count)
+		c.ServeJSON()
+	}
+	c.Data["key"] = key
+	c.TplName = "home/search.html"
 }
 
 type BookListMsg struct {
@@ -164,7 +173,7 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 	})
 
 	c.OnHTML("html", func(e *colly.HTMLElement) {
-		e.ForEach("#list a[href]", func(i int, element *colly.HTMLElement) {
+		e.ForEach(pregOne.ListA, func(i int, element *colly.HTMLElement) {
 			title := element.Text
 			if char == "gbk" {
 				title = util.GbkToUtf8(element.Text)
@@ -200,11 +209,10 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 
 		//跟新最新章节，最近跟新时间,作者，描述，封面图片
 		bookList.BookNewChapter = lastTitle
-
-		bookLastTime := e.DOM.Find("#maininfo p:nth-of-type(3)").Text()
-		bookAuthor := e.DOM.Find("#maininfo p:nth-of-type(1) a").Text()
-		bookDescribe := e.DOM.Find("#intro p").Text()
-		bookImg, _ := e.DOM.Find("#fmimg img").Attr("src")
+		bookLastTime := e.DOM.Find(pregOne.ListMsgLastTime).Text()
+		bookAuthor := e.DOM.Find(pregOne.ListAuthor).Text()
+		bookDescribe := e.DOM.Find(pregOne.ListDescribe).Text()
+		bookImg, _ := e.DOM.Find(pregOne.ListMsgImg).Attr("src")
 		if char == "gbk" {
 			bookLastTime = util.GbkToUtf8(bookLastTime)
 			bookAuthor = util.GbkToUtf8(bookAuthor)
@@ -214,10 +222,18 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 		//过滤
 		bookLastTime = strings.Replace(bookLastTime, "最后更新：", "", -1)
 
-		bookList.BookLastAt = bookLastTime
+		//更新
+		if res.BookLastAt != bookLastTime {
+			models.Db.Model(&models.Books{}).Where("id=?", res.Id).Update("book_last_at", bookLastTime)
+		}
 		if res.BookAuthor == "" {
 			models.Db.Model(&models.Books{}).Where("id=?", cid).Update("book_author", bookAuthor)
 		}
+		if res.BookNewChapter != lastTitle {
+			models.Db.Model(&models.Books{}).Where("id=?", res.Id).Update("book_new_chapter", lastTitle)
+		}
+
+		bookList.BookLastAt = bookLastTime
 		bookList.BookAuthor = bookAuthor
 		bookList.BookDescribe = bookDescribe
 		bookList.BookImg = bookImg

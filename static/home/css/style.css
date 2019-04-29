@@ -24,9 +24,8 @@ i,em{font-style: normal;}
 
 /*header*/
 .header{background:#007BB1;display:block;position:relative;font-size:16px;height:50px;line-height:50px}
-.header h1{font-size:16px;font-weight:400;height:50px;margin:0 70px 0 70px;text-align:center;color:#fff;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-.header .back{position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;font-size:14px;background-color:#65bbec;border-radius:3px;width:30px}
-.header .back_r{color:#fff;position:absolute;padding:0 10px;width:30px;height:28px;margin:10px 10px;line-height:28px;text-align:center;border-radius:3px;right:0;top:0;font-size:14px;background-color:#65bbec}
+.header .back{position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;font-size:14px;background-color:#65bbec;border-radius:3px;}
+.header .back_r{color:#fff;position:absolute;padding:0 10px;height:28px;margin:10px 10px;line-height:28px;text-align:center;border-radius:3px;right:0;top:0;font-size:14px;background-color:#65bbec}
 .header a{color:#0C0}
 .back a,.back_r a{color:#fff}
 .logo{float:left;margin-left:10px;font-size:20px;}
@@ -57,7 +56,7 @@ i,em{font-style: normal;}
 .block{padding-left:10px;padding-bottom:10px;}
 .block_img{height:auto;border:0;overflow:hidden;padding-top:10px;padding-bottom:10px;float:left}
 .block_img2{float:left;height:auto;border:1px solid #DEDEDE;padding:5px 5px 0 5px;overflow:hidden;}
-.block_txt{border:0;height:100px;overflow:hidden;line-height:20px;padding-left:10px;padding-top:8px}
+.block_txt{border:0;height:105px;overflow:hidden;line-height:20px;padding-left:10px;padding-top:8px}
 .block_txt2{border:0;height:130px;overflow:hidden;line-height:22px}
 .block_txt2 h2{font-size:16px;height:auto;padding-left:8px}
 .block_txt h2,.block_txt2 h2{font-size:16px;height:auto}
