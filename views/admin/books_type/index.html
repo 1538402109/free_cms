@@ -61,7 +61,14 @@
 			cols: [[
 				{type: "checkbox", fixed: "left", width: 50},
 				{field: 'id', title: 'ID', width: 60, align: "center"},
-				{field: 'name_text', title: '规则名称'},
+				{field: 'name_text', title: '分类名称'},
+				{field: 'is_open', title: '是否导航',templet:function(d){
+						if(d.is_nav == 1){
+							return '<span class="layui-btn layui-btn-green layui-btn-xs">是</span>'
+						}else{
+							return '<span class="layui-btn layui-btn-danger layui-btn-xs">否</span>'
+						}
+					}},
 				{title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
 			]]
 		});
@@ -126,6 +133,7 @@
 						body.find(".layui-form").attr("action", "update?id=" + edit.id)
 						body.find(".name").val(edit.name);
 						body.find(".pid").val(edit.pid)
+						body.find("input:radio[value="+edit.is_nav+"]").attr("checked",true);
 						form.render();
 					} else {
 						body.find(".layui-form").attr("action", "create")

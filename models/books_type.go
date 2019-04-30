@@ -8,7 +8,7 @@ type BooksType struct {
 	Model
 	Name string `json:"name" form:"name"`
 	Pid  int    `json:"pid" form:"pid"`
-
+	IsNav int `json:"is_nav" form:"is_nav"`
 	NameText string `json:"name_text" gorm:"-"`
 }
 

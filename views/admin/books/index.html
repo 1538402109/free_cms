@@ -56,7 +56,7 @@
 			cellMinWidth: 95,
 			page: true,
 			height: "full-125",
-			limit: 10,
+			limit: 20,
 			limits: [20, 50,100],
 			//id: "booksListTable",
 			cols: [[
@@ -66,7 +66,7 @@
 				{field: 'book_type_text', title: '类型', align: 'center', width: 70},
 				{field: 'book_author', title: '作者', align: 'center'},
 				{field: 'book_new_chapter', title: '最新章节', align: 'center'},
-				{field: 'bookLast_at_text', title: '最后更新', align: 'center'},
+				{field: 'book_last_at', title: '最后更新', align: 'center'},
 				{
 					field: 'created_at_text', title: '创建时间', align: 'center', minWidth: 110, templet: function (data) {
 						return formatUnixtimestamp(data.created_at_text);
@@ -161,6 +161,9 @@
 						body.find(".seo_title").val(edit.seo_title);
 						body.find(".seo_keyword").val(edit.seo_keyword);
 						body.find(".seo_describe").val(edit.seo_describe);
+
+						body.find(".book_img").val(edit.book_img);
+						body.find("#book_img").attr("src",edit.book_img);
 						form.render();
 					} else {
 						body.find(".layui-form").attr("action", "/books/create")

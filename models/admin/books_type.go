@@ -75,7 +75,7 @@ func (m *BooksType) FindColumn() (err error, booksType map[int]string) {
 //树形菜单
 func (m *BooksType) FindTree(key string) (err error, booksType2 *[]BooksType) {
 	var booksType []BooksType
-	Db.Where("name like ?", "%"+key+"%").Find(&booksType)
+	models.Db.Where("name like ?", "%"+key+"%").Find(&booksType)
 
 	booksType2 = new([]BooksType)
 	for k, v := range booksType {

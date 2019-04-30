@@ -8,6 +8,7 @@ import (
 )
 
 func init() {
+	//前台模块
 	beego.Router("/", &home.HomeController{},"get:Index")
 	beego.Router("/list/:id", &home.HomeController{},"get:List")
 	beego.Router("/books-list/:id", &home.HomeController{},"get:BooksList")
@@ -15,8 +16,10 @@ func init() {
 	beego.Router("/search", &home.HomeController{},"get:Search")
 
 
+	//后台模块
 	beego.Router("/admin", &admin.MainController{},"get:Admin")
 	beego.Router("/main", &admin.MainController{},"get:Main")
+	beego.Router("/upload", &admin.MainController{},"*:Upload")
 	beego.Router("/login", &admin.UserController{},"*:Login")
 	beego.Router("/captcha", &admin.UserController{},"*:Captcha")
 	beego.Router("/logout", &admin.UserController{},"get:Logout")

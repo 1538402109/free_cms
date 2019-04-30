@@ -55,7 +55,7 @@ func (c *BooksTypeController) Update() {
 		id, _ := c.GetInt("id")
 		BooksType, _ := models.NewBooksType().FindById(id)
 		//1
-		if err := c.ParseForm(BooksType); err != nil {
+		if err := c.ParseForm(&BooksType); err != nil {
 			c.JsonResult(0, "赋值失败")
 		}
 		//2
