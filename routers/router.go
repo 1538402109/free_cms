@@ -1,9 +1,8 @@
 package routers
 
 import (
-	"free_cms/controllers/admin"
-	"free_cms/controllers/admin/books"
-	"free_cms/controllers/home"
+	admin "free_cms/backend/controllers"
+	home "free_cms/frontend/controllers"
 	"github.com/astaxie/beego"
 )
 
@@ -26,35 +25,40 @@ func init() {
 	beego.Router("/register", &admin.UserController{},"*:Register")
 
 	//小说模块
-	beego.Router("/books/index", &books.BooksController{},"*:Index")
-	beego.Router("/books/create", &books.BooksController{},"*:Create")
-	beego.Router("/books/update", &books.BooksController{},"*:Update")
-	beego.Router("/books/delete", &books.BooksController{},"*:Delete")
-	beego.Router("/books/batch-delete", &books.BooksController{},"*:BatchDelete")
+	beego.Router("/books/index", &admin.BooksController{},"*:Index")
+	beego.Router("/books/create", &admin.BooksController{},"*:Create")
+	beego.Router("/books/update", &admin.BooksController{},"*:Update")
+	beego.Router("/books/delete", &admin.BooksController{},"*:Delete")
+	beego.Router("/books/batch-delete", &admin.BooksController{},"*:BatchDelete")
 
-	beego.Router("/books-preg/index", &books.BooksPregController{},"*:Index")
-	beego.Router("/books-preg/create", &books.BooksPregController{},"*:Create")
-	beego.Router("/books-preg/update", &books.BooksPregController{},"*:Update")
-	beego.Router("/books-preg/delete", &books.BooksPregController{},"*:Delete")
-	beego.Router("/books-preg/batch-delete", &books.BooksPregController{},"*:BatchDelete")
+	beego.Router("/books-preg/index", &admin.BooksPregController{},"*:Index")
+	beego.Router("/books-preg/create", &admin.BooksPregController{},"*:Create")
+	beego.Router("/books-preg/update", &admin.BooksPregController{},"*:Update")
+	beego.Router("/books-preg/delete", &admin.BooksPregController{},"*:Delete")
+	beego.Router("/books-preg/batch-delete", &admin.BooksPregController{},"*:BatchDelete")
 
-	beego.Router("/books-type/index", &books.BooksTypeController{},"*:Index")
-	beego.Router("/books-type/create", &books.BooksTypeController{},"*:Create")
-	beego.Router("/books-type/update", &books.BooksTypeController{},"*:Update")
-	beego.Router("/books-type/delete", &books.BooksTypeController{},"*:Delete")
-	beego.Router("/books-type/batch-delete", &books.BooksTypeController{},"*:BatchDelete")
+	beego.Router("/books-type/index", &admin.BooksTypeController{},"*:Index")
+	beego.Router("/books-type/create", &admin.BooksTypeController{},"*:Create")
+	beego.Router("/books-type/update", &admin.BooksTypeController{},"*:Update")
+	beego.Router("/books-type/delete", &admin.BooksTypeController{},"*:Delete")
+	beego.Router("/books-type/batch-delete", &admin.BooksTypeController{},"*:BatchDelete")
 
-	//
+	//会员模块
 	beego.Router("/members/center", &admin.MembersController{},"*:Center")
 	beego.Router("/members/center/add", &admin.MembersController{},"*:CenterAdd")
 	beego.Router("/members/level", &admin.MembersController{},"*:Level")
 
 
 	//系统模块
-	beego.Router("/system/basic", &admin.SystemController{},"*:Basic")
-	beego.Router("/system/logs", &admin.SystemController{},"*:Logs")
-	beego.Router("/system/links", &admin.SystemController{},"*:Links")
-	beego.Router("/system/links/add", &admin.SystemController{},"*:LinksAdd")
+	beego.Router("/system/basic", &admin.ConfigController{},"*:Index")
+	beego.Router("/system/logs", &admin.AdminLogController{},"*:Index")
+	//友情链接
+	beego.Router("/links/index", &admin.LinkController{},"*:Index")
+	beego.Router("/links/create", &admin.LinkController{},"*:Create")
+	beego.Router("/links/update", &admin.LinkController{},"*:Update")
+	beego.Router("/links/delete", &admin.LinkController{},"*:Delete")
+	beego.Router("/links/batch-delete", &admin.LinkController{},"*:BatchDelete")
+
 	beego.Router("/system/icons", &admin.SystemController{},"*:Icons")
 
 	//beego.Router("/gorm", &admin.GormController{},"*:Find")

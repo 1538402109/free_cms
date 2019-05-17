@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>系统基本参数--FreeCms</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/admin/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        {{range $k,$v:=.configGroup}}
+        <li class=" {{if eq "basic" $k}}layui-this{{end}}">{{$v}}</li>
+        {{end}}
+    </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        {{range $k,$v:=.configGroup}}
+            <div class="layui-tab-item {{if eq "basic" $k}}layui-show{{end}}">
+                    <form class="layui-form">
+                    <table class="layui-table mag0">
+                        <colgroup>
+                            <col width="25%">
+                            <col width="45%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>参数说明</th>
+                            <th>参数值</th>
+                            <th>变量名</th>
+                            <th>说明</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{range $k2,$v2:=$.configs}}
+                            {{if eq $k $v2.Group}}
+                            <tr>
+                                <td>{{$v2.Title}}</td>
+                                <td><input type="text" name="name[{{$v2.Name}}]" class="layui-input" lay-verify="required" placeholder="" value="{{$v2.Value}}"></td>
+                                <td pc>{{$v2.Name}}</td>
+                                <td pc>{{$v2.Tip}}</td>
+                            </tr>
+                                {{end}}
+                        {{end}}
+                        </tbody>
+                    </table>
+                    <div class="magt10 layui-right">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="systemParameter">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        {{end}}
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/static/admin/js/cache.js"></script>
+<script>
+    layui.use(['form','layer','jquery','element'],function(){
+        var form = layui.form,
+            layer = parent.layer === undefined ? layui.layer : top.layer,
+            laypage = layui.laypage,
+            element = layui.element,
+            $ = layui.jquery;
+
+        form.on("submit(systemParameter)",function(data){
+            //弹出loading
+            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
+            $.post("",data.field,function (res) {
+                setTimeout(function(){
+                    if(res.code==200){
+                        layer.close(index);
+                        layer.msg("系统基本参数修改成功！");
+                    }
+                },500);
+            });
+            return false;
+        })
+
+    })
+
+</script>
+</body>
+</html>

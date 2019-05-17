@@ -2,11 +2,13 @@ package util
 
 import (
 	"bytes"
+	"encoding/binary"
 	"fmt"
 	"github.com/axgle/mahonia"
 	"golang.org/x/text/encoding/simplifiedchinese"
 	"golang.org/x/text/transform"
 	"io/ioutil"
+	"net"
 	"strconv"
 	"strings"
 )
@@ -53,4 +55,23 @@ func Utf8ToGbk(s []byte) ([]byte, error) {
 		return nil, e
 	}
 	return d, nil
+}
+
+func Ip2long(ipstr string) uint32 {
+	ip := net.ParseIP(ipstr)
+	if ip == nil {
+		return 0
+	}
+	ip = ip.To4()
+	if ip ==nil{
+		return 0
+	}
+	return binary.BigEndian.Uint32(ip)
+}
+
+func Long2ip(ipLong uint32) string {
+	ipByte := make([]byte, 4)
+	binary.BigEndian.PutUint32(ipByte, ipLong)
+	ip := net.IP(ipByte)
+	return ip.String()
 }

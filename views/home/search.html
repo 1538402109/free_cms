@@ -11,18 +11,7 @@
 <body>
 {{template "home/public/nav.html".}}
 
-<div class="content">
-    <ul>
-        {{range $k,$v:= .sonType}}
-            <li class="prev"><a id="s1" href="javascript:;" onclick="show({{$v.Id}})">{{$v.Name}}</a></li>
-        {{end}}
-    </ul>
-</div>
-
-
 <div class="container-full btable" id="book_list"></div>
-
-
 
 {{template "home/public/foot.html" .}}
 {{template "home/public/scripts.html" .}}
