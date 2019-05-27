@@ -2,40 +2,40 @@
     <div class="layui-form-item">
         <div class="layui-upload-list linkLogo">
             <img class="layui-upload-img linkLogoImg">
-            <input type="hidden" name="image" value="">
+            <input type="hidden" name="image" class="image" value="">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">网站名称</label>
         <div class="layui-input-block">
-            <input type="text" class="layui-input name" name="name" lay-verify="required" placeholder="请输入网站名称" />
+            <input type="text" class="layui-input name" name="name" lay-verify="required" placeholder="请输入网站名称"/>
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">网站地址</label>
         <div class="layui-input-block">
-            <input type="text" class="layui-input url" name="url" lay-verify="required|url" placeholder="请输入网站地址" />
+            <input type="text" class="layui-input url" name="url" lay-verify="required|url" placeholder="请输入网站地址"/>
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">展示位置</label>
         <div class="layui-input-block">
-            <input type="checkbox" class="layui-input target" name="target" lay-text="站内|站外" lay-skin="switch" />
+            <input type="checkbox" class="layui-input target" name="target" lay-text="站内|站外" lay-skin="switch"/>
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">状态</label>
         <div class="layui-input-block">
-            <input type="checkbox" class="layui-input status" name="status" lay-text="显示|关闭" lay-skin="switch" />
+            <input type="checkbox" class="layui-input status" name="status" lay-text="显示|关闭" lay-skin="switch"/>
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">排序</label>
         <div class="layui-input-block">
-            <input type="text" class="layui-input list_order" name="list_order" lay-verify="" placeholder="" />
+            <input type="text" class="layui-input list_order" name="list_order" lay-verify="" placeholder=""/>
         </div>
     </div>
     <div class="layui-form-item">
@@ -48,8 +48,9 @@
         <button class="layui-btn layui-block" lay-filter="getTo" lay-submit>提交</button>
     </div>
 </form>
+
 <script type="text/javascript">
-    layui.use(['form','layer','layedit','laydate','upload'],function(){
+    layui.use(['form', 'layer', 'layedit', 'laydate', 'upload'], function () {
         var form = layui.form
         layer = parent.layer === undefined ? layui.layer : top.layer,
             laypage = layui.laypage,
@@ -58,23 +59,33 @@
             laydate = layui.laydate,
             $ = layui.jquery;
 
-        form.on("submit(getTo)",function(data){
+        form.on("submit(getTo)", function (data) {
             //弹出loading
-            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
+            var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
             // 实际使用时的提交信息
-            data.field.status=data.field.status?1:0;
-            data.field.target=data.field.target?"_blank":"_self";
-            $.post($(".layui-form").attr("action"),data.field,function (res) {
-                setTimeout(function(){
+            data.field.status = data.field.status ? 1 : 0;
+            data.field.target = data.field.target ? 1 : 0;
+            $.post($(".layui-form").attr("action"), data.field, function (res) {
+                setTimeout(function () {
                     top.layer.close(index);
                     top.layer.msg(res.msg);
                     layer.closeAll("iframe");
                     //刷新父页面
                     parent.location.reload();
-                },500);
+                }, 500);
             });
             return false;
         })
 
+        //上传logo
+        upload.render({
+            elem: '.linkLogo',
+            url: '/upload/',
+            done: function (res, index, upload) {
+                $('.linkLogoImg').attr('src', res.data);
+                $("input[name='image']").val(res.data)
+                $('.linkLogo').css("background", "#fff");
+            }
+        });
     })
 </script>

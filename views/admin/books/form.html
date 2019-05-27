@@ -166,5 +166,35 @@
                 });
             }
         });
+
+        form.verify({
+            book_name : function(val){
+                if(val == ''){
+                    return "小说名称不能为空";
+                }
+            },
+            list_url : function(val){
+                if(val == ''){
+                    return "列表页地址不能为空";
+                }
+            }
+        })
+
+        form.on("submit(addBooks)",function(data){
+            //弹出loading
+            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
+            // 实际使用时的提交信息
+            $.post($(".layui-form").attr("action"),data.field,function (res) {
+                setTimeout(function(){
+                    top.layer.close(index);
+                    top.layer.msg(res.msg);
+                    layer.closeAll("iframe");
+                    //刷新父页面
+                    parent.location.reload();
+                },500);
+            });
+            return false;
+        })
+
     });
 </script>

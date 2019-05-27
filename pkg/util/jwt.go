@@ -2,8 +2,8 @@ package util
 
 import (
 	"github.com/astaxie/beego"
+	"github.com/dgrijalva/jwt-go"
 	"time"
-	jwt "github.com/dgrijalva/jwt-go"
 )
 
 var jwtSecret = []byte(beego.AppConfig.String("jwt_secret"))

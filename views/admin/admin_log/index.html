@@ -35,12 +35,9 @@
                 {type: "checkbox", fixed:"left", width:50},
                 {field: 'id', title: '序号', width:100, align:"center"},
                 {field: 'route', title: '请求地址', width:350},
-                {field: 'method', title: '操作方式', align:'center', width:100},
                 {field: 'ip_text', title: '操作IP',  align:'center',width:120},
                 {field: 'description', title: '操作信息', align:'center'},
-                {field: 'User.username',title: '操作人',width:100,align:"center",templet: function (data) {
-                        return data.User.username;
-                    }},
+                {field: 'user_id',title: '操作人',width:100,align:"center"},
                 {field: 'created_at_text', title: '操作时间', align:'center',width:200}
             ]]
         });
