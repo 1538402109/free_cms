@@ -20,7 +20,7 @@ type Model struct {
 	DeletedAt time.Time `json:"deleted_at" sql:"index"`
 }
 
-func Init() {
+func init() {
 	var (
 		err                                               error
 		dbType, dbName, user, password, host, tablePrefix string
