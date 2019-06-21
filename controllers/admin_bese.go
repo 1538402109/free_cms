@@ -12,10 +12,6 @@ type BaseController struct {
 	ADMIN_TPL string
 }
 
-func Init() {
-
-}
-
 func (c *BaseController) Prepare() {
 	c.ADMIN_TPL = "admin/"
 

@@ -24,6 +24,7 @@ func Fc(tableName, modelPath, controllerPath, viewPath string) {
 	tablePrefix := beego.AppConfig.String("tablePrefix")
 	var tableAttr []TabelAttr
 	models.Db.Raw("desc " + tablePrefix + tableName).Scan(&tableAttr)
+
 	//获取数据
 	if modelPath != "" {
 		CreateModel(modelPath, tableName, tableAttr)

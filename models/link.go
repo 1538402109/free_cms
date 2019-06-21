@@ -6,14 +6,13 @@ import (
 
 type Link struct {
 	Model
-	Name    string    `json:"name" form:"name"`
-	Description    string    `json:"description" form:"description"`
-	Status    int    `json:"status" form:"status"`
-	Url    string    `json:"url" form:"url"`
-	Image    string    `json:"image" form:"image"`
-	Target    string    `json:"target" form:"target"`
-	ListOrder    int    `json:"list_order" form:"list_order" gorm:"default:'1000'"`
-
+	Name        string `json:"name" form:"name" valid:"Required"`
+	Description string `json:"description" form:"description"`
+	Status      int    `json:"status" form:"status"`
+	Url         string `json:"url" form:"url"  valid:"Required"`
+	Image       string `json:"image" form:"image"`
+	Target      string `json:"target" form:"target"`
+	ListOrder   int    `json:"list_order" form:"list_order" gorm:"default:'1000'"`
 }
 
 func NewLink() (link *Link) {
@@ -25,7 +24,7 @@ func (m *Link) Pagination(offset, limit int, key string) (res []Link, count int)
 	if key != "" {
 		query = query.Where("name like ?", "%"+key+"%")
 	}
-	query.Offset(offset).Limit(limit).Order("id desc").Find(&res)
+	query.Offset(offset).Limit(limit).Order("list_order desc").Find(&res)
 	query.Model(Link{}).Count(&count)
 	return
 }

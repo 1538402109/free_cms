@@ -3,27 +3,40 @@ package util
 import (
 	"fmt"
 	"io/ioutil"
+	"net"
 	"net/http"
 	"net/url"
 	"strings"
+	"time"
 )
 
-func httpGet() {
-	resp, err :=   http.Get("http://www.01happy.com/demo/accept.php?id=1")
+func HttpGet(url string) (res string, err error) {
+/*	connectTimeout := 5 * time.Second
+	readWriteTimeout := 100 * time.Millisecond
+
+	c := http.Client{
+		Transport: &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+			Dial:            TimeoutDialer(connectTimeout, readWriteTimeout),
+		},
+	}*/
+
+	resp, err := http.Get(url)
 	if err != nil {
-		// handle error
+		return
 	}
 
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		// handle error
+		return
 	}
 
-	fmt.Println(string(body))
+	res = string(body)
+	return
 }
 
-func httpPost() {
+func HttpPost() {
 	resp, err := http.Post("http://www.01happy.com/demo/accept.php",
 		"application/x-www-form-urlencoded",
 		strings.NewReader("name=cjb"))
@@ -79,4 +92,15 @@ func httpDo() {
 	}
 
 	fmt.Println(string(body))
+}
+
+func TimeoutDialer(cTimeout time.Duration, rwTimeout time.Duration) func(net, addr string) (c net.Conn, err error) {
+	return func(netw, addr string) (net.Conn, error) {
+		conn, err := net.DialTimeout(netw, addr, cTimeout)
+		if err != nil {
+			return nil, err
+		}
+		conn.SetDeadline(time.Now().Add(rwTimeout))
+		return conn, nil
+	}
 }

@@ -43,7 +43,8 @@ func (c *LinkController) Create() {
 		}
 		//2.验证
 		valid := validation.Validation{}
-		if valid.HasErrors() {
+		b, _ := valid.Valid(link)
+		if !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}

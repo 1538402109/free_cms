@@ -60,21 +60,22 @@
                     }
                 },
                 {field: 'name', title: '链接名称', minWidth: 240},
-                {field: 'url', title: '链接地址', width: 300, templet: function (d) {
+                {
+                    field: 'url', title: '链接地址', width: 300, templet: function (d) {
                         return '<a class="layui-blue" href="' + d.url + '" target="_blank">' + d.url + '</a>';
                     }
                 },
                 {
                     field: 'target', title: '打开方式', align: 'center', templet: function (d) {
                         if (d.target == 1) {
-                            return "站内";
+                            return '<span class="layui-badge layui-bg-blue">站内</span>';
                         }
                         if (d.target == 0) {
-                            return "站外";
+                            return '<span class="layui-badge">站外</span>';
                         }
                     }
                 },
-                {field: 'list_order', title: '排序', minWidth: 200, align: 'center'},
+                {field: 'list_order', title: '排序', minWidth: 200, align: 'center', edit: 'text'},
                 {
                     title: '操作', width: 130, fixed: "right", align: "center", templet: function () {
                         return '\t\t<a class="layui-icon-face-smile layui-icon btn-edit" lay-event="update">&#xe642;</a>\n' +
@@ -98,7 +99,21 @@
                 layer.msg("请输入搜索的内容");
             }
         });
+
+        //监听单元格编辑
+        table.on('edit(jsonTable)', function (obj) {
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+            $.post("update", data, function (res) {
+                tableIns.reload()
+                setTimeout(function () {
+                    top.layer.msg(res.msg);
+                }, 500);
+            });
+        });
     })
+
 
     function Edit(body, edit, form) {
         if (edit) {

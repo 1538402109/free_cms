@@ -30,16 +30,16 @@ func (c *LinkController) Create() {
 		if err := c.ParseForm(link); err != nil {
 			c.JsonResult(1001, "赋值失败")
 		}
-		//2.验证
+		//验证
 		valid := validation.Validation{}
-		valid.Required(link.Name, "name").Message("名称不能为空")
-		valid.Required(link.Url, "url").Message("地址不能为空")
-		if valid.HasErrors() {
+		b, _ := valid.Valid(link)
+		if !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
 			c.JsonResult(1001, "验证失败")
 		}
+
 		//3.插入数据
 		if err, _ := link.Create(); err != nil {
 			c.JsonResult(1001, "创建失败")
@@ -59,12 +59,10 @@ func (c *LinkController) Update() {
 		if err := c.ParseForm(&link); err != nil {
 			c.JsonResult(1001, "赋值失败")
 		}
-		//2
+		//验证
 		valid := validation.Validation{}
-		valid.Required(link.Id, "id").Message("id不能为空")
-		valid.Required(link.Name, "name").Message("名称不能为空")
-		valid.Required(link.Url, "url").Message("地址不能为空")
-		if valid.HasErrors() {
+		b, _ := valid.Valid(link)
+		if !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
