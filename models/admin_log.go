@@ -25,7 +25,7 @@ func NewAdminLog() (adminlog *AdminLog) {
 
 func (m *AdminLog) AfterFind(scope *gorm.Scope) (err error) {
 	m.IpText = str.Long2ip(uint32(m.Ip))
-	m.CreatedAtText = m.CreatedAt.Format("2006-05-04 15:02:01")
+	m.CreatedAtText = m.CreatedAt.Format("2006-01-02 15:04:05")
 	return
 }
 
