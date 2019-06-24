@@ -1,18 +1,15 @@
-layui.use(['form', 'layer', 'laydate', 'table', 'upload'], function () {
+layui.use(['form', 'layer', 'table'], function () {
     var form = layui.form,
         layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
-        laydate = layui.laydate,
-        upload = layui.upload,
         table = layui.table;
 
-
-//列表操作
+//列表页 json table操作
     table.on('tool(jsonTable)', function (obj) {
         var layEvent = obj.event,
             data = obj.data;
         if (layEvent === 'update') { //编辑
-            add(data, "update");
+            openJump("update?id=" + data.id);
         } else if (layEvent === 'delete') { //删除
             layer.confirm('确定删除此文章？', {icon: 3, title: '提示信息'}, function (index) {
                 $.get("delete", {
@@ -39,8 +36,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'upload'], function () {
         }
     });
 
-    //编辑文章
-    function add(edit, action) {
+    //弹出编辑页
+    function openJump(action) {
         var index = layui.layer.open({
             title: "小说",
             type: 2,
@@ -49,17 +46,10 @@ layui.use(['form', 'layer', 'laydate', 'table', 'upload'], function () {
             content: action,
             success: function (layero, index) {
                 var body = layui.layer.getChildFrame('body', index);
-
-                Edit(body, edit, form);
-
-/*                setTimeout(function () {
-                    layui.layer.tips('点击此处返回文章列表', '.layui-layer-setwin .layui-layer-close', {
-                        tips: 3
-                    });
-                }, 500)*/
+                body.find(".layui-form").attr("action", action);
             }
         })
-        //layui.layer.full(index);
+
         //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
         $(window).on("resize", function () {
             layui.layer.full(index);
@@ -91,8 +81,25 @@ layui.use(['form', 'layer', 'laydate', 'table', 'upload'], function () {
 
     //添加
     $(".create_btn").click(function () {
-        add("", "create");
+        openJump("create");
     })
+
+    form.on("submit(getTo)", function (data) {
+        //弹出loading
+        var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
+        // 实际使用时的提交信息
+        $.post($(".layui-form").attr("action"), data.field, function (res) {
+            setTimeout(function () {
+                top.layer.close(index);
+                top.layer.msg(res.msg);
+                layer.closeAll("iframe");
+                //刷新父页面
+                parent.location.reload();
+            }, 500);
+        });
+        return false;
+    })
+
 });
 
 

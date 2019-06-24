@@ -15,7 +15,7 @@ func (c *BooksTypeController) Index() {
 	if c.Ctx.Input.IsAjax() {
 		key := c.GetString("key", "")
 
-		_, result := models.NewBooksType().FindTree(key)
+		result, _ := models.NewBooksType().FindTree(key)
 
 		c.JsonResult(0, "ok", result)
 	}
@@ -45,7 +45,7 @@ func (c *BooksTypeController) Create() {
 		}
 		c.JsonResult(0, "添加成功")
 	}
-	_, result := models.NewBooksType().FindTree("")
+	result, _ := models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
 	c.TplName = c.ADMIN_TPL + "books_type/create.html"
 }
@@ -75,7 +75,7 @@ func (c *BooksTypeController) Update() {
 		}
 		c.JsonResult(0, "修改成功")
 	}
-	_, result := models.NewBooksType().FindTree("")
+	result, _ := models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
 	c.TplName = c.ADMIN_TPL + "books_type/update.html"
 }

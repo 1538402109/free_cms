@@ -3,7 +3,7 @@ package models
 import (
 	"fmt"
 	"free_cms/common"
-	"free_cms/pkg/util"
+	"free_cms/pkg/str"
 	"github.com/astaxie/beego"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -79,7 +79,7 @@ func CreateAdminLogCallback(scope *gorm.Scope) {
 		fmt.Println(scope)
 		Db.Create(&AdminLog{Route: common.Fc.Request.URL.String(),
 			UserId:      common.UserId,
-			Ip:          int(util.Ip2long(common.Fc.Input.IP())),
+			Ip:          int(str.Ip2long(common.Fc.Input.IP())),
 			Method:      common.Fc.Request.Method,
 			Description: fmt.Sprintf("%s添加了表%s 的%s", common.UserId, scope.TableName(), fmt.Sprintf("%+v", scope.Value)),
 		})
@@ -90,7 +90,7 @@ func CreateAdminLogCallback(scope *gorm.Scope) {
 func UpdateAdminLogCallback(scope *gorm.Scope) {
 	Db.Create(&AdminLog{Route: common.Fc.Request.URL.String(),
 		UserId:      common.UserId,
-		Ip:          int(util.Ip2long(common.Fc.Input.IP())),
+		Ip:          int(str.Ip2long(common.Fc.Input.IP())),
 		Method:      common.Fc.Request.Method,
 		Description: fmt.Sprintf("%s修改了表%s 的%s", common.UserId, scope.TableName(), fmt.Sprintf("%+v", scope.Value)),
 	})
@@ -100,9 +100,9 @@ func UpdateAdminLogCallback(scope *gorm.Scope) {
 func DeleteAdminLogCallback(scope *gorm.Scope) {
 	Db.Create(&AdminLog{Route: common.Fc.Request.URL.String(),
 		UserId:      common.UserId,
-		Ip:          int(util.Ip2long(common.Fc.Input.IP())),
+		Ip:          int(str.Ip2long(common.Fc.Input.IP())),
 		Method:      common.Fc.Request.Method,
-		Description: fmt.Sprintf("%s删除了表%s 的一条数据", common.UserId, scope.TableName(),scope.Value),
+		Description: fmt.Sprintf("%s删除了表%s 的一条数据", common.UserId, scope.TableName(), scope.Value),
 	})
 	return
 }

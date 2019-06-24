@@ -5,7 +5,7 @@ import (
 	"free_cms/controllers"
 	"free_cms/models"
 	"free_cms/pkg/d"
-	"free_cms/pkg/util"
+	"free_cms/pkg/str"
 	"github.com/gocolly/colly"
 	"net/url"
 	"strconv"
@@ -176,7 +176,7 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 		e.ForEach(pregOne.ListA, func(i int, element *colly.HTMLElement) {
 			title := element.Text
 			if char == "gbk" {
-				title = util.GbkToUtf8(element.Text)
+				title = str.GbkToUtf8(element.Text)
 			}
 
 			i2 := strconv.Itoa(i + 1)
@@ -214,10 +214,10 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 		bookDescribe := e.DOM.Find(pregOne.ListDescribe).Text()
 		bookImg, _ := e.DOM.Find(pregOne.ListMsgImg).Attr("src")
 		if char == "gbk" {
-			bookLastTime = util.GbkToUtf8(bookLastTime)
-			bookAuthor = util.GbkToUtf8(bookAuthor)
-			bookDescribe = util.GbkToUtf8(bookDescribe)
-			bookImg = util.GbkToUtf8(bookImg)
+			bookLastTime = str.GbkToUtf8(bookLastTime)
+			bookAuthor = str.GbkToUtf8(bookAuthor)
+			bookDescribe = str.GbkToUtf8(bookDescribe)
+			bookImg = str.GbkToUtf8(bookImg)
 		}
 		//过滤
 		bookLastTime = strings.Replace(bookLastTime, "最后更新：", "", -1)
@@ -254,7 +254,7 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 		element.DOM.Find(pregOne.ContentTextFilter).Remove()
 		content, _ := element.DOM.Find(pregOne.ContentText).Html()
 		if char == "gbk" {
-			content = util.GbkToUtf8(content)
+			content = str.GbkToUtf8(content)
 			//todo &nbsp;变 聽
 			content = strings.Replace(content, "聽", "&nbsp;", -1)
 		}

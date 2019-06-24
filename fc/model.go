@@ -33,13 +33,13 @@ func (m *Config) Pagination(offset, limit int, key string) (res []Config, count 
 	return
 }
 
-func (m *Config) Create() (err error, newAttr *Config) {
+func (m *Config) Create() (newAttr Config, err error) {
 	err = Db.Create(m).Error
-	newAttr = m
+	newAttr = *m
 	return
 }
 
-func (m *Config) Update() (err error, newAttr Config) {
+func (m *Config) Update() (newAttr Config, err error) {
 	if m.Id > 0 {
 		err = Db.Where("id=?", m.Id).Save(m).Error
 	} else {

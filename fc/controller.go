@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var controllerTpl = `package link
+var controllerTpl = `package category
 
 import (
 	"free_cms/controllers"
@@ -18,98 +18,104 @@ import (
 	"log"
 )
 
-type LinkController struct {
+type CategoryController struct {
 	controllers.BaseController
 }
 
-func (c *LinkController) Index() {
-	if c.Ctx.Input.IsAjax() {
-		page, _ := c.GetInt("page")
-		limit, _ := c.GetInt("limit")
-		key := c.GetString("key", "")
+func (c *CategoryController) PrePare() {
 
-		result, count := models.NewLink().Pagination((page-1)*limit, limit, key)
-		c.JsonResult(0, "ok", result, count)
-	}
-	c.TplName = c.ADMIN_TPL + "link/index.html"
 }
 
-func (c *LinkController) Create() {
+func (c *CategoryController) Index() {
+	if c.Ctx.Input.IsAjax() {
+		key := c.GetString("key", "")
+		result, _ := models.NewCategory().FindTree(key)
+		c.JsonResult(0, "ok", result)
+	}
+	c.TplName = c.ADMIN_TPL + "category/index.html"
+}
+
+func (c *CategoryController) Create() {
 	if c.Ctx.Input.IsPost() {
-		link := models.NewLink()
+		categoryModel := models.NewCategory()
 		//1.压入数据
-		if err := c.ParseForm(link); err != nil {
+		if err := c.ParseForm(categoryModel); err != nil {
 			c.JsonResult(1001, "赋值失败")
 		}
 		//2.验证
 		valid := validation.Validation{}
-		b, _ := valid.Valid(link)
-		if !b {
+		if b, _ := valid.Valid(categoryModel); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
 			c.JsonResult(1001, "验证失败")
 		}
 		//3.插入数据
-		if err, _ := link.Create(); err != nil {
+		if _, err := categoryModel.Create(); err != nil {
 			c.JsonResult(1001, "创建失败")
 		}
 		c.JsonResult(0, "添加成功")
 	}
 
-	c.TplName = c.ADMIN_TPL + "link/create.html"
+	result, _ := models.NewCategory().FindTree("")
+	c.Data["category"] = result
+	c.Data["vo"] = models.Category{}
+	c.TplName = c.ADMIN_TPL + "category/create.html"
 }
 
-func (c *LinkController) Update() {
-	if c.Ctx.Input.IsPost() {
-		id, _ := c.GetInt("id")
+func (c *CategoryController) Update() {
+	id, _ := c.GetInt("id")
+	category, _ := models.NewCategory().FindById(id)
 
-		link, _ := models.NewLink().FindById(id)
+	if c.Ctx.Input.IsPost() {
 		//1
-		if err := c.ParseForm(&link); err != nil {
+		if err := c.ParseForm(&category); err != nil {
 			c.JsonResult(1001, "赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
-		valid.Required(link.Id, "id").Message("id不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(category); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
 			c.JsonResult(1001, "验证失败")
 		}
 		//3
-		if err, _ := link.Update(); err != nil {
+		if _, err := category.Update(); err != nil {
 			c.JsonResult(1001, "修改失败")
 		}
 		c.JsonResult(0, "修改成功")
 	}
 
-	c.TplName = c.ADMIN_TPL + "link/update.html"
+	result, _ := models.NewCategory().FindTree("")
+	c.Data["category"] = result
+	c.Data["vo"] = category
+	c.TplName = c.ADMIN_TPL + "category/update.html"
 }
 
-func (c *LinkController) Delete() {
-	link := models.NewLink()
+func (c *CategoryController) Delete() {
+	categoryModel := models.NewCategory()
 	id, _ := c.GetInt("id")
-	link.Id = id
-	if err := link.Delete(); err != nil {
+	categoryModel.Id = id
+	if err := categoryModel.Delete(); err != nil {
 		c.JsonResult(1001, "删除失败")
 	}
 	c.JsonResult(0, "删除成功")
 }
 
-func (c *LinkController) BatchDelete() {
+func (c *CategoryController) BatchDelete() {
 	var ids []int
 	if err := c.Ctx.Input.Bind(&ids, "ids"); err != nil {
 		c.JsonResult(1001, "赋值失败")
 	}
 
-	link := models.NewLink()
-	if err := link.DelBatch(ids); err != nil {
+	categoryModel := models.NewCategory()
+	if err := categoryModel.DelBatch(ids); err != nil {
 		c.JsonResult(1001, "删除失败")
 	}
 	c.JsonResult(0, "删除成功")
 }
+
 `
 
 func CreateController(controllerPath, tableName string) {
@@ -125,7 +131,7 @@ func CreateController(controllerPath, tableName string) {
 }
 
 func createModelBase(tableName string) (controllerData string) {
-	controllerData = strings.Replace(controllerTpl, "Link", Hump(tableName, "max"), -1)
-	controllerData = strings.Replace(controllerData, "link", Hump(tableName, "min"), -1)
+	controllerData = strings.Replace(controllerTpl, "Category", Hump(tableName, "max"), -1)
+	controllerData = strings.Replace(controllerData, "category", Hump(tableName, "min"), -1)
 	return
 }

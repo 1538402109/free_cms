@@ -2,13 +2,14 @@ package models
 
 import (
 	"errors"
+	"strings"
 )
 
 type BooksType struct {
 	Model
-	Name string `json:"name" form:"name"`
-	Pid  int    `json:"pid" form:"pid"`
-	IsNav int `json:"is_nav" form:"is_nav"`
+	Name     string `json:"name" form:"name"`
+	Pid      int    `json:"pid" form:"pid"`
+	IsNav    int    `json:"is_nav" form:"is_nav"`
 	NameText string `json:"name_text" gorm:"-"`
 }
 
@@ -17,7 +18,7 @@ func NewBooksType() (books *BooksType) {
 }
 
 func (m *BooksType) Pagination(offset, limit int, key string) (res []BooksType, count int) {
-	query :=Db
+	query := Db
 	if key != "" {
 		query = query.Where("name like ?", "%"+key+"%")
 	}
@@ -71,59 +72,37 @@ func (m *BooksType) FindColumn() (err error, booksType map[int]string) {
 }
 
 //树形菜单
-func (m *BooksType) FindTree(key string) (err error, booksType2 *[]BooksType) {
-	var booksType []BooksType
-	Db.Where("name like ?", "%"+key+"%").Find(&booksType)
+func (m *BooksType) FindTree(key string) (booksType2 *[]BooksType, err error) {
+	var booksTypeData []BooksType
+	Db.Where("name like ?", "%"+key+"%").Find(&booksTypeData)
 
 	booksType2 = new([]BooksType)
-	for k, v := range booksType {
-		var level int = 0
-		booksType[k].NameText = v.Name
-		v.NameText = v.Name
-		if key == "" && v.Pid == 0 {
-			*booksType2 = append(*booksType2, v)
-			T(booksType, v.Id, booksType2, level)
-		}
-	}
-	if key != "" {
-		booksType2 = &booksType
-	}
+	Tree(booksTypeData, booksType2, 0, -1)
 	return
 }
 
-func T(b []BooksType, id int, booksType2 *[]BooksType, level int) {
+func Tree(treeData []BooksType, booksType2 *[]BooksType, pid int, level int) {
 	var position int
 	level++
-	for _, v := range b {
-		if v.Pid == id {
+	for _, v := range treeData {
+		if v.Pid == pid {
 			position++
-			v.NameText = Tpl(level, position, TNum(b, id)) + v.Name
+			v.NameText = Prefix(level, position, TNum(treeData, pid)) + v.Name
 			*booksType2 = append(*booksType2, v)
-			T(b, v.Id, booksType2, level)
+			Tree(treeData, booksType2, v.Id, level)
 		}
 	}
 }
-
-func Tpl(level int, position int, lastPostion int) (str string) {
-	if level == 1 && position == lastPostion {
-		str = "└─"
+func Prefix(level int, position int, lastPostion int) (str string) {
+	if level > 0 {
+		if position == lastPostion {
+			str = strings.Repeat("│ ", level-1) + "└─"
+		} else {
+			str = strings.Repeat("│ ", level-1) + "├─"
+		}
 	}
-
-	if level == 1 && position != lastPostion {
-		str = "├─"
-	}
-
-	if level == 2 && position == lastPostion {
-		str = "│ └─"
-	}
-
-	if level == 2 && position != lastPostion {
-		str = "│ ├─"
-	}
-
 	return
 }
-
 func TNum(b []BooksType, id int) (num int) {
 	for _, v := range b {
 		if v.Pid == id {
@@ -133,12 +112,12 @@ func TNum(b []BooksType, id int) (num int) {
 	return
 }
 
-func (m *BooksType) FindByPid(pid int) (booksType []BooksType,err error) {
+func (m *BooksType) FindByPid(pid int) (booksType []BooksType, err error) {
 	err = Db.Where("pid=?", pid).Find(&booksType).Error
 	return
 }
 
-func (m *BooksType) FindById(id int) (booksType BooksType,err error) {
+func (m *BooksType) FindById(id int) (booksType BooksType, err error) {
 	err = Db.Where("id=?", id).Find(&booksType).Error
 	return
 }

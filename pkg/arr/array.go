@@ -1,8 +1,8 @@
-package slice
+package arr
 
 import "math"
 
-//反转
+// Reverse 反转
 func Reverse(arr []string) (res []string) {
 	pushPlanLen := len(arr)
 	val := int(math.Floor(float64(pushPlanLen / 2)))
@@ -12,6 +12,7 @@ func Reverse(arr []string) (res []string) {
 	return arr
 }
 
+// Sort 冒泡排序
 func Sort(arr []int) (res []int) {
 	length := len(arr)
 	for i := 0; i < length; i++ {

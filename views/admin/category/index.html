@@ -34,19 +34,16 @@
 
     <!--操作-->
     <script type="text/html" id="toolBar">
-        <a class="layui-icon-face-smile layui-icon btn-edit" lay-event="update">&#xe642;</a>
-        <a class="layui-icon-face-smile layui-icon btn-edit" lay-event="delete">&#xe640;</a>
+        <a class="layui-icon btn-edit" lay-event="update">&#xe642;</a>
+        <a class="layui-icon btn-edit" lay-event="delete">&#xe640;</a>
     </script>
 </form>
 <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
 <script type="text/javascript" src="/static/admin/js/base.js"></script>
 <script type="text/javascript">
-    layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function () {
-        var form = layui.form,
-            layer = parent.layer === undefined ? layui.layer : top.layer,
+    layui.use(['form', 'layer', 'table'], function () {
+        var layer = parent.layer === undefined ? layui.layer : top.layer,
             $ = layui.jquery,
-            laydate = layui.laydate,
-            laytpl = layui.laytpl,
             table = layui.table;
 
         //新闻列表
@@ -62,8 +59,8 @@
             cols: [[
                 {type: "checkbox", fixed: "left", width: 50},
                 {field: 'id', title: 'ID', width: 60, align: "center"},
+                {field: 'name_text', title: '栏目名称'},
                 {field: 'type', title: '栏目类型'},
-                {field: 'name', title: '栏目名称'},
                 {field: 'nickname', title: '栏目别名'},
                 {field: 'flag', title: '标志'},
                 {field: 'href', title: '外链'},
@@ -97,20 +94,9 @@
                 layer.msg("请输入搜索的内容");
             }
         });
-    })
 
-    //编辑文章
-    function Edit(body, edit, form) {
-        if (edit) {
-            body.find(".layui-form").attr("action", "update?id=" + edit.id)
-            body.find(".name").val(edit.name);
-            body.find(".pid").val(edit.pid)
-            body.find("input:radio[value=" + edit.is_nav + "]").attr("checked", true);
-            form.render();
-        } else {
-            body.find(".layui-form").attr("action", "create")
-        }
-    }
+
+    })
 </script>
 </body>
 </html>
