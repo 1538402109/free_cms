@@ -30,12 +30,9 @@ func (c *BooksController) Create() {
 		if err := c.ParseForm(books); err != nil {
 			c.JsonResult(1000, "表单赋值失败")
 		}
-		//2.验证，在模型中验证不能分场景
+		//2.验证
 		valid := validation.Validation{}
-		valid.Required(books.BookName, "book_name").Message("小说名称不能为空")
-		valid.Required(books.ListUrl, "list_url").Message("列表页地址不能为空")
-		valid.Required(books.PregId, "preg_id").Message("采集规则不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(books); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
@@ -51,28 +48,27 @@ func (c *BooksController) Create() {
 
 	var booksPregs []models.BooksPreg
 	models.Db.Find(&booksPregs)
-	c.Data["booksPregs"] = booksPregs
 	_, booksType := models.NewBooksType().FindColumn()
+
+	c.Data["booksPregs"] = booksPregs
 	c.Data["bookType"] = booksType
+	c.Data["vo"] = models.NewBooks()
 
 	c.TplName = c.ADMIN_TPL + "books/create.html"
 }
 
 func (c *BooksController) Update() {
+	id, _ := c.GetInt("id")
+	books, _ := models.NewBooks().FindById(id)
+
 	if c.Ctx.Input.IsPost() {
-		id, _ := c.GetInt("id")
-		books, _ := models.NewBooks().FindById(id)
 		//1
 		if err := c.ParseForm(&books); err != nil {
 			c.JsonResult(1000, "表单赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
-		valid.Required(books.Id, "id").Message("id不能为空")
-		valid.Required(books.BookName, "book_name").Message("小说名称不能为空")
-		valid.Required(books.ListUrl, "list_url").Message("列表页地址不能为空")
-		valid.Required(books.PregId, "preg_id").Message("采集规则不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(books); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
@@ -87,9 +83,11 @@ func (c *BooksController) Update() {
 
 	var booksPregs []models.BooksPreg
 	models.Db.Find(&booksPregs)
-	c.Data["booksPregs"] = booksPregs
 	_, booksType := models.NewBooksType().FindColumn()
+
+	c.Data["booksPregs"] = booksPregs
 	c.Data["bookType"] = booksType
+	c.Data["vo"] = books
 
 	c.TplName = c.ADMIN_TPL + "books/update.html"
 }

@@ -44,8 +44,12 @@
             <textarea name="description" class="layui-textarea description" placeholder="请输入内容"></textarea>
         </div>
     </div>
+    <hr class="layui-bg-gray"/>
     <div class="layui-form-item">
-        <button class="layui-btn layui-block" lay-filter="getTo" lay-submit>提交</button>
+        <div class="layui-layer-btn">
+            <button class="layui-btn layui-btn-normal layui-btn-sm" lay-filter="getTo" lay-submit>确定</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+        </div>
     </div>
 </form>
 

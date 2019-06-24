@@ -1,11 +1,12 @@
 <style>
     .book-type p{float:left;width:50%;}
 </style>
-<form class="layui-form layui-row layui-col-space10" lay-filter="books" action="xx">
+<form class="layui-form" action="">
 
     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
         <ul class="layui-tab-title">
             <li class="layui-this">基本设置</li>
+            <li>状态设置</li>
             <li>seo设置</li>
         </ul>
         <div class="layui-tab-content">
@@ -15,13 +16,13 @@
                     <div class="layui-form-item magt3">
                         <label class="layui-form-label">小说名称*</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input book_name" lay-verify="book_name" name="book_name" placeholder="">
+                            <input type="text" class="layui-input book_name" lay-verify="book_name" name="book_name" placeholder="" value="{{.vo.BookName}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">列表页地址*</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input list_url" lay-verify="list_url" name="list_url" placeholder="">
+                            <input type="text" class="layui-input list_url" lay-verify="list_url" name="list_url" placeholder="" value="{{.vo.ListUrl}}">
                         </div>
                     </div>
 
@@ -29,7 +30,7 @@
                         <label class="layui-form-label">规则</label>
                         <div class="layui-input-block">
                             {{range $k,$v := .booksPregs}}
-                                <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary">
+                                <input name="preg_id" title="{{$v.Name}}" value="{{$v.Id}}" type="radio" lay-skin="primary" {{if eq $v.Id $.vo.PregId}}checked{{end}}>
                             {{end}}
                         </div>
                     </div>
@@ -37,7 +38,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">作者</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input book_author" name="book_author" placeholder="">
+                            <input type="text" class="layui-input book_author" name="book_author" placeholder="" value="{{.vo.BookAuthor}}">
                         </div>
                     </div>
 
@@ -47,8 +48,8 @@
                             <div class="layui-upload">
                                 <button class="layui-btn" id="book_img_upload" type="button">上传封面</button>
                                 <div class="layui-upload-list">
-                                    <img class="layui-upload-img" id="book_img" style="max-width:200px;">
-                                    <input type="hidden" name="book_img" class="book_img">
+                                    <img class="layui-upload-img" id="book_img" style="max-width:200px;" src="{{.vo.BookImg}}">
+                                    <input type="hidden" name="book_img" class="book_img" value="{{.vo.BookImg}}">
                                     <p id="book_img_text"></p>
                                 </div>
                             </div>
@@ -58,10 +59,43 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">描述</label>
                         <div class="layui-input-block">
-                            <textarea placeholder="请输入内容" class="layui-textarea book_describe" name="book_describe"></textarea>
+                            <textarea placeholder="请输入内容" class="layui-textarea book_describe" name="book_describe">{{.vo.BookDescribe}}</textarea>
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <div class="layui-tab-item">
+                <div class="layui-col-md3 layui-col-xs12">
+                    <blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i>类型</blockquote>
+                    <div class="border category">
+                        <div class="book-type clearfix">
+                            {{range $k,$v := .bookType}}
+                                <p><input type="radio" name="book_type" title="{{$v}}" lay-skin="primary" value="{{$k}}" {{if eq $k $.vo.BookType}}checked{{end}}/></p>
+                            {{end}}
+                        </div>
+                    </div>
+                    <blockquote class="layui-elem-quote title magt10"><i class="layui-icon">&#xe609;</i> 发布</blockquote>
+                    <div class="border">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label"><i class="layui-icon">&#xe60e;</i> 状　态</label>
+                            <div class="layui-input-block book_status">
+                                <select name="book_status" lay-verify="required">
+                                    <option value="1" {{if eq 1 .vo.BookStatus}}selected{{end}}>推荐</option>
+                                    <option value="2" {{if eq 2 .vo.BookStatus}}selected{{end}}>封面推荐</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item is_top">
+                            <label class="layui-form-label"><i class="seraph icon-zhiding"></i> 置　顶</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="is_top" value="1" title="是" {{if eq 1 .vo.IsTop}}checked{{end}}>
+                                <input type="radio" name="is_top" value="0" title="否" {{if eq 0 .vo.IsTop}}checked{{end}}>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -70,19 +104,19 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">seo标题</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input seo_title" name="seo_title" placeholder="">
+                            <input type="text" class="layui-input seo_title" name="seo_title" placeholder="" value="{{.vo.SeoTitle}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">seo关键字</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input seo_keyword" name="seo_keyword" placeholder="">
+                            <input type="text" class="layui-input seo_keyword" name="seo_keyword" placeholder="" {{.vo.SeoKeyword}}>
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">seo描述</label>
                         <div class="layui-input-block">
-                            <textarea placeholder="请输入内容" class="layui-textarea seo_describe" name="seo_describe"></textarea>
+                            <textarea placeholder="请输入内容" class="layui-textarea seo_description" name="seo_description">{{.vo.SeoDescription}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -92,41 +126,14 @@
     </div>
 
 
-
-    <div class="layui-col-md3 layui-col-xs12">
-        <blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i>类型</blockquote>
-        <div class="border category">
-            <div class="book-type clearfix">
-                {{range $k,$v := .bookType}}
-                <p><input type="radio" name="book_type" title="{{$v}}" lay-skin="primary" value="{{$k}}"/></p>
-                {{end}}
-            </div>
-        </div>
-        <blockquote class="layui-elem-quote title magt10"><i class="layui-icon">&#xe609;</i> 发布</blockquote>
-        <div class="border">
-            <div class="layui-form-item">
-                <label class="layui-form-label"><i class="layui-icon">&#xe60e;</i> 状　态</label>
-                <div class="layui-input-block book_status">
-                    <select name="book_status" lay-verify="required">
-                        <option value="1">推荐</option>
-                        <option value="2">封面推荐</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="layui-form-item is_top">
-                <label class="layui-form-label"><i class="seraph icon-zhiding"></i> 置　顶</label>
-                <div class="layui-input-block">
-                    <input type="checkbox" name="is_top" lay-skin="switch" lay-text="是|否" value="1">
-                </div>
-            </div>
-            <hr class="layui-bg-gray" />
-            <div class="layui-right">
-                <a class="layui-btn layui-btn-sm" lay-filter="addBooks" lay-submit><i class="layui-icon">&#xe609;</i>发布</a>
-                <a class="layui-btn layui-btn-primary layui-btn-sm" lay-filter="look" lay-submit>预览</a>
-            </div>
+    <hr class="layui-bg-gray"/>
+    <div class="layui-form-item">
+        <div class="layui-layer-btn">
+            <button class="layui-btn layui-btn-normal layui-btn-sm" lay-filter="getTo" lay-submit>确定</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
         </div>
     </div>
+
 </form>
 
 <script>
@@ -179,22 +186,5 @@
                 }
             }
         })
-
-        form.on("submit(addBooks)",function(data){
-            //弹出loading
-            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
-            // 实际使用时的提交信息
-            $.post($(".layui-form").attr("action"),data.field,function (res) {
-                setTimeout(function(){
-                    top.layer.close(index);
-                    top.layer.msg(res.msg);
-                    layer.closeAll("iframe");
-                    //刷新父页面
-                    parent.location.reload();
-                },500);
-            });
-            return false;
-        })
-
     });
 </script>

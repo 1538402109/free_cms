@@ -4,51 +4,55 @@
         <div class="layui-form-item magt3">
             <label class="layui-form-label">规则名称*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="">
+                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="" value="{{.vo.Name}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">列表链接*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_a" lay-verify="list_a" name="list_a" placeholder="">
+                <input type="text" class="layui-input list_a" lay-verify="list_a" name="list_a" placeholder="" value="{{.vo.ListA}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">作者</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_author" lay-verify="list_author" name="list_author" placeholder="">
+                <input type="text" class="layui-input list_author" lay-verify="list_author" name="list_author" placeholder="" value="{{.vo.ListAuthor}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">封面</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_msg_img" lay-verify="list_msg_img" name="list_msg_img" placeholder="">
+                <input type="text" class="layui-input list_msg_img" lay-verify="list_msg_img" name="list_msg_img" placeholder="" value="{{.vo.ListMsgImg}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">描述</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_describe" lay-verify="list_describe" name="list_describe" placeholder="">
+                <input type="text" class="layui-input list_describe" lay-verify="list_describe" name="list_describe" placeholder="" value="{{.vo.ListDescribe}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">更新时间</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_msg_last_time" lay-verify="list_msg_last_time" name="list_msg_last_time" placeholder="">
+                <input type="text" class="layui-input list_msg_last_time" lay-verify="list_msg_last_time" name="list_msg_last_time" placeholder="" value="{{.vo.ListMsgLastTime}}">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">内容文本*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input content_text" lay-verify="content_text" name="content_text" placeholder="">
+                <input type="text" class="layui-input content_text" lay-verify="content_text" name="content_text" placeholder="" value="{{.vo.ContentText}}">
             </div>
         </div>
 
-        <hr class="layui-bg-gray" />
-        <div class="layui-right">
-            <a class="layui-btn layui-btn-sm" lay-filter="getTo" lay-submit><i class="layui-icon">&#xe609;</i>保存</a>
+        <hr class="layui-bg-gray"/>
+        <div class="layui-form-item">
+            <div class="layui-layer-btn">
+                <button class="layui-btn layui-btn-normal layui-btn-sm" lay-filter="getTo" lay-submit>确定</button>
+                <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+            </div>
         </div>
+
     </div>
 
 </form>
@@ -80,22 +84,5 @@
                 }
             }
         })
-
-        form.on("submit(getTo)",function(data){
-            //弹出loading
-            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
-            // 实际使用时的提交信息
-            $.post($(".layui-form").attr("action"),data.field,function (res) {
-                setTimeout(function(){
-                    top.layer.close(index);
-                    top.layer.msg(res.msg);
-                    layer.closeAll("iframe");
-                    //刷新父页面
-                    parent.location.reload();
-                },500);
-            });
-            return false;
-        })
-
     })
 </script>

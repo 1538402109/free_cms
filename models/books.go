@@ -30,8 +30,11 @@ type Books struct {
 }
 
 func NewBooks() (books *Books) {
-	return &Books{}
+	books = &Books{}
+	books.PregId = 1
+	return
 }
+
 func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
 	m.CreatedAtText = m.CreatedAt.Unix()
 	_, booksType := NewBooksType().FindColumn()

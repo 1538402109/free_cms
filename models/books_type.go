@@ -76,7 +76,8 @@ func (m *BooksType) FindTree(key string) (booksType2 *[]BooksType, err error) {
 	var booksTypeData []BooksType
 	Db.Where("name like ?", "%"+key+"%").Find(&booksTypeData)
 
-	booksType2 = new([]BooksType)
+	//booksType2 = new([]BooksType)
+	booksType2 = &[]BooksType{}
 	Tree(booksTypeData, booksType2, 0, -1)
 	return
 }

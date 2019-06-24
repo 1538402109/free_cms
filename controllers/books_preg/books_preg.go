@@ -30,43 +30,36 @@ func (c *BooksPregController) Create() {
 		if err := c.ParseForm(booksPreg); err != nil {
 			c.JsonResult(1000, "赋值失败")
 		}
-		//2.验证，在模型中验证不能分场景
+		//2.验证
 		valid := validation.Validation{}
-		valid.Required(booksPreg.Name, "name").Message("规则名称不能为空")
-		valid.Required(booksPreg.ListA, "list_a").Message("列表链接不能为空")
-		valid.Required(booksPreg.ContentText, "content_text").Message("内容文本不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(booksPreg); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
 			c.JsonResult(1000, "验证失败")
 		}
-
 		//3.插入数据
 		if err, _ := booksPreg.Create(); err != nil {
 			c.JsonResult(1000, "创建失败")
 		}
 		c.JsonResult(0, "添加成功")
 	}
+	c.Data["vo"] = models.NewBooksPreg()
 	c.TplName = c.ADMIN_TPL + "books_preg/create.html"
 }
 
 func (c *BooksPregController) Update() {
-	if c.Ctx.Input.IsPost() {
-		id, _ := c.GetInt("id")
-		booksPreg, _ := models.NewBooksPreg().FindById(id)
+	id, _ := c.GetInt("id")
+	booksPreg, _ := models.NewBooksPreg().FindById(id)
 
+	if c.Ctx.Input.IsPost() {
 		//1
 		if err := c.ParseForm(&booksPreg); err != nil {
 			c.JsonResult(0, "赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
-		valid.Required(booksPreg.Id, "id").Message("id不能为空")
-		valid.Required(booksPreg.Name, "name").Message("规则名称不能为空")
-		valid.Required(booksPreg.ListA, "list_a").Message("列表链接不能为空")
-		valid.Required(booksPreg.ContentText, "content_text").Message("内容文本不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(booksPreg); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
@@ -78,6 +71,7 @@ func (c *BooksPregController) Update() {
 		}
 		c.JsonResult(0, "修改成功")
 	}
+	c.Data["vo"] = booksPreg
 	c.TplName = c.ADMIN_TPL + "books_preg/update.html"
 }
 

@@ -24,59 +24,58 @@ func (c *BooksTypeController) Index() {
 
 func (c *BooksTypeController) Create() {
 	if c.Ctx.Input.IsPost() {
-		BooksType := models.NewBooksType()
+		booksType := models.NewBooksType()
 		//1.压入数据
-		if err := c.ParseForm(BooksType); err != nil {
+		if err := c.ParseForm(booksType); err != nil {
 			c.JsonResult(0, "赋值失败")
 		}
-		//2.验证，在模型中验证不能分场景
+		//2.验证
 		valid := validation.Validation{}
-		valid.Required(BooksType.Name, "name").Message("规则名称不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(booksType); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.JsonResult(0, "验证失败")
+			c.JsonResult(1000, "验证失败")
 		}
 
 		//3.插入数据
-		if err, _ := BooksType.Create(); err != nil {
+		if err, _ := booksType.Create(); err != nil {
 			c.JsonResult(0, "创建失败")
 		}
 		c.JsonResult(0, "添加成功")
 	}
 	result, _ := models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
+	c.Data["vo"] = models.NewBooksType()
 	c.TplName = c.ADMIN_TPL + "books_type/create.html"
 }
 
 func (c *BooksTypeController) Update() {
+	id, _ := c.GetInt("id")
+	booksType, _ := models.NewBooksType().FindById(id)
+
 	if c.Ctx.Input.IsPost() {
-		id, _ := c.GetInt("id")
-		BooksType, _ := models.NewBooksType().FindById(id)
 		//1
-		if err := c.ParseForm(&BooksType); err != nil {
+		if err := c.ParseForm(&booksType); err != nil {
 			c.JsonResult(0, "赋值失败")
 		}
 		//2
 		valid := validation.Validation{}
-		valid.Required(BooksType.Id, "id").Message("id不能为空")
-		valid.Required(BooksType.Name, "name").Message("规则名称不能为空")
-		if valid.HasErrors() {
+		if b, _ := valid.Valid(booksType); !b {
 			for _, err := range valid.Errors {
 				log.Println(err.Key, err.Message)
 			}
-			c.JsonResult(0, "验证失败")
+			c.JsonResult(1000, "验证失败")
 		}
 		//3
-
-		if err, _ := models.NewBooksType().Update(); err != nil {
+		if err, _ := booksType.Update(); err != nil {
 			c.JsonResult(0, "修改失败")
 		}
 		c.JsonResult(0, "修改成功")
 	}
 	result, _ := models.NewBooksType().FindTree("")
 	c.Data["booksType"] = result
+	c.Data["vo"] = booksType
 	c.TplName = c.ADMIN_TPL + "books_type/update.html"
 }
 

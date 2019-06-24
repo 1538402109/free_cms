@@ -8,7 +8,7 @@
                 <select name="pid" lay-verify="pid" class="pid">
                     <option value="0">顶级</option>
                     {{range $k,$v:=.booksType}}
-                        <option value="{{$v.Id}}">{{$v.NameText}}</option>
+                        <option value="{{$v.Id}}" {{if eq $v.Id $.vo.Pid}}selected{{end}}>{{$v.NameText}}</option>
                     {{end}}
                 </select>
             </div>
@@ -17,28 +17,32 @@
         <div class="layui-form-item magt3">
             <label class="layui-form-label">名称*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="">
+                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="" value="{{.vo.Name}}">
             </div>
         </div>
 
         <div class="layui-form-item magt3">
             <label class="layui-form-label">是否导航</label>
             <div class="layui-input-block">
-                <input type="radio" name="is_nav" value="1"  checked title="是">
-                <input type="radio" name="is_nav" value="0" title="否">
+                <input type="radio" name="is_nav" value="1" title="是" {{if eq 1 .vo.IsNav}}checked{{end}}>
+                <input type="radio" name="is_nav" value="0" title="否" {{if eq 0 .vo.IsNav}}checked{{end}}>
             </div>
         </div>
 
-        <hr class="layui-bg-gray" />
-        <div class="layui-right">
-            <a class="layui-btn layui-btn-sm" lay-filter="getTo" lay-submit><i class="layui-icon">&#xe609;</i>保存</a>
+        <hr class="layui-bg-gray"/>
+        <div class="layui-form-item">
+            <div class="layui-layer-btn">
+                <button class="layui-btn layui-btn-normal layui-btn-sm" lay-filter="getTo" lay-submit>确定</button>
+                <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+            </div>
         </div>
+
     </div>
 
 </form>
 
 <script type="text/javascript">
-    layui.use(['form','layer','layedit','laydate','upload'],function(){
+    layui.use(['form', 'layer', 'layedit', 'laydate', 'upload'], function () {
         var form = layui.form
         layer = parent.layer === undefined ? layui.layer : top.layer,
             laypage = layui.laypage,
@@ -48,28 +52,11 @@
             $ = layui.jquery;
 
         form.verify({
-            name : function(val){
-                if(val == ''){
+            name: function (val) {
+                if (val == '') {
                     return "名称不能为空";
                 }
             }
         })
-
-        form.on("submit(getTo)",function(data){
-            //弹出loading
-            var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
-            // 实际使用时的提交信息
-            $.post($(".layui-form").attr("action"),data.field,function (res) {
-                setTimeout(function(){
-                    top.layer.close(index);
-                    top.layer.msg(res.msg);
-                    layer.closeAll("iframe");
-                    //刷新父页面
-                    parent.location.reload();
-                },500);
-            });
-            return false;
-        })
-
     })
 </script>
