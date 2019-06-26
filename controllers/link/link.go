@@ -47,14 +47,15 @@ func (c *LinkController) Create() {
 		c.JsonResult(0, "添加成功")
 	}
 
+	c.Data["vo"] = models.NewLink()
 	c.TplName = c.ADMIN_TPL + "link/create.html"
 }
 
 func (c *LinkController) Update() {
-	if c.Ctx.Input.IsPost() {
-		id, _ := c.GetInt("id")
+	id, _ := c.GetInt("id")
+	link, _ := models.NewLink().FindById(id)
 
-		link, _ := models.NewLink().FindById(id)
+	if c.Ctx.Input.IsPost() {
 		//1
 		if err := c.ParseForm(&link); err != nil {
 			c.JsonResult(1001, "赋值失败")
@@ -75,6 +76,7 @@ func (c *LinkController) Update() {
 		c.JsonResult(0, "修改成功")
 	}
 
+	c.Data["vo"] = link
 	c.TplName = c.ADMIN_TPL + "link/update.html"
 }
 

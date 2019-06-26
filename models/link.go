@@ -16,7 +16,9 @@ type Link struct {
 }
 
 func NewLink() (link *Link) {
-	return &Link{}
+	link = &Link{}
+	link.ListOrder = 1000
+	return
 }
 
 func (m *Link) Pagination(offset, limit int, key string) (res []Link, count int) {
