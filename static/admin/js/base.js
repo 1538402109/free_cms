@@ -39,7 +39,7 @@ layui.use(['form', 'layer', 'table'], function () {
     //弹出编辑页
     function openJump(action) {
         var index = layui.layer.open({
-            title: "小说",
+            title: "编辑",
             type: 2,
             maxmin: true,
             area: ['50%', '80%'],

@@ -53,15 +53,15 @@
             limits: [20, 50, 100],
             id: "jsonTable",
             cols: [[
-                {type: "checkbox", fixed: "left", width: 50},
+                {type: "checkbox", fixed: "left"},
                 {
-                    field: 'image', title: 'LOGO', width: 180, align: "center", templet: function (d) {
+                    field: 'image', title: 'LOGO', align: "center", templet: function (d) {
                         return '<a href="' + d.websiteUrl + '" target="_blank"><img src="' + d.image + '" height="26" /></a>';
                     }
                 },
-                {field: 'name', title: '链接名称', minWidth: 240},
+                {field: 'name', title: '链接名称'},
                 {
-                    field: 'url', title: '链接地址', width: 300, templet: function (d) {
+                    field: 'url', title: '链接地址', templet: function (d) {
                         return '<a class="layui-blue" href="' + d.url + '" target="_blank">' + d.url + '</a>';
                     }
                 },
@@ -75,9 +75,9 @@
                         }
                     }
                 },
-                {field: 'list_order', title: '排序', minWidth: 200, align: 'center', edit: 'text'},
+                {field: 'list_order', title: '排序',  align: 'center', edit: 'text'},
                 {
-                    title: '操作', width: 130, fixed: "right", align: "center", templet: function () {
+                    title: '操作', width: 100, fixed: "right", align: "center", templet: function () {
                         return '\t\t<a class="layui-icon btn-edit" lay-event="update">&#xe642;</a>\n' +
                             '\t\t<a class="layui-icon btn-edit" lay-event="delete">&#xe640;</a>\n';
                     }
@@ -99,43 +99,7 @@
                 layer.msg("请输入搜索的内容");
             }
         });
-
-        //监听单元格编辑
-        table.on('edit(jsonTable)', function (obj) {
-            var value = obj.value //得到修改后的值
-                , data = obj.data //得到所在行所有键值
-                , field = obj.field; //得到字段
-            $.post("update", data, function (res) {
-                tableIns.reload()
-                setTimeout(function () {
-                    top.layer.msg(res.msg);
-                }, 500);
-            });
-        });
     })
-
-
-    function Edit(body, edit, form) {
-        if (edit) {
-            body.find(".layui-form").attr("action", "update?id=" + edit.id)
-
-            body.find(".image").val(edit.image);
-            body.find(".linkLogoImg").attr("src", edit.image);
-            body.find(".name").val(edit.name);
-            body.find(".url").val(edit.url);
-            if (edit.status == 1) {
-                body.find(".status").prop("checked", true);
-            }
-            if (edit.target == 1) {
-                body.find(".target").prop("checked", true);
-            }
-            body.find(".description").val(edit.description);
-            body.find(".list_order").val(edit.list_order);
-            form.render();
-        } else {
-            body.find(".layui-form").attr("action", "create")
-        }
-    }
 </script>
 </body>
 </html>

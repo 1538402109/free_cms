@@ -61,9 +61,9 @@
             id: "jsonTable",
             cols: [[
                 {type: "checkbox", fixed: "left", width: 50},
-                {field: 'id', title: 'ID', width: 60, align: "center"},
+                {field: 'id', title: 'ID', align: "center"},
                 {field: 'book_name', title: '小说名称'},
-                {field: 'book_type_text', title: '类型', align: 'center', width: 70},
+                {field: 'book_type_text', title: '类型', align: 'center'},
                 {field: 'book_author', title: '作者', align: 'center'},
                 {field: 'book_new_chapter', title: '最新章节', align: 'center'},
                 {field: 'book_last_at', title: '最后更新', align: 'center'},
@@ -72,7 +72,7 @@
                         return formatUnixtimestamp(data.created_at_text);
                     }
                 },
-                {title: '操作', width: 170, templet: '#listBar', fixed: "right", align: "center"}
+                {title: '操作', width: 100, templet: '#listBar', fixed: "right", align: "center"}
             ]]
         });
 
@@ -92,35 +92,6 @@
             }
         });
     })
-
-    function Edit(body, edit, form) {
-        if (edit) {
-            body.find(".layui-form").attr("action", "/books/update?id=" + edit.id)
-            body.find(".book_name").val(edit.book_name);
-            body.find(".list_url").val(edit.list_url);
-            body.find(".book_author").val(edit.book_author);
-            body.find(".book_describe").val(edit.book_describe);
-            body.find(".book_status select").val(edit.book_status);
-            body.find("input[name='book_type'][value='" + edit.book_type + "']").prop("checked", "checked");
-            body.find("input[name='preg_id'][value='" + edit.preg_id + "']").prop("checked", true)
-            body.find("input[name='book_type'][value='" + edit.book_type + "']").prop("checked", true)
-            body.find(".book_status").val(edit.book_status)
-            if (edit.is_top) {
-                body.find("input[name='is_top']").prop("checked", "checked");
-            }
-            body.find(".seo_title").val(edit.seo_title);
-            body.find(".seo_keyword").val(edit.seo_keyword);
-            body.find(".seo_describe").val(edit.seo_describe);
-
-            body.find(".book_img").val(edit.book_img);
-            body.find("#book_img").attr("src", edit.book_img);
-            form.render();
-        } else {
-            body.find(".layui-form").attr("action", "/books/create")
-            body.find("input[name='preg_id']").eq(0).attr("checked", true)
-            body.find("input[name='book_type']").eq(0).attr("checked", true)
-        }
-    }
 </script>
 </body>
 </html>

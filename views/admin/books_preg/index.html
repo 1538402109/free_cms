@@ -60,8 +60,8 @@
 			limits: [20, 50,100],
 			id: "jsonTable",
 			cols: [[
-				{type: "checkbox", fixed: "left", width: 50},
-				{field: 'id', title: 'ID', width: 60, align: "center"},
+				{type: "checkbox", fixed: "left"},
+				{field: 'id', title: 'ID', align: "center"},
 				{field: 'name', title: '规则名称'},
 				{field: 'list_author', title: '作者', align: 'center'},
 				{field: 'list_describe', title: '描述', align: 'center'},
@@ -69,7 +69,7 @@
 				{field: 'list_msg_last_time', title: '跟新时间', align: 'center'},
 				{field: 'list_a', title: '列表链接', align: 'center'},
 				{field: 'content_text', title: '内容文本', align: 'center'},
-				{title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
+				{title: '操作', width: 100, templet: '#toolBar', fixed: "right", align: "center"}
 			]]
 		});
 
@@ -89,25 +89,6 @@
 			}
 		});
 	})
-
-	//编辑文章
-	function Edit(body, edit, form)
-	{
-		if (edit) {
-			body.find(".layui-form").attr("action", "update?id=" + edit.id)
-			body.find(".name").val(edit.name);
-			body.find(".list_a").val(edit.list_a);
-			body.find(".list_author").val(edit.list_author);
-			body.find(".list_new_chapter").val(edit.list_new_chapter);
-			body.find(".list_describe").val(edit.list_describe);
-			body.find(".list_msg_img").val(edit.list_msg_img);
-			body.find(".list_msg_last_time").val(edit.list_msg_last_time);
-			body.find(".content_text").val(edit.content_text);
-			form.render();
-		} else {
-			body.find(".layui-form").attr("action", "create")
-		}
-	}
 </script>
 </body>
 </html>

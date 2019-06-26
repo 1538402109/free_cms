@@ -60,8 +60,8 @@
             //limits: [10, 15, 20, 25],
             //id: "booksListTable",
             cols: [[
-                {type: "checkbox", fixed: "left", width: 50},
-                {field: 'id', title: 'ID', width: 60, align: "center"},
+                {type: "checkbox", fixed: "left"},
+                {field: 'id', title: 'ID', align: "center"},
                 {field: 'name_text', title: '分类名称'},
                 {
                     field: 'is_open', title: '是否导航', templet: function (d) {
@@ -72,7 +72,7 @@
                         }
                     }
                 },
-                {title: '操作', width: 170, templet: '#toolBar', fixed: "right", align: "center"}
+                {title: '操作', width: 100, templet: '#toolBar', fixed: "right", align: "center"}
             ]]
         });
 
@@ -92,19 +92,6 @@
             }
         });
     })
-
-    //编辑文章
-    function Edit(body, edit, form) {
-        if (edit) {
-            body.find(".layui-form").attr("action", "update?id=" + edit.id)
-            body.find(".name").val(edit.name);
-            body.find(".pid").val(edit.pid)
-            body.find("input:radio[value=" + edit.is_nav + "]").attr("checked", true);
-            form.render();
-        } else {
-            body.find(".layui-form").attr("action", "create")
-        }
-    }
 </script>
 </body>
 </html>
