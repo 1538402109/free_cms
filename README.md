@@ -1,5 +1,5 @@
 # freecms
-FreeCms内容管理系统(未完成),使用工具如下:
+FreeCms内容管理系统(学习项目),使用工具如下:
 
 [beego](https://beego.me)
 

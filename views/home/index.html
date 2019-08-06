@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-{{template "home/public/head.html".}}
+    {{template "home/public/head.html".}}
+    <title>{{.seoIndex.seo_title}}</title>
+    <meta name="keywords" content="{{.seoIndex.seo_keywords}}"/>
+    <meta name="description" content="{{.seoIndex.seo_description}}"/>
 </head>
 <body>
 
@@ -11,13 +14,15 @@
     <h2 class="title"><span>封面推荐</span></h2>
     <div class="block">
         {{range $k,$v:=.books8}}
-        <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
-        <div class="block_txt">
-            <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
-            <p>作者：{{$v.BookAuthor}}</p>
-            <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}}</a></p>
-        </div>
-        <div style="clear:both"></div>
+            <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                        onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+            </div>
+            <div class="block_txt">
+                <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                <p>作者：{{$v.BookAuthor}}</p>
+                <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}}</a></p>
+            </div>
+            <div style="clear:both"></div>
         {{end}}
 
     </div>
@@ -28,13 +33,15 @@
     <div class="block">
         {{range $k,$v:=.books1}}
             {{if eq 0 $k}}
-            <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
-            <div class="block_txt">
-                <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
-                <p>作者：{{$v.BookAuthor}}</p>
-                <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
-            </div>
-            <div style="clear:both"></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
+                <div class="block_txt">
+                    <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
+                    <p>作者：{{$v.BookAuthor}}</p>
+                    <p><a href="/books-list/{{$v.Id}}">{{$v.BookDescribe}} </a></p>
+                </div>
+                <div style="clear:both"></div>
             {{end}}
         {{end}}
         <ul>
@@ -53,7 +60,9 @@
     <div class="block">
         {{range $k,$v:=.books2}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>
@@ -78,7 +87,9 @@
     <div class="block">
         {{range $k,$v:=.books3}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>
@@ -103,7 +114,9 @@
     <div class="block">
         {{range $k,$v:=.books4}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>
@@ -128,7 +141,9 @@
     <div class="block">
         {{range $k,$v:=.books5}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>
@@ -153,7 +168,9 @@
     <div class="block">
         {{range $k,$v:=.books6}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>
@@ -178,7 +195,9 @@
     <div class="block">
         {{range $k,$v:=.books7}}
             {{if eq 0 $k}}
-                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}" onerror="this.src='/static/home/images/book-default.jpg'"/></a></div>
+                <div class="block_img"><a href="/books-list/{{$v.Id}}"><img height=100 width=80 src="{{$v.BookImg}}"
+                                                                            onerror="this.src='/static/home/images/book-default.jpg'"/></a>
+                </div>
                 <div class="block_txt">
                     <p><a href="/books-list/{{$v.Id}}"><h2>{{$v.BookName}}</h2></a></p>
                     <p>作者：{{$v.BookAuthor}}</p>

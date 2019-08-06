@@ -30,9 +30,7 @@ type Books struct {
 }
 
 func NewBooks() (books *Books) {
-	books = &Books{}
-	books.PregId = 1
-	return
+	return &Books{PregId:1,BookType:1}
 }
 
 func (m *Books) AfterFind(scope *gorm.Scope) (err error) {

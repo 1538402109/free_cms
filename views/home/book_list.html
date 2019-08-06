@@ -2,6 +2,9 @@
 <html>
 <head>
     {{template "home/public/head.html".}}
+    <title>{{.bookMsg.BookName}}_{{.seoIndex.seo_title}}</title>
+    <meta name="keywords" content="{{.bookMsg.BookName}}"/>
+    <meta name="description" content="{{if eq "" .bookMsg.BookDescribe}} {{.list.BookDescribe}} {{else}}{{.bookMsg.BookDescribe}} {{end}}"/>
     <style type="text/css">
         #notice {
             max-width: 320px;

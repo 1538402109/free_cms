@@ -64,6 +64,7 @@ func getType(typeName string) (str string) {
 }
 
 //字段转换大驼峰，小驼峰
+//mysql 自带命名要使用小写"_"分割
 func Hump(v, t string) (new string) {
 	field := strings.Split(v, "_")
 	if t == "min" {

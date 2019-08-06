@@ -27,6 +27,16 @@ func (c *HomeController) Prepare() {
 	c.Data["sonType"] = sonType
 	//友情链接
 
+	//seo
+	var seoIndex = make(map[string]string)
+	conf, _ := models.NewConfig().FindByName("seo_title")
+	seoIndex["seo_title"] = conf.Value
+	conf, _ = models.NewConfig().FindByName("seo_keywords")
+	seoIndex["seo_keywords"] = conf.Value
+	conf, _ = models.NewConfig().FindByName("seo_description")
+	seoIndex["seo_description"] = conf.Value
+
+	c.Data["seoIndex"] = seoIndex
 	c.Data["booksType"] = booksType
 }
 

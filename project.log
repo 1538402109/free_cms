@@ -1,0 +1,31 @@
+2019/08/02 19:31:35.728 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:32:12.302 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:32:18.257 [I] [value.go:447]  aaa
+2019/08/02 19:34:23.413 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:34:36.220 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:35:25.663 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:35:27.323 [I] [value.go:447]  aaa
+2019/08/02 19:36:04.831 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/02 19:36:54.324 [I] [value.go:447]  aaann
+2019/08/03 12:26:04.790 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/03 14:35:58.406 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/03 15:08:35.543 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 11:04:36.967 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 11:13:06.399 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 11:13:12.894 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 12:16:23.645 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 12:16:36.880 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 13:03:46.176 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 13:04:48.009 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 13:07:48.691 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 13:08:01.481 [C] [panic.go:522]  the request url is  /
+2019/08/06 13:08:01.481 [C] [panic.go:522]  Handler crashed with error assignment to entry in nil map
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/runtime/map_faststr.go:204
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:33
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:817
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 13:08:01.482 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 13:10:01.220 [I] [asm_amd64.s:1337]  http server Running on http://:8000
