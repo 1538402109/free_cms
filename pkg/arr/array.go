@@ -1,6 +1,9 @@
 package arr
 
-import "math"
+import (
+	"math"
+	"sort"
+)
 
 // Reverse 反转
 func Reverse(arr []string) (res []string) {
@@ -24,5 +27,23 @@ func Sort(arr []int) (res []int) {
 	}
 
 	res = arr
+	return
+}
+
+func RemoveRepeatedElement(arr []string) (newArr []string) {
+	newArr = make([]string, 0)
+	sort.Strings(arr)
+	for i := 0; i < len(arr); i++ {
+		repeat := false
+		for j := i + 1; j < len(arr); j++ {
+			if arr[i] == arr[j] {
+				repeat = true
+				break
+			}
+		}
+		if !repeat {
+			newArr = append(newArr, arr[i])
+		}
+	}
 	return
 }

@@ -1,10 +1,10 @@
 package home
 
 import (
-	"comgo/slice"
 	"fmt"
 	"free_cms/controllers"
 	"free_cms/models"
+	"free_cms/pkg/arr"
 	"free_cms/pkg/d"
 	"free_cms/pkg/str"
 	"github.com/gocolly/colly"
@@ -115,7 +115,7 @@ func (c *HomeController) Shujia() {
 	cookieArr := strings.Split(cookieStr, ",")
 	//2
 	cookieArr = append(cookieArr, strconv.Itoa(cid))
-	cookieArr = slice.RemoveRepeatedElement(cookieArr)
+	cookieArr = arr.RemoveRepeatedElement(cookieArr)
 	//3
 	c.Ctx.SetCookie("shujia", strings.Join(cookieArr, ","))
 	c.Data["json"] = cookieArr
