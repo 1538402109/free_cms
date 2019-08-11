@@ -1,13 +1,10 @@
 <!doctype html>
 <html>
 <head>
-
-    <title>Stone个人博客-杨远奇的个人博客</title>
-    <meta name="keywords" content="Stone个人博客，Stone的博客，杨远奇的个人博客，后端程序员博客,后端技术总结，后端技术错误处理"/>
-    <meta name="description" content="作为一个苦逼的程序员，坚持不能做重复的工作和向上的学习态度，把工作中遇到的搞笑，常见错误，学习笔记，兴趣爱好等事迹记录下来，当作一种激励或人生的起伏波动。"/>
-
+    <title>{{.seoIndex.seo_title}}</title>
+    <meta name="keywords" content="{{.seoIndex.seo_keywords}}"/>
+    <meta name="description" content="{{.seoIndex.seo_description}}"/>
     {{template "home/blog/public/head.html" .}}
-
 </head>
 <body>
 <article>

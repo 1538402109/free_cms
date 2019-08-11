@@ -14,6 +14,19 @@ type BlogController struct {
 	controllers.HomeBaseController
 }
 
+func (c *BlogController) Prepare() {
+	//seo
+	var seoIndex = make(map[string]string)
+	conf, _ := models.NewConfig().FindByName("seo_title")
+	seoIndex["seo_title"] = conf.Value
+	conf, _ = models.NewConfig().FindByName("seo_keywords")
+	seoIndex["seo_keywords"] = conf.Value
+	conf, _ = models.NewConfig().FindByName("seo_description")
+	seoIndex["seo_description"] = conf.Value
+
+	c.Data["seoIndex"] = seoIndex
+}
+
 func (b *BlogController) Index() {
 	blogModel := models.NewPost()
 	page, _ := b.GetInt("page", 1)
