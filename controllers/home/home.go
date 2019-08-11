@@ -1,6 +1,7 @@
 package home
 
 import (
+	"comgo/slice"
 	"fmt"
 	"free_cms/controllers"
 	"free_cms/models"
@@ -69,6 +70,9 @@ func (c *HomeController) List() {
 	id2, _ := strconv.Atoi(id)
 
 	if c.IsAjax() {
+		limit, _ := c.GetInt("limit", 10)
+		offset, _ := c.GetInt("offset", 0)
+
 		if id2 == 1 {
 			id2 = 6
 		}
@@ -83,9 +87,14 @@ func (c *HomeController) List() {
 		}
 		if id2 == 5 {
 			//书架
+			shujia := c.Ctx.GetCookie("shujia")
+			booksModel := models.NewBooks()
+			shujiaData := booksModel.FindByIdWhereIn(strings.Split(shujia, ","), offset, limit)
+
+			c.Data["json"] = d.TableJson(shujiaData)
+			c.ServeJSON()
+			return
 		}
-		limit, _ := c.GetInt("limit", 10)
-		offset, _ := c.GetInt("offset", 0)
 		key := c.GetString("key")
 		tabData, count, _ := models.NewBooks().FindOfBtTable(id2, offset, limit, key, bookType2)
 		c.Data["json"] = d.TableJson(tabData, offset, limit, count)
@@ -97,6 +106,21 @@ func (c *HomeController) List() {
 	c.Data["category"] = category
 
 	c.TplName = "home/list.html"
+}
+
+func (c *HomeController) Shujia() {
+	cid, _ := c.GetInt("cid")
+	//1
+	cookieStr := c.Ctx.GetCookie("shujia")
+	cookieArr := strings.Split(cookieStr, ",")
+	//2
+	cookieArr = append(cookieArr, strconv.Itoa(cid))
+	cookieArr = slice.RemoveRepeatedElement(cookieArr)
+	//3
+	c.Ctx.SetCookie("shujia", strings.Join(cookieArr, ","))
+	c.Data["json"] = cookieArr
+	c.ServeJSON()
+	return
 }
 
 //小说章节列表
@@ -190,26 +214,26 @@ func GetList(cid, id string) (bookList BookList, bookArticle BookArticle) {
 			}
 
 			i2 := strconv.Itoa(i + 1)
-			bookList.BookListMsgs = append(bookList.BookListMsgs, BookListMsg{Href: "/article/" + cid + "/" + i2, Title: title, OldHref: element.Request.AbsoluteURL(element.Attr("href"))})
+			bookList.BookListMsgs = append(bookList.BookListMsgs, BookListMsg{Href: "/book/article/" + cid + "/" + i2, Title: title, OldHref: element.Request.AbsoluteURL(element.Attr("href"))})
 
 			lastTitle = title
 			lastId = i
 
-			bookArticle.ListHref = "/books-list/" + cid
+			bookArticle.ListHref = "/book/books-list/" + cid
 			//组装内容页的url
 			if idI > i { //已到最后一章
 				prev := strconv.Itoa((idI - 1))
-				bookArticle.PrevHref = "/article/" + cid + "/" + prev
-				bookArticle.NextHref = "/books-list/" + cid
+				bookArticle.PrevHref = "/book/article/" + cid + "/" + prev
+				bookArticle.NextHref = "/book/books-list/" + cid
 			} else if idI <= 1 { //已到第一张
 				next := strconv.Itoa((idI + 1))
-				bookArticle.PrevHref = "/books-list/" + cid
-				bookArticle.NextHref = "/article/" + cid + "/" + next
+				bookArticle.PrevHref = "/book/books-list/" + cid
+				bookArticle.NextHref = "/book/article/" + cid + "/" + next
 			} else {
 				next := strconv.Itoa((idI + 1))
 				prev := strconv.Itoa((idI - 1))
-				bookArticle.PrevHref = "/article/" + cid + "/" + prev
-				bookArticle.NextHref = "/article/" + cid + "/" + next
+				bookArticle.PrevHref = "/book/article/" + cid + "/" + prev
+				bookArticle.NextHref = "/book/article/" + cid + "/" + next
 			}
 
 			if i+1 == idI {

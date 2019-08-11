@@ -7,7 +7,7 @@
 <div class="header" id="_bqgmb_head">
     <div class="back"><a href="javascript:history.go(-1);">返回</a></div>
     <h1 id="_bqgmb_h1">{{.article.Title}}</h1>
-    <div class="back_r"><a href="/">首页</a></div>
+    <div class="back_r"><a href="/book">首页</a></div>
 </div>
 <div>
     <div class="nr_set">
@@ -22,7 +22,7 @@
                 <td class="prev"><a id="pb_prev" href="{{.article.PrevHref}}">上一章</a></td>
                 <td class="mulu"><a id="pb_mulu" href="{{.article.ListHref}}">回目录</a></td>
                 <td class="next"><a id="pb_next" href="{{.article.NextHref}}">下一章</a></td>
-                <td class="mulu"><a id="pt_shouye" href="">加入书架</a></td>
+                <td class="mulu"><a id="pt_shouye" href="Javascript:void(0);" onclick="javascript:shujia({{.article.Cid}})">加入书架</a></td>
             </tr>
         </table>
     </div>
@@ -38,7 +38,7 @@
                 <td class="prev"><a id="pb_prev" href="{{.article.PrevHref}}">上一章</a></td>
                 <td class="mulu"><a id="pb_mulu" href="{{.article.ListHref}}">回目录</a></td>
                 <td class="next"><a id="pb_next" href="{{.article.NextHref}}">下一章</a></td>
-                <td class="mulu"><a id='pb_shouye' href="Javascript:void(0);" onclick="javascript:putbookmark(23537,17123860);"><font>加入书架</font></a></td>
+                <td class="mulu"><a id='pb_shouye' href="Javascript:void(0);" onclick="javascript:shujia({{.article.Cid}})"><font>加入书架</font></a></td>
             </tr>
         </table>
     </div>
@@ -46,6 +46,17 @@
 
 {{template "home/public/foot.html" .}}
 {{template "home/public/scripts.html" .}}
-
+<script>
+    function shujia(cid) {
+        $.ajax({
+            url:"/book/shujia",
+            data:{cid:cid},
+            success:function (res) {
+                console.log(res);
+                alert("添加成功");
+            }
+        });
+    }
+</script>
 </body>
 </html>

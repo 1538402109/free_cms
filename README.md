@@ -16,13 +16,17 @@ FreeCms内容管理系统(学习项目),使用工具如下:
 
 git clone https://github.com/yangyuanqi/free_cms.git
 
-2.导入sql
+2.导入sql  
+/data/free_cms.sql
 
-3.修改conf配置
+3.修改conf配置  
+/conf/app.conf
 
 #### 网站地址
-前台:localhost:8000
+前台:localhost:8000  
 
-后台:localhost:8000/admin
+后台:localhost:8000/admin  
 
-账号:admin 密码:123456
+账号:admin 密码:123456  
+
+演示地址：[book.yyq6.cn](http://book.yyq6.cn)  

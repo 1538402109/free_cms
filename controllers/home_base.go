@@ -7,4 +7,3 @@ import (
 type HomeBaseController struct {
 	beego.Controller
 }
-

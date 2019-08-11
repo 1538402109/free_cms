@@ -88,12 +88,14 @@ func CreateAdminLogCallback(scope *gorm.Scope) {
 }
 
 func UpdateAdminLogCallback(scope *gorm.Scope) {
-	Db.Create(&AdminLog{Route: common.Fc.Request.URL.String(),
-		UserId:      common.UserId,
-		Ip:          int(str.Ip2long(common.Fc.Input.IP())),
-		Method:      common.Fc.Request.Method,
-		Description: fmt.Sprintf("%s修改了表%s 的%s", common.UserId, scope.TableName(), fmt.Sprintf("%+v", scope.Value)),
-	})
+	if common.Fc != nil {
+		Db.Create(&AdminLog{Route: common.Fc.Request.URL.String(),
+			UserId:      common.UserId,
+			Ip:          int(str.Ip2long(common.Fc.Input.IP())),
+			Method:      common.Fc.Request.Method,
+			Description: fmt.Sprintf("%s修改了表%s 的%s", common.UserId, scope.TableName(), fmt.Sprintf("%+v", scope.Value)),
+		})
+	}
 	return
 }
 

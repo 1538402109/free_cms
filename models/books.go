@@ -30,7 +30,7 @@ type Books struct {
 }
 
 func NewBooks() (books *Books) {
-	return &Books{PregId:1,BookType:1}
+	return &Books{PregId: 1, BookType: 1}
 }
 
 func (m *Books) AfterFind(scope *gorm.Scope) (err error) {
@@ -138,5 +138,10 @@ func (m *Books) FindOfBtTable(pid, offset, limit int, key string, bookType2 int)
 
 	query.Offset(offset).Limit(limit).Order("id desc").Find(&books)
 	query.Model(Books{}).Count(&count)
+	return
+}
+
+func (m *Books) FindByIdWhereIn(ids []string, offset, limit int) (books []Books) {
+	Db.Preload("BookTypes").Where("id in (?)", ids).Offset(offset).Limit(limit).Find(&books)
 	return
 }

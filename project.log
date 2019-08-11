@@ -29,3 +29,1177 @@
 2019/08/06 13:08:01.481 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
 2019/08/06 13:08:01.482 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
 2019/08/06 13:10:01.220 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 14:37:08.783 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:00:50.228 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:04:01.677 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:30:31.813 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:30:43.424 [C] [panic.go:522]  the request url is  /books-list/2552
+2019/08/06 15:30:43.424 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:30:43.424 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:30:43.424 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:30:43.424 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:30:43.424 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:30:43.424 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:30:43.425 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:30:43.426 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:32:17.214 [C] [panic.go:522]  the request url is  /books-list/2552
+2019/08/06 15:32:17.214 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:32:17.214 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:32:17.215 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:32:29.704 [C] [panic.go:522]  the request url is  /books-list/2532
+2019/08/06 15:32:29.704 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:32:29.704 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:29.704 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:32:29.704 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:29.704 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:32:29.704 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:32:29.705 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:32:29.705 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:32:36.261 [C] [panic.go:522]  the request url is  /books-list/2507
+2019/08/06 15:32:36.261 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:32:36.261 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:32:36.262 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:32:36.262 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:32:39.283 [C] [panic.go:522]  the request url is  /books-list/2542
+2019/08/06 15:32:39.283 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:32:39.283 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:32:39.283 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:32:46.830 [C] [panic.go:522]  the request url is  /books-list/2525
+2019/08/06 15:32:46.830 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:32:46.830 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:32:46.831 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:35:01.493 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:35:09.002 [C] [panic.go:522]  the request url is  /books-list/2525
+2019/08/06 15:35:09.002 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:35:09.002 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:09.002 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:35:09.002 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:09.002 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:35:09.003 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:35:09.004 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:35:34.584 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:35:46.854 [C] [panic.go:522]  the request url is  /books-list/2509
+2019/08/06 15:35:46.854 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:35:46.855 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:35:46.856 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:35:46.856 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:35:48.559 [C] [panic.go:522]  the request url is  /books-list/2509
+2019/08/06 15:35:48.559 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:35:48.559 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:35:48.560 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:36:01.911 [C] [panic.go:522]  the request url is  /books-list/2486
+2019/08/06 15:36:01.911 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:36:01.911 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:36:01.912 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:36:01.913 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:38:13.229 [C] [panic.go:522]  the request url is  /books-list/2486
+2019/08/06 15:38:13.229 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:38:13.229 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:38:13.230 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:38:13.230 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:38:13.230 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:38:13.230 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:38:13.230 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:38:50.253 [C] [panic.go:522]  the request url is  /books-list/2541
+2019/08/06 15:38:50.253 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:38:50.253 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:38:50.254 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:38:50.254 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:38:54.151 [C] [panic.go:522]  the request url is  /books-list/2541
+2019/08/06 15:38:54.151 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:38:54.151 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:38:54.151 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:42:07.392 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:42:17.372 [C] [panic.go:522]  the request url is  /books-list/2530
+2019/08/06 15:42:17.372 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:42:17.372 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:42:17.373 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:42:17.374 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:42:17.374 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:42:17.374 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:42:17.374 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:42:26.310 [C] [panic.go:522]  the request url is  /books-list/2530
+2019/08/06 15:42:26.310 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:42:26.310 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:42:26.311 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:43:12.292 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:43:20.810 [C] [panic.go:522]  the request url is  /books-list/2533
+2019/08/06 15:43:20.810 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:241
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:43:20.810 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:43:20.811 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:43:23.371 [C] [panic.go:522]  the request url is  /books-list/2533
+2019/08/06 15:43:23.371 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:863
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/free_cms/models/model.go:91
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/scope.go:867
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:424
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/jinzhu/gorm/main.go:416
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:247
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:973
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/PuerkitoBio/goquery/iteration.go:10
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:963
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:629
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:541
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/gocolly/colly/colly.go:412
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:277
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/home.go:111
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/06 15:43:23.371 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/06 15:43:23.372 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/06 15:44:26.100 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:45:04.840 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:45:12.868 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:45:41.486 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:54:29.209 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 15:54:35.685 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:04:06.428 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:04:37.561 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:07:13.875 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:07:44.255 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:08:43.240 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:08:49.957 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:10:19.173 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:13:37.218 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:13:45.217 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:15:33.494 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:17:39.654 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:18:35.234 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:19:14.334 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:20:31.187 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:21:09.119 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:21:17.139 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:21:49.453 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:22:42.304 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:23:14.840 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:24:31.188 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:25:04.541 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:26:55.995 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:27:29.611 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:28:18.388 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:29:40.209 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:33:29.922 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:38:01.222 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:38:34.490 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:39:00.459 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:41:48.515 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:42:43.587 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:42:50.916 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:55:20.786 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:56:14.164 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:58:09.144 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:59:04.468 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 16:59:52.415 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:05:47.905 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:11:56.405 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:14:46.553 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:22:16.299 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:22:23.677 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:23:22.932 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:24:49.519 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:25:43.271 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:26:33.423 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:28:07.225 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:30:40.591 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:30:44.163 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/06 17:30:58.631 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 10:44:21.669 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 10:45:24.782 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:00:48.827 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:07:42.914 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:08:45.906 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:51:11.428 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:53:27.678 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:56:30.684 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:56:36.406 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 16:56:36.406 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/admin/post/index.html
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 16:56:36.406 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 16:56:36.406 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 16:57:23.579 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 16:58:41.087 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:00:19.243 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:00:38.949 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:00:56.639 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:00:58.315 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:01:05.612 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:01:08.730 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:01:08.730 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:01:08.730 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:01:08.731 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:03:06.285 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:03:09.628 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:03:13.321 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:03:13.321 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/views/postcontroller/index.tpl
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:03:13.321 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:03:13.321 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:03:35.004 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:03:37.133 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:03:37.133 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:03:37.133 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:03:37.134 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:04:26.950 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:06:25.958 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:07:36.020 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:07:37.999 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:07:37.999 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:07:37.999 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:07:37.999 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:09:23.263 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:09:25.063 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:09:25.063 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:09:25.063 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:09:25.063 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:12:36.351 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:12:39.462 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:12:43.798 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:12:43.798 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:12:43.798 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:12:43.799 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:13:22.878 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:13:22.878 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:13:22.878 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:13:22.878 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:15:32.196 [C] [panic.go:522]  the request url is  /blog/index
+2019/08/09 17:15:32.196 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/postcontroller/index.tpl
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 17:15:32.196 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 17:15:32.196 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 17:15:55.824 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:19:57.376 [D] [controller.go:282]  template Execute err: template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:19:57.376 [E] [server.go:2774]  template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:22:27.849 [D] [controller.go:282]  template Execute err: template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:22:27.849 [E] [server.go:2774]  template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:23:36.418 [D] [controller.go:282]  template Execute err: template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:23:36.418 [E] [server.go:2774]  template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:30:07.969 [D] [controller.go:282]  template Execute err: template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:30:07.969 [E] [server.go:2774]  template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:30:59.094 [D] [controller.go:282]  template Execute err: template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:30:59.094 [E] [server.go:2774]  template: admin/link/form.html:12:31: executing "admin/link/form.html" at <.vo.Name>: can't evaluate field Name in type interface {}
+2019/08/09 17:31:43.934 [D] [controller.go:282]  template Execute err: template: admin/blog/form.html:26:99: executing "admin/blog/form.html" at <.vo.Description>: can't evaluate field Description in type interface {}
+2019/08/09 17:31:43.934 [E] [server.go:2774]  template: admin/blog/form.html:26:99: executing "admin/blog/form.html" at <.vo.Description>: can't evaluate field Description in type interface {}
+2019/08/09 17:31:50.614 [D] [controller.go:282]  template Execute err: template: admin/blog/form.html:26:99: executing "admin/blog/form.html" at <.vo.Description>: can't evaluate field Description in type interface {}
+2019/08/09 17:31:50.614 [E] [server.go:2774]  template: admin/blog/form.html:26:99: executing "admin/blog/form.html" at <.vo.Description>: can't evaluate field Description in type interface {}
+2019/08/09 17:38:10.857 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:38:56.362 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:39:31.547 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 17:43:22.511 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 18:58:19.731 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 18:59:11.200 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 18:59:20.808 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 18:59:20.808 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 18:59:20.808 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 18:59:20.809 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 18:59:23.976 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 18:59:23.976 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 18:59:23.976 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 18:59:23.976 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 18:59:31.383 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 18:59:31.383 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 18:59:31.383 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 18:59:31.383 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 19:00:14.266 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:00:41.152 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 19:00:41.152 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 19:00:41.152 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 19:00:41.153 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 19:00:41.153 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 19:00:44.735 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:01:18.384 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:08:54.702 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:08:59.599 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:09:01.054 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:09:02.684 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:11:04.108 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:17:11.156 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:18:32.004 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:19:06.705 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:19:33.462 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:20:55.701 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:22:13.802 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:23:31.251 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:24:00.934 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:24:26.225 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:24:46.694 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:26:15.105 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:26:18.552 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 19:26:18.552 [C] [panic.go:522]  Handler crashed with error interface conversion: interface {} is nil, not map[string]interface {}
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/runtime/iface.go:248
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/index/index.go:89
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 19:26:18.552 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 19:26:18.553 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 19:29:35.156 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:30:33.529 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:30:42.758 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:31:13.579 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:31:45.983 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:31:49.026 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:36:43.616 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 19:37:19.824 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 19:37:19.824 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/index/index.go:90
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/09 19:37:19.824 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 19:37:19.825 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 19:37:19.825 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 19:37:19.825 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 19:59:32.639 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:00:06.637 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 20:00:06.637 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/index/index.go:90
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 20:00:06.637 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 20:00:06.637 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 20:01:03.002 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:01:46.582 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:02:28.251 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:03:34.384 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:04:42.188 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:05:27.837 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:06:11.377 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:07:02.355 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:07:15.580 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:07:20.779 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 20:07:20.779 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/09 20:07:20.779 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 20:07:20.779 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/09 20:07:20.779 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/index/index.go:90
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 20:07:20.780 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 20:07:20.780 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/09 20:07:40.302 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:09:10.400 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:10:11.728 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:10:58.856 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:12:37.366 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:58:03.748 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 20:59:45.410 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:00:22.325 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:01:57.674 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:02:00.671 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:03:09.865 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:06:24.416 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:06:58.178 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:08:41.602 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:09:34.937 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:10:23.084 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:10:42.394 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:14:28.502 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/09 21:18:21.556 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/09 21:18:21.556 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/09 21:18:21.556 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/09 21:18:21.557 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 10:15:29.974 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:19:10.913 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:19:20.233 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:21:16.438 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:22:46.542 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:31:46.033 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:32:56.003 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:35:16.684 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:36:14.395 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:37:09.937 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:37:38.845 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:37:43.892 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:40:02.900 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:41:14.183 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:41:22.994 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:42:11.546 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:43:15.781 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:45:10.815 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:54:25.795 [E] [template.go:176]  parse template err: home/blog/index.html template: home/blog/index.html:29: unexpected EOF
+2019/08/11 10:54:25.795 [W] [beego.go:103]  template: home/blog/index.html:29: unexpected EOF
+2019/08/11 10:55:12.693 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:55:20.985 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:55:39.254 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:59:27.035 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 10:59:31.769 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:01:57.970 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:06:21.967 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:06:41.546 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:07:32.638 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:07:37.353 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:09:38.351 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:11:15.325 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:11:51.426 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:12:35.559 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:13:05.336 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:14:20.754 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:15:17.037 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:16:09.555 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:17:22.986 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:19:14.188 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:29:35.195 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:33:31.767 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:46:28.392 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:50:23.197 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:50:26.927 [C] [panic.go:522]  the request url is  /
+2019/08/11 11:50:26.927 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/html/template/template.go:95
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/html/template/template.go:119
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:45
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:20
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 11:50:26.927 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 11:50:26.927 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 11:52:18.305 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:55:02.096 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:55:10.767 [C] [panic.go:522]  the request url is  /
+2019/08/11 11:55:10.767 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/html/template/template.go:95
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/html/template/template.go:119
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:46
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:21
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 11:55:10.767 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 11:55:10.768 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 11:55:10.768 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 11:55:10.768 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 11:55:10.768 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 11:55:10.768 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 11:55:11.760 [C] [panic.go:522]  the request url is  /
+2019/08/11 11:55:11.760 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/html/template/template.go:95
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/html/template/template.go:119
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:46
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:21
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 11:55:11.760 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 11:55:11.760 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 11:56:48.237 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 11:57:39.685 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:00:01.360 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:00:45.852 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:03:30.207 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:04:21.306 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:05:34.269 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:06:07.523 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:06:10.888 [C] [panic.go:522]  the request url is  /
+2019/08/11 12:06:10.888 [C] [panic.go:522]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:82
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/runtime/signal_windows.go:233
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/html/template/template.go:95
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/html/template/template.go:119
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:47
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:20
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 12:06:10.888 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 12:06:10.889 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 12:06:57.333 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:09:56.939 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:12:25.196 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:17:29.170 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:17:37.924 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:18:54.896 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:25:18.820 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:25:18.820 [E] [server.go:2774]  template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:25:21.371 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:25:21.371 [E] [server.go:2774]  template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:25:23.147 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:25:23.147 [E] [server.go:2774]  template: home/blog/index.html:39:33: executing "home/blog/index.html" at <.post_description>: can't evaluate field post_description in type models.Post
+2019/08/11 12:28:24.386 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:28:31.986 [C] [panic.go:522]  the request url is  /article
+2019/08/11 12:28:31.986 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/blogcontroller/article.tpl
+2019/08/11 12:28:31.986 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 12:28:31.987 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 12:28:31.987 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 12:29:07.269 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:29:08.926 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:08.926 [E] [server.go:2774]  template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:13.911 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:13.911 [E] [server.go:2774]  template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:15.744 [D] [controller.go:282]  template Execute err: template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:15.744 [E] [server.go:2774]  template: home/blog/index.html:50:23: executing "home/blog/index.html" at <.page>: invalid value; expected string
+2019/08/11 12:29:51.623 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 12:59:51.351 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:09:30.075 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:10:14.838 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:12:38.076 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:31:52.475 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:31:58.193 [C] [panic.go:522]  the request url is  /
+2019/08/11 13:31:58.193 [C] [panic.go:522]  Handler crashed with error assignment to entry in nil map
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/runtime/map_faststr.go:204
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:23
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 13:31:58.193 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 13:31:58.194 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 13:35:55.644 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:37:10.966 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:37:52.530 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:37:58.214 [C] [panic.go:522]  the request url is  /
+2019/08/11 13:37:58.214 [C] [panic.go:522]  Handler crashed with error assignment to entry in nil map
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/runtime/map_faststr.go:204
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:23
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 13:37:58.214 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 13:37:58.215 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 13:37:59.438 [C] [panic.go:522]  the request url is  /
+2019/08/11 13:37:59.438 [C] [panic.go:522]  Handler crashed with error assignment to entry in nil map
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/runtime/map_faststr.go:204
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:23
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 13:37:59.438 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 13:37:59.438 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 13:38:58.200 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:38:59.958 [C] [panic.go:522]  the request url is  /
+2019/08/11 13:38:59.958 [C] [panic.go:522]  Handler crashed with error assignment to entry in nil map
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/runtime/map_faststr.go:204
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/home/blog.go:24
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 13:38:59.958 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 13:38:59.958 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 13:39:33.808 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:40:03.347 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:40:42.661 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:41:05.962 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:42:14.232 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:43:51.106 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 13:58:16.382 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 14:04:18.356 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 14:04:22.224 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 14:09:24.486 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:08:09.590 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:08:57.233 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:09:09.367 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:09:21.966 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:09:52.156 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:11:01.990 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:11:05.807 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:14:46.366 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:14:56.319 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:15:09.084 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:15:25.418 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:15:29.481 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:16:20.639 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:17:21.875 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:18:33.269 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 15:26:20.796 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:26:20.796 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:26:20.796 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:26:20.796 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:27:30.945 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:27:30.945 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:27:30.945 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:27:30.946 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:27:30.946 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:27:52.932 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:27:52.932 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:27:52.932 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:27:52.933 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:27:52.933 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:27:52.933 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:27:52.933 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:30:40.750 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:30:40.750 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:30:40.750 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:30:40.750 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:32:49.998 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:32:49.998 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:32:49.998 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:32:49.999 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:32:49.999 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:32:49.999 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:32:49.999 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:35:28.526 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:35:28.526 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:35:28.526 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:35:28.526 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:45:51.089 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:45:51.089 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:45:51.089 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:45:51.090 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 15:53:29.355 [C] [panic.go:522]  the request url is  /ueditor-upload
+2019/08/11 15:53:29.355 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/indexcontroller/ueditorupload.tpl
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/08/11 15:53:29.355 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/08/11 15:53:29.355 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/11 16:04:50.191 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 16:05:28.500 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 16:17:13.001 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/08/11 16:25:37.201 [I] [asm_amd64.s:1337]  http server Running on http://:8000

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"free_cms/fc"
 	_ "free_cms/routers"
 	"github.com/astaxie/beego"
@@ -21,19 +20,13 @@ func main() {
 	//gii
 	if b, err := beego.AppConfig.Bool("gii"); b {
 		if err == nil {
-			tableName := flag.String("t", "", "表名")
-			modelPath := flag.String("m", "", "模型地址")
-			controllerPath := flag.String("c", "", "控制器地址")
-			viewPath := flag.String("v", "", "视图地址")
-			flag.Parse()
-			if *tableName != "" {
-				fc.Fc(*tableName, *modelPath, *controllerPath, *viewPath)
-				return
-			}
+			fc.Run() //开启gii
 		}
+		//return
 	}
+
 	//log
-	logs.SetLogger(logs.AdapterFile,`{"filename":"project.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10,"color":true}`)
+	logs.SetLogger(logs.AdapterFile, `{"filename":"project.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10,"color":true}`)
 	//输出文件名，行号
 	logs.EnableFuncCallDepth(true)
 	//异步log

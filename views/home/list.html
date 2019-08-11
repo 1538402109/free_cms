@@ -28,12 +28,12 @@
 {{template "home/public/scripts.html" .}}
 <script>
 function show(id){
-    $('#book_list').bootstrapTable('refresh',{url: '/list/'+id})
+    $('#book_list').bootstrapTable('refresh',{url: '/book/list/'+id})
 }
 
     $(document).ready(function () {
         $('#book_list').bootstrapTable({
-            url: '/list/{{.category.Id}}',         //请求后台的URL（*）
+            url: '/book/list/{{.category.Id}}',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             //toolbar: '#toolbar',                //工具按钮用哪个容器
             //striped: true,                      //是否显示行间隔色
@@ -78,7 +78,7 @@ function show(id){
                     field: 'book_name',
                     title: '名称',
                     formatter:function (value, row, index) {//formatter格式化单元格内容,value当前列的本来值，row当前行的数据{id:1,name:""...},index序号从0开始计数
-                        return "<a href='/books-list/"+row.id+"'>"+value+"</a>"
+                        return "<a href='/book/books-list/"+row.id+"'>"+value+"</a>"
                     },
                     //footerFormatter:function (row) {} //格式化footer内容，function(rows)，rows：所有行数据
                 }, {
@@ -103,7 +103,7 @@ $(function () {
     $(".nav .l"+getQuery()[4]).addClass("active")
     $("#search").on("click",function () {
         var keyword = $("#keyword").val()
-        $('#book_list').bootstrapTable('refresh',{url: '/list/4',query:{key:keyword}})
+        $('#book_list').bootstrapTable('refresh',{url: '/book/list/4',query:{key:keyword}})
     });
 });
 </script>

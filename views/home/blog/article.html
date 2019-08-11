@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{.article.PostTitle}}</title>
+    <meta name="keywords" content="{{.article.PostKeywords}}"/>
+    <meta name="description" content="{{.article.PostDescription}}"/>
+
+    {{template "home/blog/public/head.html" .}}
+</head>
+<body>
+<article>
+    <div class="leftbox">
+        <main>
+            <div class="blank"></div>
+            <div class="infos">
+                <div class="newsview">
+                    <h3 class="news_title">{{.article.PostTitle}}</h3>
+                    <div class="news_author">
+                        <span class="au02">{{date .article.CreatedAt "Y-m-d H:i:s"}}</span><span
+                                class="au03">共<b>{{.article.PostHits}}</b>人围观</span>
+                    </div>
+
+                    <div class="tags">
+
+                    </div>
+                    <div class="news_about"><strong>简介</strong>
+                        {{.article.PostDescription}}
+                    </div>
+                    <div class="news_infos">
+                        {{str2html .article.PostContent}}
+                    </div>
+                </div>
+                {{/*<div class="nextinfo">*/}}
+                    {{/*<p>上一篇：<a href='/xxbj/45.html'>png,jpeg,gif格式有什么区别,如何去选择？</a></p>*/}}
+                    {{/*<p>下一篇：<a href='/article/index?id=47'>react入门</a></p>*/}}
+                {{/*</div>*/}}
+            </div>
+        </main>
+    </div>
+    <aside class="rightbox">
+        <div class="blank"></div>
+        <div class="search">
+            <form action="/" method="get" class="layui-form">
+                <input name="keyword" id="keyword" class="input_text" placeholder="请输入关键字" type="text"
+                       lay-verify="required">
+                <button class="input_submit" lay-submit="" lay-filter="search">搜索</button>
+            </form>
+        </div>
+
+        <div class="paihang">
+            <h2 class="ab_title"><a href="/">点击排行</a></h2>
+            <ul>
+                {{range $k,$v:=.clickRanking}}
+                    <li><b><a href="{{urlfor "home.BlogController.Article" "id" .Id}}" target="_blank">{{.PostTitle}}</a></b>
+                        <p>
+                            <i><a href="{{urlfor "home.BlogController.Article" "id" .Id}}" title="{{.PostTitle}}" target="_blank">
+                                    <img src="{{.Image}}" alt="{{.PostTitle}}"/>
+                                </a></i>
+                            {{substr .PostDescription 0 40}}
+                        </p>
+                    </li>
+                {{end}}
+            </ul>
+        </div>
+    </aside>
+</article>
+{{template "home/blog/public/footer.html" .}}
+</body>
+</html>

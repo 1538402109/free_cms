@@ -2,6 +2,7 @@ package routers
 
 import (
 	"free_cms/controllers/admin_log"
+	"free_cms/controllers/blog"
 	"free_cms/controllers/books"
 	"free_cms/controllers/books_preg"
 	"free_cms/controllers/books_type"
@@ -19,16 +20,21 @@ import (
 
 func init() {
 	//前台模块
-	beego.Router("/", &home.HomeController{}, "get:Index")
-	beego.Router("/list/:id", &home.HomeController{}, "get:List")
-	beego.Router("/books-list/:id", &home.HomeController{}, "get:BooksList")
-	beego.Router("/article/:cid/:id", &home.HomeController{}, "get:Article")
-	beego.Router("/search", &home.HomeController{}, "get:Search")
+	beego.Router("/book", &home.HomeController{}, "get:Index")
+	beego.Router("/book/list/:id", &home.HomeController{}, "get:List")
+	beego.Router("/book/books-list/:id", &home.HomeController{}, "get:BooksList")
+	beego.Router("/book/article/:cid/:id", &home.HomeController{}, "get:Article")
+	beego.Router("/book/search", &home.HomeController{}, "get:Search")
+	beego.Router("/book/shujia", &home.HomeController{}, "get:Shujia")
+
+	beego.Router("/", &home.BlogController{}, "*:Index")
+	beego.Router("/article", &home.BlogController{}, "*:Article")
 
 	//后台模块
-	beego.Router("/admin", &index.IndexController{}, "get:Admin")
+	beego.Router("/hhxxttxs", &index.IndexController{}, "get:Admin")
 	beego.Router("/main", &index.IndexController{}, "get:Main")
 	beego.Router("/upload", &index.IndexController{}, "*:Upload")
+	beego.Router("/ueditor-upload", &index.IndexController{}, "*:UeditorUpload")
 	beego.Router("/login", &user.UserController{}, "*:Login")
 	beego.Router("/captcha", &user.UserController{}, "*:Captcha")
 	beego.Router("/logout", &user.UserController{}, "get:Logout")
@@ -81,4 +87,12 @@ func init() {
 	beego.Router("/document/demo1", &document.DocumentController{}, "*:Demo1")
 	beego.Router("/document/demo2", &document.DocumentController{}, "*:Demo2")
 	beego.Router("/document/demo3", &document.DocumentController{}, "*:Demo3")
+
+	//博客
+	beego.Router("/blog/index", &blog.PostController{}, "*:Index")
+	beego.Router("/blog/update", &blog.PostController{}, "*:Update")
+	beego.Router("/blog/create", &blog.PostController{}, "*:Create")
+	beego.Router("/blog/delete", &blog.PostController{}, "*:Delete")
+	beego.Router("/blog/batch-delete", &blog.PostController{}, "*:BatchDelete")
+
 }

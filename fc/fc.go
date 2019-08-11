@@ -1,13 +1,10 @@
 package fc
 
 import (
-	"fmt"
+	"flag"
 	"free_cms/models"
 	"github.com/astaxie/beego"
-	"io/ioutil"
-	"log"
-	"os"
-	"path"
+	"path/filepath"
 	"strings"
 )
 
@@ -20,31 +17,32 @@ type TabelAttr struct {
 	Extra   string `gorm:"column:Extra"`
 }
 
+// go run main.go -t post -c controllers/blog -m models -v views/index
+//从根路径开始，填写文件路径，生成的文件名为数据库名称
+func Run() {
+	tableName := flag.String("t", "", "表名")
+	modelPath := flag.String("m", "", "模型地址")
+	controllerPath := flag.String("c", "", "控制器地址")
+	viewPath := flag.String("v", "", "视图地址")
+	flag.Parse()
+	if *tableName != "" {
+		Fc(*tableName, *modelPath, *controllerPath, *viewPath)
+		return
+	}
+}
+
 func Fc(tableName, modelPath, controllerPath, viewPath string) {
 	tablePrefix := beego.AppConfig.String("tablePrefix")
 	var tableAttr []TabelAttr
 	models.Db.Raw("desc " + tablePrefix + tableName).Scan(&tableAttr)
 
-	//获取数据
+	//
 	if modelPath != "" {
 		CreateModel(modelPath, tableName, tableAttr)
 	}
-
+	//
 	if controllerPath != "" {
 		CreateController(controllerPath, tableName)
-	}
-
-	var viewData string
-	if viewPath != "" {
-		//viewData = createModel(tableAttr, *tableName, *modelPath, "")
-
-		if err := os.MkdirAll(viewPath, 777); err != nil {
-			log.Println("视图文件创建失败")
-		}
-
-		if err := ioutil.WriteFile(path.Join(modelPath, fmt.Sprintf("%s.go", tableName)), []byte(viewData), os.ModeType); err != nil {
-			log.Println(err)
-		}
 	}
 
 }
@@ -80,5 +78,19 @@ func Hump(v, t string) (new string) {
 		}
 	}
 	new = strings.Join(field, "")
+	return
+}
+
+func ReplaceStr(tableName, path, oldStr, option string) (newStr string) {
+	newStr = strings.Replace(oldStr, "Category", Hump(tableName, "max"), -1)
+	newStr = strings.Replace(newStr, "category", Hump(tableName, "min"), -1)
+
+	_, f := filepath.Split(path)
+	newStr = strings.Replace(newStr, "$path$", f, -1)
+
+	newStr = strings.Replace(newStr, "package models", "package "+filepath.Clean(path), -1)
+	newStr = strings.Replace(newStr, "Config", Hump(tableName, "max"), -1)
+	newStr = strings.Replace(newStr, "config", Hump(tableName, "min"), -1)
+	newStr = strings.Replace(newStr, "$attr$", option, -1)
 	return
 }

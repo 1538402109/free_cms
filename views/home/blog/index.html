@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>Stone个人博客-杨远奇的个人博客</title>
+    <meta name="keywords" content="Stone个人博客，Stone的博客，杨远奇的个人博客，后端程序员博客,后端技术总结，后端技术错误处理"/>
+    <meta name="description" content="作为一个苦逼的程序员，坚持不能做重复的工作和向上的学习态度，把工作中遇到的搞笑，常见错误，学习笔记，兴趣爱好等事迹记录下来，当作一种激励或人生的起伏波动。"/>
+
+    {{template "home/blog/public/head.html" .}}
+
+</head>
+<body>
+<article>
+    <div class="leftbox">
+        <div class="newblogs" name="topnew">
+            <h2 class="hometitle"><a href="/">返回首页</a></h2>
+            <ul id="list">
+
+                {{range $key,$val:=.blogList}}
+                    <li>
+                        <h3 class="blogtitle">
+                            <a href="{{urlfor "home.BlogController.Article" "id" .Id}}"
+                               target="_blank">{{.PostTitle}}</a>
+                        </h3>
+                        <div class="bloginfo">
+                            <span class="blogpic">
+                                <a href="{{urlfor "home.BlogController.Article" "id" .Id}}" title="{{.PostTitle}}"
+                                   target="_blank">
+                                    <img src="{{.Image}}" alt="{{.PostTitle}}"/>
+                                </a>
+                            </span>
+                            <p>{{substr .PostDescription 0 200}}</p>
+                        </div>
+                        <div class="autor">
+                            <span class="dtime f_l">{{date .CreatedAt "Y-m-d H:i:s"}}</span>
+                            <span class="viewnum f_l">浏览（<a href="/">{{.PostHits}}</a>）</span>
+                            <span class="pingl f_l">喜欢（ {{.PostLike}} ）</span>
+                            <span class="f_r"><a href="{{urlfor "home.BlogController.Article" "id" .Id}}" class="more"
+                                                 target="_blank">阅读原文>></a></span>
+                        </div>
+                    </li>
+                {{end}}
+            </ul>
+            {{str2html .page}}
+        </div>
+    </div>
+
+    <div class="rightbox">
+        <div class="blank"></div>
+        <div class="search">
+            <form action="" method="get" class="layui-form">
+                <input name="keyword" id="keyword" class="input_text" placeholder="请输入关键字" type="text" lay-verify="required">
+                <button class="input_submit" lay-submit="" lay-filter="search">搜索</button>
+            </form>
+        </div>
+
+        <div class="paihang">
+            <h2 class="ab_title"><a href="/">点击排行</a></h2>
+            <ul>
+
+                {{range $k,$v:=.clickRanking}}
+                    <li><b><a href="{{urlfor "home.BlogController.Article" "id" .Id}}" target="_blank">{{.PostTitle}}</a></b>
+                        <p>
+                            <i><a href="{{urlfor "home.BlogController.Article" "id" .Id}}" title="{{.PostTitle}}" target="_blank">
+                                    <img src="{{.Image}}" alt="{{.PostTitle}}"/>
+                                </a></i>
+                            {{substr .PostDescription 0 40}}
+                        </p>
+                    </li>
+                {{end}}
+
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!--<div class="link">-->
+    <!--<ul>-->
+    <!--<li>友情链接:</li>-->
+    <!--<li><a href="http://www.qiganju.com" target="_blank">荆门七个柑橘</a></li>-->
+    <!--<li><a href="http://www.51game.vip" target="_blank">fc游戏网</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+</article>
+
+{{template "home/blog/public/footer.html" .}}
+</body>
+</html>

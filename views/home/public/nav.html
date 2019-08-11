@@ -1,17 +1,17 @@
 <div class="header">
-    <div class="logo"><a href="/">轻轻小说</a></div>
+    <div class="logo"><a href="/book">轻轻小说</a></div>
 </div>
 
 <div class="nav">
     <ul class="clearfix">
         {{range $k,$v:=.booksType}}
-        <li class="l{{$v.Id}}" ><a href="/list/{{$v.Id}}">{{$v.Name}}</a></li>
+        <li class="l{{$v.Id}}" ><a href="/book/list/{{$v.Id}}">{{$v.Name}}</a></li>
         {{end}}
     </ul>
 </div>
 
 <div class="search">
-    <form action="/search" method="get">
+    <form action="/book/search" method="get">
         <input type="text" name="key" style="width:80%;height:30px;font-size:16px;float:left;" value="{{.key}}"><button style="width:20%;height:30px;">搜索</button>
     </form>
 </div>
