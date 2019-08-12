@@ -91,7 +91,7 @@ func (c *HomeController) List() {
 			booksModel := models.NewBooks()
 			shujiaData := booksModel.FindByIdWhereIn(strings.Split(shujia, ","), offset, limit)
 
-			c.Data["json"] = d.TableJson(shujiaData)
+			c.Data["json"] = d.TableJson(shujiaData, 0, 0, 0)
 			c.ServeJSON()
 			return
 		}
