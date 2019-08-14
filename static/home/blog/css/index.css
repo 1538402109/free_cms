@@ -115,6 +115,7 @@ h3.blogtitle:hover a { color: #000 }
 .news_infos { line-height: 24px; padding: 20px 0 }
 .news_infos p { margin-bottom: 10px }
 .news_infos img { max-width: 650px; height: auto; }
+.news_infos pre{white-space: pre-wrap;word-break: break-word;}
 .share { margin: 0 0 20px 0; overflow: hidden; width: 100%; }
 .nextinfo { line-height: 24px; width: 100%; background: #FFF; border-radius: 10px; overflow: hidden; margin: 20px 0 }/*��һƪ��һƪ*/
 .nextinfo p { padding: 4px 10px; border-radius: 5px; }

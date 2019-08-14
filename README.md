@@ -1,11 +1,11 @@
 # freecms
 FreeCms内容管理系统(学习项目),使用工具如下:
 
-[beego](https://beego.me)
-
-[gorm](https://github.com/jinzhu/gorm)
-
-[gocolly/colly](https://github.com/gocolly/colly)
+[beego](https://beego.me)  
+[gorm](https://github.com/jinzhu/gorm)  
+[gocolly/colly](https://github.com/gocolly/colly)  
+[layui](https://www.layui.com/)  
+[gjson](https://github.com/tidwall/gjson)  
 
 带一个小说模块
 
@@ -29,4 +29,4 @@ git clone https://github.com/yangyuanqi/free_cms.git
 
 账号:admin 密码:123456  
 
-演示地址：[book.yyq6.cn](http://book.yyq6.cn)  
+演示地址：[book.yyq6.cn](http://book.yyq6.cn/book)  
