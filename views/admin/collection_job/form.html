@@ -1,0 +1,79 @@
+<form class="layui-form layui-row layui-col-space10" lay-filter="getForm" action="xx">
+
+    <div class="layui-col-md9 layui-col-xs12">
+        <div class="layui-form-item magt3">
+            <label class="layui-form-label">名称*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input name" lay-verify="name" name="name"
+                       placeholder=""
+                       value="{{.row.Name}}">
+            </div>
+        </div>
+
+        <div class="layui-form-item magt3">
+            <label class="layui-form-label">执行时间*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input trigger_time" lay-verify="trigger_time" name="trigger_time"
+                       placeholder=""
+                       value="{{.row.TriggerTime}}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">推送地址*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" lay-verify="api_url" name="api_url" placeholder=""
+                       value="{{.row.ApiUrl}}">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">选择规则*</label>
+            <div class="layui-input-block">
+                {{range $k,$v:=.preg}}
+                    <input type="checkbox" name="preg_ids[]" title="{{$v.Name}}" value="{{$v.Id}}"
+                           {{if eq $v.IsChecked true}}checked{{end}}>
+                {{end}}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">图片存储地址*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" lay-verify="image_path" name="image_path" placeholder=""
+                       value="{{.row.ImagePath}}">
+            </div>
+        </div>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" id="submit" style="display: none" lay-filter="getTo" lay-submit>确定</button>
+    </div>
+</form>
+
+<script type="text/javascript">
+    layui.use(['form', 'layer', 'layedit', 'laydate', 'upload'], function () {
+        var form = layui.form
+        layer = parent.layer === undefined ? layui.layer : top.layer,
+            laypage = layui.laypage,
+            upload = layui.upload,
+            layedit = layui.layedit,
+            laydate = layui.laydate,
+            $ = layui.jquery;
+
+        form.verify({
+            name: function (val) {
+                if (val == '') {
+                    return "规则名称不能为空";
+                }
+            },
+            list_a: function (val) {
+                if (val == '') {
+                    return "列表链接不能为空";
+                }
+            },
+            content_text: function (val) {
+                if (val == '') {
+                    return "内容文本不能为空";
+                }
+            }
+        })
+    })
+</script>

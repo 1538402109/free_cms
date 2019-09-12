@@ -52,7 +52,7 @@ func getType(typeName string) (str string) {
 	if strings.Index(typeName, "bigint") >= 0 || strings.Index(typeName, "int") >= 0 || strings.Index(typeName, "tinyint") >= 0 {
 		return "int"
 	}
-	if strings.Index(typeName, "varchar") >= 0 || strings.Index(typeName, "char") >= 0 {
+	if strings.Index(typeName, "varchar") >= 0 || strings.Index(typeName, "char") >= 0 || strings.Index(typeName, "text") >= 0 {
 		return "string"
 	}
 	if strings.Index(typeName, "datetime") >= 0 || strings.Index(typeName, "time") >= 0 {

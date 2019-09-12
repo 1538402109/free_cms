@@ -21,7 +21,7 @@ type CategoryController struct {
 	controllers.BaseController
 }
 
-func (c *CategoryController) PrePare() {
+func (c *CategoryController) Prepare() {
 
 }
 

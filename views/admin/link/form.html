@@ -50,13 +50,8 @@
                       placeholder="请输入内容">{{.vo.Description}}</textarea>
         </div>
     </div>
-    <hr class="layui-bg-gray"/>
-    <div class="layui-form-item">
-        <div class="layui-layer-btn">
-            <button class="layui-btn layui-btn-normal layui-btn-sm" lay-filter="getTo" lay-submit>确定</button>
-            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
-        </div>
-    </div>
+    <button class="layui-btn layui-btn-normal layui-btn-sm" id="submit" style="display: none" lay-filter="getTo" lay-submit>确定</button>
+
 </form>
 
 <script type="text/javascript">

@@ -49,6 +49,26 @@
           "spread": false
         }
       ]
+    },
+    {
+      "title": "采集器",
+      "icon": "&#xe705;",
+      "href": "",
+      "spread": false,
+      "children": [
+        {
+          "title": "采集规则",
+          "icon": "&#xe600;",
+          "href": "collection-preg/index",
+          "spread": false
+        },
+        {
+          "title": "定时任务",
+          "icon": "&#xe600;",
+          "href": "collection-job/index",
+          "spread": false
+        }
+      ]
     }
   ],
   "memberCenter": [

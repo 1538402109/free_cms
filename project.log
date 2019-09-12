@@ -1208,3 +1208,355 @@
 2019/08/11 19:15:27.548 [I] [asm_amd64.s:1337]  http server Running on http://:8000
 2019/08/11 19:15:34.047 [I] [asm_amd64.s:1337]  http server Running on http://:8000
 2019/08/12 17:32:25.194 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 15:23:25.004 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 15:50:40.934 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 15:51:34.460 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 15:52:32.721 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 15:53:08.730 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 16:00:26.488 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:06:20.681 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:06:24.087 [C] [panic.go:522]  the request url is  /collection-article/index
+2019/09/04 17:06:24.087 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/admin/collectionArticle/index.html
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/04 17:06:24.087 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/04 17:06:24.087 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/04 17:07:43.457 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:07:51.842 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:10:25.891 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:11:37.536 [D] [controller.go:282]  template Execute err: template: admin/books/form.html:19:144: executing "admin/books/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:11:37.536 [E] [server.go:2774]  template: admin/books/form.html:19:144: executing "admin/books/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:11:52.541 [D] [controller.go:282]  template Execute err: template: admin/books/form.html:19:144: executing "admin/books/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:11:52.541 [E] [server.go:2774]  template: admin/books/form.html:19:144: executing "admin/books/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:28.351 [D] [controller.go:282]  template Execute err: template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:28.351 [E] [server.go:2774]  template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:30.944 [D] [controller.go:282]  template Execute err: template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:30.944 [E] [server.go:2774]  template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:32.879 [D] [controller.go:282]  template Execute err: template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:12:32.879 [E] [server.go:2774]  template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:13:51.833 [D] [controller.go:282]  template Execute err: template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:13:51.833 [E] [server.go:2774]  template: admin/collection_article/form.html:19:144: executing "admin/collection_article/form.html" at <.vo.BookName>: can't evaluate field BookName in type interface {}
+2019/09/04 17:16:58.464 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:17:17.725 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:18:48.298 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:19:10.007 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:19:42.275 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:20:20.700 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:24:31.196 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:24:53.042 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:25:06.569 [C] [panic.go:522]  the request url is  /collection-preg/index
+2019/09/04 17:25:06.569 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/admin/collectionPreg/index.html
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/04 17:25:06.569 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/04 17:25:06.569 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/04 17:25:39.677 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:25:51.715 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:25:59.491 [D] [controller.go:282]  template Execute err: template: admin/collection_preg/form.html:19:138: executing "admin/collection_preg/form.html" at <.vo.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:25:59.491 [E] [server.go:2774]  template: admin/collection_preg/form.html:19:138: executing "admin/collection_preg/form.html" at <.vo.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:22.995 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/04 17:28:28.795 [D] [controller.go:282]  template Execute err: template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:28.795 [E] [server.go:2774]  template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:31.188 [D] [controller.go:282]  template Execute err: template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:31.188 [E] [server.go:2774]  template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:33.279 [D] [controller.go:282]  template Execute err: template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/04 17:28:33.279 [E] [server.go:2774]  template: admin/collection_preg/form.html:19:139: executing "admin/collection_preg/form.html" at <.row.ListAuthor>: can't evaluate field ListAuthor in type interface {}
+2019/09/10 13:55:05.266 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/10 13:55:16.631 [C] [panic.go:522]  the request url is  /game
+2019/09/10 13:55:16.631 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/933640459/index.html
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/10 13:55:16.631 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/10 13:55:16.631 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/10 13:56:18.243 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:12:38.604 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:41:07.620 [D] [controller.go:282]  template Execute err: template: admin/collection_preg/form.html:30:36: executing "admin/collection_preg/form.html" at <.row.Time>: can't evaluate field Time in type interface {}
+2019/09/11 17:41:07.620 [E] [server.go:2774]  template: admin/collection_preg/form.html:30:36: executing "admin/collection_preg/form.html" at <.row.Time>: can't evaluate field Time in type interface {}
+2019/09/11 17:42:21.312 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:48:16.571 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:49:45.493 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:49:54.171 [C] [panic.go:522]  the request url is  /collection-job/index
+2019/09/11 17:49:54.171 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/admin/collectionJob/index.html
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/11 17:49:54.171 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/11 17:49:54.171 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/11 17:50:22.934 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:50:34.514 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 17:50:50.272 [C] [panic.go:522]  the request url is  /collection-job/index
+2019/09/11 17:50:50.272 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/admin/collection_job/index.html
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/11 17:50:50.272 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/11 17:50:50.272 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/11 18:03:05.419 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 18:03:10.244 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 18:04:32.615 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 18:05:07.323 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 18:05:55.114 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/11 18:07:01.848 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 14:00:32.524 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:15:41.331 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:22:56.239 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:24:23.853 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:29:16.227 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:29:30.406 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:29:50.810 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:30:19.223 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:30:49.752 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:31:54.420 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:32:38.879 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:36:26.530 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:38:24.009 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:25.946 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:30.530 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:32.170 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:34.490 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:54.149 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:38:59.535 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:39:56.532 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:39:58.458 [E] [controller.go:280]  parse template err: admin/collection_job/create.html template: admin/collection_job/form.html:88: unexpected EOF
+2019/09/12 15:41:12.617 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:42:31.493 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:42:36.058 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:44:11.782 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:44:18.248 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:44:23.465 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:44:31.883 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:44:41.262 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:44:41.262 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:44:41.262 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:44:41.263 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:44:41.263 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:44:58.462 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:45:01.024 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:45:01.024 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:45:01.024 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:45:01.025 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:45:02.727 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:45:02.727 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:45:02.727 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:45:02.727 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:45:16.088 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:45:16.088 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:45:16.088 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:45:16.088 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:45:17.337 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:45:17.337 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:45:17.337 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:45:17.337 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:46:06.673 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:46:09.975 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:46:09.975 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:46:09.975 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:46:09.975 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:46:12.534 [C] [panic.go:522]  the request url is  /collection-job/create
+2019/09/12 15:46:12.534 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_job/create.html
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 15:46:12.534 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 15:46:12.535 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 15:47:02.212 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:47:34.282 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:49:03.880 [D] [controller.go:282]  template Execute err: template: admin/collection_job/form.html:34:104: executing "admin/collection_job/form.html" at <eq $v.Id $.row.PregIds>: error calling eq: incompatible types for comparison
+2019/09/12 15:49:03.880 [E] [server.go:2774]  template: admin/collection_job/form.html:34:104: executing "admin/collection_job/form.html" at <eq $v.Id $.row.PregIds>: error calling eq: incompatible types for comparison
+2019/09/12 15:57:32.089 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:57:53.738 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:58:52.156 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:58:56.008 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 15:59:32.569 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:00:16.477 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:00:39.367 [D] [controller.go:282]  template Execute err: template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:00:39.367 [E] [server.go:2774]  template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:01:12.419 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:02:31.711 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:03:15.751 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:03:22.017 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:04:00.155 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:04:02.912 [D] [controller.go:282]  template Execute err: template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:04:02.912 [E] [server.go:2774]  template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:04:14.125 [D] [controller.go:282]  template Execute err: template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:04:14.125 [E] [server.go:2774]  template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:04:15.914 [D] [controller.go:282]  template Execute err: template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:04:15.914 [E] [server.go:2774]  template: admin/collection_job/form.html:36:32: executing "admin/collection_job/form.html" at <eq $v.IsChecked>: error calling eq: missing argument for comparison
+2019/09/12 16:06:10.914 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:07:48.211 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:08:43.193 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:09:45.529 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:10:10.578 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:10:19.940 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:12:27.978 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:13:33.654 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:17:39.161 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:17:44.203 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:18:09.328 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:18:18.387 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:18:30.765 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:19:27.742 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:20:12.023 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:21:34.193 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:22:18.249 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:22:45.673 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:23:35.904 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:26:11.237 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:27:33.933 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:27:54.886 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:31:41.383 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:36:48.470 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:38:06.055 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:39:53.089 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:40:35.496 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:42:46.647 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:43:43.705 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:43:53.404 [C] [panic.go:522]  the request url is  /collection-job/update
+2019/09/12 16:43:53.404 [C] [panic.go:522]  Handler crashed with error runtime error: index out of range
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:44
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/goproject/src/free_cms/controllers/collection/collection_job.go:67
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/reflect/value.go:447
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/reflect/value.go:308
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:852
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 16:43:53.404 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 16:43:53.404 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 16:44:27.828 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:44:31.457 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:48:26.582 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:48:31.753 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:48:52.375 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:49:06.924 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:51:01.101 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:51:58.654 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:53:04.235 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:53:11.890 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:53:18.297 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:54:10.124 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:54:37.460 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:55:48.027 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:57:56.563 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 16:59:29.089 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:05:09.088 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:09:47.983 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:11:11.209 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:11:59.485 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:12:26.996 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:13:10.016 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:15:20.761 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:15:24.389 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:22:40.602 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:27:47.737 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:27:53.683 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:28:08.962 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:28:12.556 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:34:19.696 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:35:40.943 [C] [panic.go:522]  the request url is  /collection-preg/index
+2019/09/12 17:35:40.943 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_preg/index.html
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 17:35:40.943 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 17:35:40.943 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 17:35:45.326 [C] [panic.go:522]  the request url is  /collection-preg/index
+2019/09/12 17:35:45.326 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/collection_preg/index.html
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/Go/src/runtime/panic.go:522
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/template.go:75
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:282
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:233
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/controller.go:213
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/goproject/src/github.com/astaxie/beego/router.go:864
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/Go/src/net/http/server.go:2774
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/Go/src/net/http/server.go:1878
+2019/09/12 17:35:45.326 [C] [panic.go:522]  C:/Go/src/runtime/asm_amd64.s:1337
+2019/09/12 17:35:45.326 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/09/12 17:36:10.190 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:51:54.347 [I] [asm_amd64.s:1337]  http server Running on http://:8000
+2019/09/12 17:54:04.518 [I] [asm_amd64.s:1337]  http server Running on http://:8000

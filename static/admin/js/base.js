@@ -44,9 +44,19 @@ layui.use(['form', 'layer', 'table'], function () {
             maxmin: true,
             area: ['50%', '80%'],
             content: action,
+            btn: ['确定', '取消'],
+            yes: function (index, layero) {
+                var body = layui.layer.getChildFrame('body', index);
+                body.find('form #submit').click();
+                return false;
+            },
+            btn2: function (index, layero) {
+                layer.close(index)
+            },
             success: function (layero, index) {
                 var body = layui.layer.getChildFrame('body', index);
                 body.find(".layui-form").attr("action", action);
+                //关闭弹出层
             }
         })
 

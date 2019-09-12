@@ -7,7 +7,10 @@ FreeCms内容管理系统(学习项目),使用工具如下:
 [layui](https://www.layui.com/)  
 [gjson](https://github.com/tidwall/gjson)  
 
-带一个小说模块
+####功能  
+基础cms  
+小说模块  
+博客模块
 
 ![avatar](20190621113357.png) ![avatar](20190621113451.png)
 
@@ -29,4 +32,5 @@ git clone https://github.com/yangyuanqi/free_cms.git
 
 账号:admin 密码:123456  
 
-演示地址：[book.yyq6.cn](http://book.yyq6.cn/book)  
+[小说演示地址](http://book.yyq6.cn/book)  
+[博客演示地址](http://book.yyq6.cn)

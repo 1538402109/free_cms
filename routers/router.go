@@ -7,6 +7,7 @@ import (
 	"free_cms/controllers/books_preg"
 	"free_cms/controllers/books_type"
 	"free_cms/controllers/category"
+	"free_cms/controllers/collection"
 	"free_cms/controllers/config"
 	"free_cms/controllers/document"
 	"free_cms/controllers/home"
@@ -95,4 +96,15 @@ func init() {
 	beego.Router("/blog/delete", &blog.PostController{}, "*:Delete")
 	beego.Router("/blog/batch-delete", &blog.PostController{}, "*:BatchDelete")
 
+	beego.Router("/collection-job/index", &collection.CollectionJobController{}, "*:Index")
+	beego.Router("/collection-job/update", &collection.CollectionJobController{}, "*:Update")
+	beego.Router("/collection-job/create", &collection.CollectionJobController{}, "*:Create")
+	beego.Router("/collection-job/delete", &collection.CollectionJobController{}, "*:Delete")
+	beego.Router("/collection-job/batch-delete", &collection.CollectionJobController{}, "*:BatchDelete")
+
+	beego.Router("/collection-preg/index", &collection.CollectionPregController{}, "*:Index")
+	beego.Router("/collection-preg/update", &collection.CollectionPregController{}, "*:Update")
+	beego.Router("/collection-preg/create", &collection.CollectionPregController{}, "*:Create")
+	beego.Router("/collection-preg/delete", &collection.CollectionPregController{}, "*:Delete")
+	beego.Router("/collection-preg/batch-delete", &collection.CollectionPregController{}, "*:BatchDelete")
 }

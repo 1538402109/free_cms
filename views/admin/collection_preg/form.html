@@ -1,58 +1,62 @@
-<form class="layui-form layui-row layui-col-space10" lay-filter="getForm" action="xx">
+<form class="layui-form layui-row layui-col-space10" lay-filter="getForm" action="xx" method="post">
 
     <div class="layui-col-md9 layui-col-xs12">
         <div class="layui-form-item magt3">
             <label class="layui-form-label">规则名称*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input name" lay-verify="name" name="name" placeholder="" value="{{.vo.Name}}">
+                <input type="text" class="layui-input" lay-verify="name" name="name" placeholder=""
+                       value="{{.row.Name}}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">列表地址*</label>
+            <div class="layui-input-block">
+                <input name="list" id="" class="layui-input" lay-verify="list" value="{{.row.List}}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间标签*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" lay-verify="time" name="time" placeholder=""
+                       value="{{.row.Time}}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间格式化*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" lay-verify="time_format" name="time_format"
+                       placeholder="" value="{{.row.TimeFormat}}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">列表块标签*</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" lay-verify="list_li" name="list_li" placeholder=""
+                       value="{{.row.ListLi}}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">列表链接*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input list_a" lay-verify="list_a" name="list_a" placeholder="" value="{{.vo.ListA}}">
+                <input type="text" class="layui-input" lay-verify="list_a" name="list_a" placeholder=""
+                       value="{{.row.ListA}}">
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">作者</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input list_author" lay-verify="list_author" name="list_author" placeholder="" value="{{.vo.ListAuthor}}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">封面</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input list_msg_img" lay-verify="list_msg_img" name="list_msg_img" placeholder="" value="{{.vo.ListMsgImg}}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">描述</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input list_describe" lay-verify="list_describe" name="list_describe" placeholder="" value="{{.vo.ListDescribe}}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">更新时间</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input list_msg_last_time" lay-verify="list_msg_last_time" name="list_msg_last_time" placeholder="" value="{{.vo.ListMsgLastTime}}">
-            </div>
-        </div>
-
         <div class="layui-form-item">
             <label class="layui-form-label">内容文本*</label>
             <div class="layui-input-block">
-                <input type="text" class="layui-input content_text" lay-verify="content_text" name="content_text" placeholder="" value="{{.vo.ContentText}}">
+                <input type="text" class="layui-input" lay-verify="content_text" name="content_text"
+                       placeholder="" value="{{.row.ContentText}}">
             </div>
         </div>
-
         <button class="layui-btn layui-btn-normal layui-btn-sm" id="submit" style="display: none" lay-filter="getTo" lay-submit>确定</button>
-
     </div>
 
 </form>
-
 <script type="text/javascript">
-    layui.use(['form','layer','layedit','laydate','upload'],function(){
+    layui.use(['form', 'layer', 'layedit', 'laydate', 'upload'], function () {
         var form = layui.form
         layer = parent.layer === undefined ? layui.layer : top.layer,
             laypage = layui.laypage,
@@ -62,18 +66,18 @@
             $ = layui.jquery;
 
         form.verify({
-            name : function(val){
-                if(val == ''){
+            name: function (val) {
+                if (val == '') {
                     return "规则名称不能为空";
                 }
             },
-            list_a : function(val){
-                if(val == ''){
+            list_a: function (val) {
+                if (val == '') {
                     return "列表链接不能为空";
                 }
             },
-            content_text : function(val){
-                if(val == ''){
+            content_text: function (val) {
+                if (val == '') {
                     return "内容文本不能为空";
                 }
             }
